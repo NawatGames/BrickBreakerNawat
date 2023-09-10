@@ -27,24 +27,24 @@ public class LayerController : MonoBehaviour
         
         if (ball != null)
         {
-            // Altera a LayerMask da bolinha
+            
             ball.layer = LayerMask.NameToLayer(newLayer.ToString());
 
-            // Dispara o evento TileCollisionLayerChangeEvent
+            
             TileCollisionLayerChangeEvent.Invoke();
         }
     }
 
-    // Função para alterar a LayerMask da bolinha em colisão com Parede
+    
     private void ChangeBallLayerOnWallCollision()
     {
-        // Verifica se a bolinha existe
+        
         if (ball != null)
         {
-            // Altera a LayerMask da bolinha
+            
             ball.layer = LayerMask.NameToLayer(newLayer.ToString());
 
-            // Dispara o evento WallCollisionLayerChangeEvent
+            
             WallCollisionLayerChangeEvent.Invoke();
         }
     }
