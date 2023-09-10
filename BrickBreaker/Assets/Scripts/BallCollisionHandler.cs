@@ -5,11 +5,7 @@ using UnityEngine.Events;
 
 public class BallCollisionHandler : MonoBehaviour
 {
-    public GameObject wall;
-
     public GameObject tile;
-
-    public UnityEvent WallCollision;
 
     public UnityEvent TileCollision;
 
