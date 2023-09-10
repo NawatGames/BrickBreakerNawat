@@ -7,5 +7,6 @@ public class BallHandler : MonoBehaviour
     public BallCollisionHandler ballCollisionHandler;
     public BallMovement ballMovement;
     public BallDamage ballDamage;
+    public LayerController layerController;
 
 }
