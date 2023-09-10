@@ -9,15 +9,15 @@ public class BallCollisionHandler : MonoBehaviour
 
     public GameObject tile;
 
-    public UnityEvent WallCollision;
+    public UnityEvent WallCollisionEvent;
 
-    public UnityEvent TileCollision;
+    public UnityEvent TileCollisionEvent;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject == tile)
         {
-            TileCollision.Invoke();
+            TileCollisionEvent.Invoke();
         }
     }
 }
