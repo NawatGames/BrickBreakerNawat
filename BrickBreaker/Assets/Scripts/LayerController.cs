@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class LayerController : MonoBehaviour
 {
-    public LayerMask newLayer; 
-    private GameObject ball; 
+    public LayerMask newLayer;
+    private GameObject ball;
 
     private void Awake()
     {
         ball = GameObject.FindGameObjectWithTag("Ball");
-
-        BallCollisionHandler ballCollisionHandler = ball.GetComponent<BallCollisionHandler>();
-        ballCollisionHandler.TileCollisionEvent.AddListener(ChangeBallLayerOnTileCollision);
-        ballCollisionHandler.WallCollisionEvent.AddListener(ChangeBallLayerOnWallCollision);
     }
-    
-    private void ChangeBallLayerOnTileCollision()
+
+    private void OnEnable()
     {
-        ball.layer = newLayer.value;
+        BallCollisionHandler ballCollisionHandler = ball.GetComponent<BallCollisionHandler>();
+        ballCollisionHandler.TileCollisionEvent.AddListener(ChangeBallLayerOnCollision);
+        ballCollisionHandler.WallCollisionEvent.AddListener(ChangeBallLayerOnCollision);
     }
 
-    private void ChangeBallLayerOnWallCollision()
+    private void OnDisable()
+    {
+        BallCollisionHandler ballCollisionHandler = ball.GetComponent<BallCollisionHandler>();
+        ballCollisionHandler.TileCollisionEvent.RemoveListener(ChangeBallLayerOnCollision);
+        ballCollisionHandler.WallCollisionEvent.RemoveListener(ChangeBallLayerOnCollision);
+    }
+
+    private void ChangeBallLayerOnCollision()
     {
         ball.layer = newLayer.value;
     }
