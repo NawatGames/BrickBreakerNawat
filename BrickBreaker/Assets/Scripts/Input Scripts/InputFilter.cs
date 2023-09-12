@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class InputFilter : MonoBehaviour
@@ -9,6 +10,7 @@ public class InputFilter : MonoBehaviour
     [SerializeField] private RawInput rawInput;
     public Vector2 initialPosition;
     [SerializeField] private float angleClamp = 20f;
+    public UnityEvent<Vector2> FilteredInputEvent;
     
     public Vector2 AngleClamp(Vector2 position){
         float deltaX = position.x - initialPosition.x;
@@ -29,17 +31,28 @@ public class InputFilter : MonoBehaviour
         {
             clampedAngle = Mathf.Clamp(angle, angleClamp*Mathf.Deg2Rad, (180f-angleClamp)*Mathf.Deg2Rad);
         }
-        Debug.Log(clampedAngle * Mathf.Rad2Deg);
-        float x = Mathf.Cos(clampedAngle) * Math.Abs(deltaX);
-        float y = Mathf.Sin(clampedAngle) * Math.Abs(deltaY);
+        float x = initialPosition.x + Mathf.Cos(clampedAngle) * Math.Abs(deltaX);
+        float y = initialPosition.y + Mathf.Sin(clampedAngle) * Math.Abs(deltaY);
         return new Vector2(x, y);
     }
-    
-    
-    
-    void SetInitialPosition(Vector2 position){
-        initialPosition = position;
+
+    void OnEnable()
+    {
+        rawInput.worldspacePointerUpEvent.AddListener(OnWorldspacePointerUp);
     }
 
-    //calcular o valor de x
+    void OnDisable()
+    {
+        rawInput.worldspacePointerUpEvent.RemoveListener(OnWorldspacePointerUp);
+    }
+    
+    private void OnWorldspacePointerUp(Vector2 position)
+    {
+        FilteredInputEvent.Invoke(AngleClamp(position));
+    }
+
+    public void SetInitialPosition(Vector2 position){
+        initialPosition = position;
+    }
+    
 }

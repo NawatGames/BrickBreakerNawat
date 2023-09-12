@@ -21,6 +21,7 @@ public class LineRendererPointer : MonoBehaviour
     }
     void OnWorldspacePointerDown(Vector2 position){
         initialPosition = position;
+        inputFilter.SetInitialPosition(position);
     }
     void OnWorldspacePointerDrag(Vector2 position){
         lineRenderer.enabled = true;
