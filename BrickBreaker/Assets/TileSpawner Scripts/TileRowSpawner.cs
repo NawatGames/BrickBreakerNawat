@@ -5,13 +5,23 @@ using UnityEngine;
 public class TileRowSpawner : MonoBehaviour
 
 {
+    private TileRowMover _tileRowMover;
     public GameObject[] tilePrefabs; // Lista de prefabs.
     public float spacing = 1.5f; //Espaços entre os tijolos
-    public Transform spawnPoint; 
+    public Transform spawnPoint;
 
-    void Start()
+    void Awake()
     {
-        TileRowMover.RowMovedEvent+=SpawnRow;
+        _tileRowMover = this.gameObject.GetComponent<TileRowMover>();
+    }
+    void OnEnable()
+    {
+        _tileRowMover.RowMovedEvent.AddListener(SpawnRow);
+    }
+
+    void OnDisable()
+    {
+        _tileRowMover.RowMovedEvent.RemoveListener(SpawnRow);
     }
 
     public void SpawnRow()

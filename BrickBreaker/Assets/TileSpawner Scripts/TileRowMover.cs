@@ -1,17 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TileRowMover : MonoBehaviour
 {
     public delegate void RowMover();
-    public static event RowMover RowMovedEvent;
+    public UnityEvent RowMovedEvent;
     public float tileSize = 1.0f; // Tamanho de um tijolo.
 
-    void Start()
-    {
-       TurnEndEvent.TurnEnded += MoveTileRows;
-    }
 
     void MoveTileRows()
     {
@@ -25,7 +22,7 @@ public class TileRowMover : MonoBehaviour
         // Dispara o evento RowMovedEvent.
         if (RowMovedEvent != null)
         {
-            RowMovedEvent();
+            RowMovedEvent.Invoke();
         }
     }
 }

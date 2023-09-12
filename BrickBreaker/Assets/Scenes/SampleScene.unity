@@ -123,6 +123,83 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &257316931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8750544528140036794, guid: e59a42288c2b3e44bbf8bbfb20c1d63e, type: 3}
+  m_PrefabInstance: {fileID: 8750544526900131547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &257316932 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8750544528140036793, guid: e59a42288c2b3e44bbf8bbfb20c1d63e, type: 3}
+  m_PrefabInstance: {fileID: 8750544526900131547}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257316931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fd7c2778c4ef04495ffa8d4b5e0357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &257316934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8750544528140036792, guid: e59a42288c2b3e44bbf8bbfb20c1d63e, type: 3}
+  m_PrefabInstance: {fileID: 8750544526900131547}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257316931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8902f4e5357a349bb92aeb8b651d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &257316938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257316931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92ad89cda402e14498430ce7f25eb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballCollisionHandler: {fileID: 257316934}
+  ballMovement: {fileID: 257316932}
+  ballDamage: {fileID: 257316940}
+  layerController: {fileID: 257316939}
+--- !u!114 &257316939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257316931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b6a43220df83345ab066f1ba59cdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &257316940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257316931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c029973b2be573e46967cb17c5261f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  TileCollisionDamageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamageValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &502520502
 GameObject:
   m_ObjectHideFlags: 0
