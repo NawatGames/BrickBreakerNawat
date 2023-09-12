@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class LayerController : MonoBehaviour
@@ -9,7 +10,7 @@ public class LayerController : MonoBehaviour
 
     private void Awake()
     {
-        ball = GameObject.FindGameObjectWithTag("Ball");
+        ball = this.gameObject;
     }
 
     private void OnEnable()
@@ -28,6 +29,7 @@ public class LayerController : MonoBehaviour
 
     private void ChangeBallLayerOnCollision()
     {
-        ball.layer = newLayer.value;
+        Debug.Log("ChangeBallLayerOnCollision");
+        ball.layer = LayerMask.NameToLayer("Layer2");
     }
 }

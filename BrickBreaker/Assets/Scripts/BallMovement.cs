@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-    //Tudo nesse script é placeholder, não será usado depois
-    public float forçaLançamento = 10f;
+    //Tudo nesse script ï¿½ placeholder, nï¿½o serï¿½ usado depois
+    public float forcaLancamento = 10f;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Verifique se o botão esquerdo do mouse foi clicado.
+        if (Input.GetMouseButtonDown(0)) // Verifique se o botï¿½o esquerdo do mouse foi clicado.
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 direção = (mousePos - transform.position).normalized; // Calcule a direção do lançamento.
+            Vector2 direcao = (mousePos - transform.position).normalized; // Calcule a direï¿½ï¿½o do lanï¿½amento.
 
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
-            rb.AddForce(direção * forçaLançamento, ForceMode2D.Impulse); // Aplique uma força impulsiva para lançar o objeto.
+            rb.AddForce(direcao * forcaLancamento, ForceMode2D.Impulse); // Aplique uma forï¿½a impulsiva para lanï¿½ar o objeto.
         }
     }
 

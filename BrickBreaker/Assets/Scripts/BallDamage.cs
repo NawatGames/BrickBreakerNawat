@@ -15,7 +15,7 @@ public class BallDamage : MonoBehaviour
 
     private void Awake ()
     {
-        ballCollisionHandler = GetComponentInParent<BallCollisionHandler>();
+        ballCollisionHandler = this.gameObject.GetComponent<BallCollisionHandler>();
     }
 
     private void OnEnable ()
@@ -30,6 +30,7 @@ public class BallDamage : MonoBehaviour
 
     private void TileCollisionDamageEventCaller()
     {
+        Debug.Log("TileCollisionDamageEventCaller");
         TileCollisionDamageEvent.Invoke(damage);
     }
 

@@ -9,16 +9,12 @@ public class BallCollisionHandler : MonoBehaviour
 
     public UnityEvent WallCollisionEvent; //Evento de colisão com as Paredes
 
-    private void OnTileCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Tile"))
         {
             TileCollisionEvent.Invoke();
         }
-    }
-
-    private void OnWallCollisionEnter(Collision collision)
-    {
         if (collision.gameObject.CompareTag("Wall"))
         {
             WallCollisionEvent.Invoke();
