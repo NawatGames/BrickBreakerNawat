@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8750544528140036794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.23, y: 1.62, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -116,8 +116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8902f4e5357a349bb92aeb8b651d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 6395907394387234421, guid: 686903246cbdbae49ae35c3850b39349, type: 3}
-  TileCollision:
+  TileCollisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  WallCollisionEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!50 &8750544528140036787
@@ -153,4 +155,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fd7c2778c4ef04495ffa8d4b5e0357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "for\xE7aLan\xE7amento": 10
