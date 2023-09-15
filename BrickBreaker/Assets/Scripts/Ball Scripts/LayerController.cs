@@ -6,23 +6,19 @@ using UnityEngine;
 public class LayerController : MonoBehaviour
 {
     public LayerMask newLayer;
-    private GameObject ball;
-
-    private void Awake()
-    {
-        ball = this.gameObject;
-    }
+    [SerializeField]
+    private GameObject root;
 
     private void OnEnable()
     {
-        BallCollisionHandler ballCollisionHandler = ball.GetComponent<BallCollisionHandler>();
+        BallCollisionHandler ballCollisionHandler = root.GetComponent<BallCollisionHandler>();
         ballCollisionHandler.TileCollisionEvent.AddListener(ChangeBallLayerOnCollision);
         ballCollisionHandler.WallCollisionEvent.AddListener(ChangeBallLayerOnCollision);
     }
 
     private void OnDisable()
     {
-        BallCollisionHandler ballCollisionHandler = ball.GetComponent<BallCollisionHandler>();
+        BallCollisionHandler ballCollisionHandler = root.GetComponent<BallCollisionHandler>();
         ballCollisionHandler.TileCollisionEvent.RemoveListener(ChangeBallLayerOnCollision);
         ballCollisionHandler.WallCollisionEvent.RemoveListener(ChangeBallLayerOnCollision);
     }
@@ -30,6 +26,6 @@ public class LayerController : MonoBehaviour
     private void ChangeBallLayerOnCollision()
     {
         Debug.Log("ChangeBallLayerOnCollision");
-        ball.layer = LayerMask.NameToLayer("Layer2");
+        root.layer = LayerMask.NameToLayer("Layer2");
     }
 }
