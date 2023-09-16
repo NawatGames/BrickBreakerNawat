@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,26 +12,28 @@ public class FirstBallHandler : MonoBehaviour
     public bool isFirstFakeBall;
     public GameObject FirstFakeBall;
 
-    private void Update()
+    private void Start()
     {
-        ResetFirstFakeBall();
+        isFirstFakeBall = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void FlipIsFirstFakeBall()
     {
-        if(collision.gameObject == FirstFakeBall) 
-        {
-            isFirstFakeBall = false;
-            Instantiate(FirstFakeBall, new Vector2(collision.transform.position.x, collision.transform.position.y), Quaternion.identity);
-        }
+        isFirstFakeBall = !isFirstFakeBall;
     }
 
-    private void ResetFirstFakeBall()
+    private void OnEnable()
     {
-        if (turnManager.TurnEndEvent!=null)
-        {
-            isFirstFakeBall = true;
-        }
+        turnManager.TurnEndEvent.AddListener(FlipIsFirstFakeBall);
+    }
+    
+    private void OnDisable()
+    {
+        turnManager.TurnEndEvent.RemoveListener(FlipIsFirstFakeBall);
     }
 
+    public bool IsFirstFakeBall()
+    {
+        return isFirstFakeBall;
+    }
 }

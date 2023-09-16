@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,22 @@ public class TurnManager : MonoBehaviour
     public int MaxTurns = 2; // Defina o número máximo de turnos aqui
 
     private int currentTurn = 0;
+    
+    //TESTE, TIRAR DEPOIS
+    [SerializeField] private FakeBallSpawner fakeBallSpawner;
+    
+    private void OnEnable()
+    {
+        fakeBallSpawner.SpawnLastFakeBallEvent.AddListener(EndTurn);
+        TurnEndEvent.AddListener(StartTurn);
+    }
+
+    private void OnDisable()
+    {
+        fakeBallSpawner.SpawnLastFakeBallEvent.RemoveListener(EndTurn);
+        TurnEndEvent.RemoveListener(StartTurn);
+    }
+    //
 
     void Start()
     {
@@ -29,7 +46,7 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    public void EndTurn()
+    public void EndTurn(Vector2 position)
     {
         TurnEndEvent.Invoke();
     }

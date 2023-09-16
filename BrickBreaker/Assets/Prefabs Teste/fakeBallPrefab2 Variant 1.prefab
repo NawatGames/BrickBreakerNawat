@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3432311767312126010, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
       propertyPath: m_Name
-      value: fakeBallPrefab2 Variant
+      value: fakeBallPrefab2
       objectReference: {fileID: 0}
     - target: {fileID: 5013662169313120000, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
       propertyPath: m_RootOrder
@@ -57,15 +57,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5660581199144578295, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
       propertyPath: m_Color.b
-      value: 0.7830189
+      value: 0.9254902
       objectReference: {fileID: 0}
     - target: {fileID: 5660581199144578295, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
       propertyPath: m_Color.g
-      value: 0.2696244
+      value: 0.8731299
       objectReference: {fileID: 0}
     - target: {fileID: 5660581199144578295, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
       propertyPath: m_Color.r
-      value: 0.75882894
+      value: 0.317647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a66958c05ffe48c4594000f3d3192796, type: 3}

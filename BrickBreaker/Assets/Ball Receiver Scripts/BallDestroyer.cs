@@ -5,11 +5,22 @@ using UnityEngine.Events;
 
 public class BallDestroyer : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    [SerializeField] private ReceiverCollision receiverCollision;
+    private void OnBallCollisionEnter(Collision2D ballCollision)
     {
-        if (collision.gameObject.CompareTag("Ball"))
+        if (ballCollision.gameObject.CompareTag("Ball"))
         {
-            Destroy(gameObject);
+            Destroy(ballCollision.gameObject);
         }
+    }
+
+    private void OnEnable()
+    {
+        receiverCollision.ReceiverCollisionEvent.AddListener(OnBallCollisionEnter);
+    }
+
+    private void OnDisable()
+    {
+        receiverCollision.ReceiverCollisionEvent.RemoveListener(OnBallCollisionEnter);
     }
 }

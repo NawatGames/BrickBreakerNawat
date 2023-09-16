@@ -1,18 +1,20 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class LastBallHandler : MonoBehaviour
 {
-    public UnityEvent EndTurnEvent; 
-    
-    void Start()
+    [SerializeField] private TurnManager turnManager;
+    public GameObject[] ballList;
+
+    private void Update()
     {
-        GameObject[] bolinhas = GameObject.FindGameObjectsWithTag("Bolinha");
-        
-        if (bolinhas.Length == 1)
-        {
-            EndTurnEvent.Invoke();
-        }
+        ballList = GameObject.FindGameObjectsWithTag("Ball");
+    }
+    
+    public bool isLastBall()
+    {
+        return ballList.Length == 1;
     }
 }

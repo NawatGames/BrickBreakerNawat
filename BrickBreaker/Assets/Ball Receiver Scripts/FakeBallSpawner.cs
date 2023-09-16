@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class FakeBallSpawner : MonoBehaviour
 {
     public FirstBallHandler firstBallHandler;
+    [SerializeField] private LastBallHandler lastBallHandler;
     public GameObject fakeBallPrefab; 
-    public GameObject FirstFakeBallPrefab;     private ReceiverCollision receiverCollision; 
+    public GameObject firstFakeBallPrefab;
+    public GameObject lastFakeBallPrefab;
+    private ReceiverCollision receiverCollision;
+    public UnityEvent<Vector2> SpawnFirstFakeBallEvent;
+    public UnityEvent<Vector2> SpawnLastFakeBallEvent;
 
     void Start()
     {
@@ -18,25 +25,58 @@ public class FakeBallSpawner : MonoBehaviour
         }
     }
 
-    void Check()
+    void Check(Collision2D ballCollision)
     {
         // Verificar se isFirstFakeBall é verdadeiro
-        if (firstBallHandler.isFirstFakeBall)
-            SpawnFirstFakeBall();
-        else
-            NormalFakeBall();
-    }
-
-    void SpawnFirstFakeBall()
-    {
-        if (FirstFakeBallPrefab != null)
+        if (lastBallHandler.isLastBall())
         {
-            Instantiate(FirstFakeBallPrefab, receiverCollision.transform.position, Quaternion.identity);
+            SpawnLastFakeBallEvent.Invoke(ballCollision.transform.position);
+        }
+        else
+        {
+            if (firstBallHandler.IsFirstFakeBall())
+            {
+                SpawnFirstFakeBallEvent.Invoke(ballCollision.transform.position);
+                firstBallHandler.FlipIsFirstFakeBall();
+            }
+            else
+                NormalFakeBall(ballCollision.transform.position);
         }
     }
 
-    public void NormalFakeBall()
+    private void OnEnable()
     {
-        GameObject fakeBall = Instantiate(fakeBallPrefab, transform.position, Quaternion.identity);
+        SpawnFirstFakeBallEvent.AddListener(SpawnFirstFakeBall);
+        SpawnLastFakeBallEvent.AddListener(SpawnLastFakeBall);
+    }
+
+    private void OnDisable()
+    {
+        SpawnFirstFakeBallEvent.RemoveListener(SpawnFirstFakeBall);
+        SpawnLastFakeBallEvent.RemoveListener(SpawnLastFakeBall);
+    }
+    
+    void SpawnFirstFakeBall(Vector2 position)
+    {
+        if (firstFakeBallPrefab != null)
+        {
+            Instantiate(firstFakeBallPrefab, position, Quaternion.identity);
+        }
+    }
+    
+    public void NormalFakeBall(Vector2 position)
+    {
+        if (fakeBallPrefab != null)
+        {
+            Instantiate(fakeBallPrefab, position, Quaternion.identity);
+        }
+    }
+    
+    public void SpawnLastFakeBall(Vector2 position)
+    {
+        if (lastFakeBallPrefab != null)
+        {
+            Instantiate(lastFakeBallPrefab, position, Quaternion.identity);
+        }
     }
 }
