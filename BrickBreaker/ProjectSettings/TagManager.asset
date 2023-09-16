@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Receiver
+  - Bolinha
+  - Ball
   layers:
   - Default
   - TransparentFX

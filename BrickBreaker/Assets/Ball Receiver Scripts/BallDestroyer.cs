@@ -1,23 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BallDestroyer : MonoBehaviour
 {
-    private ReceiverCollision receiverCollision;
-
-    void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        receiverCollision = FindObjectOfType<ReceiverCollision>();
-        if (receiverCollision != null)
-        {
-            receiverCollision.ReceiverCollisionEvent.AddListener(DestroyBall);
-        }
-    }
-
-    void DestroyBall()
-    {
-        if (gameObject.CompareTag("Bolinha"))//Tag do objeto a ser destruido
+        if (collision.gameObject.CompareTag("Ball"))
         {
             Destroy(gameObject);
         }
