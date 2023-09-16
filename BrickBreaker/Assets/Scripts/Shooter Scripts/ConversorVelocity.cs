@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public partial class ConvertVelocityVector : MonoBehaviour
+public partial class ConversorVelocity : MonoBehaviour
 {
     public Vector2 ConvertDirection(Vector2 direction, float absoluteVelocity)
     {   
