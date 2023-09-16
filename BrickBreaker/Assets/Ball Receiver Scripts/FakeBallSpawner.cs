@@ -28,7 +28,7 @@ public class FakeBallSpawner : MonoBehaviour
     void Check(Collision2D ballCollision)
     {
         // Verificar se isFirstFakeBall é verdadeiro
-        if (lastBallHandler.isLastBall())
+        if (lastBallHandler.IsLastBall())
         {
             SpawnLastFakeBallEvent.Invoke(ballCollision.transform.position);
         }

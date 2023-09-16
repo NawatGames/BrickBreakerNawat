@@ -13,7 +13,7 @@ public class LastBallHandler : MonoBehaviour
         ballList = GameObject.FindGameObjectsWithTag("Ball");
     }
     
-    public bool isLastBall()
+    public bool IsLastBall()
     {
         return ballList.Length == 1;
     }
