@@ -17,38 +17,52 @@ public class InputFilter : MonoBehaviour
         float deltaY = position.y - initialPosition.y;
         float angle = Mathf.Atan2(deltaY, deltaX);
         float clampedAngle;
-        if(angle < 0f){
+        float x;
+        float y;
+        if(angle < angleClamp * Mathf.Deg2Rad){
             if (angle > -Mathf.PI / 2)
             {
                 clampedAngle = angleClamp * Mathf.Deg2Rad;
+                x = deltaX * Mathf.Cos(clampedAngle);
+                y = x * Mathf.Tan(clampedAngle);
             }
             else
             {
                 clampedAngle = (180-angleClamp) * Mathf.Deg2Rad;
+                x = -deltaX * Mathf.Cos(clampedAngle);
+                y = x * Mathf.Tan(clampedAngle);
             }
         }
         else
         {
-            clampedAngle = Mathf.Clamp(angle, angleClamp*Mathf.Deg2Rad, (180f-angleClamp)*Mathf.Deg2Rad);
+            if (angle > (180 - angleClamp) * Mathf.Deg2Rad)
+            {
+                clampedAngle = (180-angleClamp) * Mathf.Deg2Rad;
+                x = -deltaX * Mathf.Cos(clampedAngle);
+                y = x * Mathf.Tan(clampedAngle);
+            }
+            else
+            {
+                return position - initialPosition;
+            }
         }
-        float x = initialPosition.x + Mathf.Cos(clampedAngle) * Math.Abs(deltaX);
-        float y = initialPosition.y + Mathf.Sin(clampedAngle) * Math.Abs(deltaY);
+        Debug.Log(new Vector2(x, y));
         return new Vector2(x, y);
     }
 
     void OnEnable()
     {
         rawInput.worldspacePointerUpEvent.AddListener(OnWorldspacePointerUp);
-    }
+    } 
 
     void OnDisable()
     {
         rawInput.worldspacePointerUpEvent.RemoveListener(OnWorldspacePointerUp);
     }
     
-    private void OnWorldspacePointerUp(Vector2 position)
+    private void OnWorldspacePointerUp(Vector2 direction)
     {
-        FilteredInputEvent.Invoke(AngleClamp(position));
+        FilteredInputEvent.Invoke(AngleClamp(direction));
     }
 
     public void SetInitialPosition(Vector2 position){
