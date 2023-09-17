@@ -4,15 +4,45 @@ using UnityEngine;
 
 public class LinePreview : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private RawInput rawInput;
+    private Vector2 _initialPosition;
+    [SerializeField] private LineRenderer lineRenderer;
+    [SerializeField] private InputFilter inputFilter;
+    [SerializeField] private GameObject ballShooter;
+    [SerializeField] private LineRaycast lineRaycast;
+    void OnEnable()
     {
-        
+        rawInput.worldspacePointerDownEvent.AddListener(OnWorldspacePointerDown);
+        rawInput.worldspacePointerDragEvent.AddListener(OnWorldspacePointerDrag);
+        rawInput.worldspacePointerUpEvent.AddListener(OnWorldspacePointerUp);
+    }
+    void OnDisable()
+    {
+        rawInput.worldspacePointerDownEvent.RemoveListener(OnWorldspacePointerDown);
+        rawInput.worldspacePointerDragEvent.RemoveListener(OnWorldspacePointerDrag);
+        rawInput.worldspacePointerUpEvent.RemoveListener(OnWorldspacePointerUp);
+    }
+    void OnWorldspacePointerDown(Vector2 position)
+    {
+        _initialPosition = ballShooter.transform.position;
+    }
+    void OnWorldspacePointerDrag(Vector2 position)
+    {
+        lineRenderer.enabled = true;
+        UpdateLineRenderer(_initialPosition, inputFilter.AngleClamp(position) + _initialPosition);
+    }
+    void OnWorldspacePointerUp(Vector2 position)
+    {
+        lineRenderer.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    void UpdateLineRenderer(Vector2 initialPosition, Vector2 finalPosition)
     {
-        
+        Vector3[] points = new Vector3[2];
+        points[0] = initialPosition;
+        points[1] = finalPosition;
+        lineRenderer.positionCount = 2;
+        lineRenderer.SetPositions(points);
     }
 }
+
