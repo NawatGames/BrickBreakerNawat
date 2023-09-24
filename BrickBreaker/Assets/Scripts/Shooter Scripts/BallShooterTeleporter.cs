@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class BallShooterTeleporter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private FakeBallSpawner fakeBallSpawner;
+
+    private void teleportShooter(Vector2 position)
     {
-        
+        this.gameObject.transform.position = position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        fakeBallSpawner.SpawnFirstFakeBallEvent.AddListener(teleportShooter);
+    }
+
+    private void OnDisable()
+    {
+        fakeBallSpawner.SpawnFirstFakeBallEvent.RemoveListener(teleportShooter);
     }
 }

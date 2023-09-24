@@ -6,8 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/FakeBallSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/FakeBallSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/LastBallHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/LastBallHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/BallDestroyer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/BallDestroyer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/FakeBallSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/FakeBallSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/FirstBallHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/FirstBallHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/LastBallHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/LastBallHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/ReceiverCollision.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/ReceiverCollision.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/TurnManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/TurnManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterSpriteEnabler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterSpriteEnabler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterTeleporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/InputDisabler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/InputDisabler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/Shooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/Shooter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +35,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConvertVelocityVector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputFilter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Input Scripts/LineRendererPointer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Input Scripts/RawInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShooterLIneRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -32,26 +45,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Receptor-de-Bolinha&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\kaive\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\kaive\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\kaive\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\kaive\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\kaive\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\kaive\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Unity.exe" />

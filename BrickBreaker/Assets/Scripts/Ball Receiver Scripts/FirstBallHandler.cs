@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 
 public class FirstBallHandler : MonoBehaviour
 {
-    [SerializeField] private TurnManager turnManager;
+    [FormerlySerializedAs("turnManager")] [SerializeField] private GameManager gameManager;
     public bool isFirstFakeBall;
     public GameObject FirstFakeBall;
 
@@ -24,12 +25,12 @@ public class FirstBallHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        turnManager.TurnEndEvent.AddListener(FlipIsFirstFakeBall);
+        gameManager.TurnEndEvent.AddListener(FlipIsFirstFakeBall);
     }
     
     private void OnDisable()
     {
-        turnManager.TurnEndEvent.RemoveListener(FlipIsFirstFakeBall);
+        gameManager.TurnEndEvent.RemoveListener(FlipIsFirstFakeBall);
     }
 
     public bool IsFirstFakeBall()

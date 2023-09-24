@@ -8,6 +8,7 @@ public class ReceiverCollision : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
             // Dispara o evento de colisão com o Receiver.
-            ReceiverCollisionEvent.Invoke(collision);
+            if(collision.gameObject.CompareTag("Ball"))
+                ReceiverCollisionEvent.Invoke(collision);
     }
 }

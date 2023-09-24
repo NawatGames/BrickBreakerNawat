@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TurnManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public UnityEvent TurnEndEvent;
     public int MaxTurns = 2; // Defina o número máximo de turnos aqui
+    private int MaxBallCount = 3;
 
     private int currentTurn = 0;
     
@@ -54,5 +55,14 @@ public class TurnManager : MonoBehaviour
     public int GetCurrentTurn()
     {
         return currentTurn;
+    }
+    
+    public int GetMaxBallCount()
+    {
+        return MaxBallCount;
+    }
+    public void SetMaxBallCount(int newMaxBallCount)
+    {
+        MaxBallCount = newMaxBallCount;
     }
 }

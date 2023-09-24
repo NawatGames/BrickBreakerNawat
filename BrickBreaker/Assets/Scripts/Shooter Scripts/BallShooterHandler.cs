@@ -7,16 +7,19 @@ using UnityEngine.Events;
 
 public class BallShooterHandler : MonoBehaviour
 {
-    private int _maxBallCount = 3;
+    private int _maxBallCount;
     [SerializeField] private float shootingDelay = 0.1f;
     // Start is called before the first frame update
     [SerializeField] private InputFilter inputFilter;
+    [SerializeField] private GameManager gameManager;
     public UnityEvent StartShootBallEvent;
     public UnityEvent<Vector2> ShootBallEvent;
     public UnityEvent EndShootBallEvent;
-
+    
     private void OnFilteredInput(Vector2 direction)
     {
+        
+        _maxBallCount = gameManager.GetMaxBallCount();
         StartCoroutine(BallSpawnerIterator(direction));
     }
 
