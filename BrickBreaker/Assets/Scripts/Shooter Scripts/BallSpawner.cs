@@ -5,7 +5,6 @@ using UnityEngine;
 public class BallSpawner : MonoBehaviour
 {
     public GameObject playerBall;
-    [SerializeField] private InputFilter inputFilter;
     [SerializeField] private float absoluteVelocity = 10f;
     private ConvertVelocityVector _convertVelocityVector;
 
@@ -23,16 +22,4 @@ public class BallSpawner : MonoBehaviour
     {
         _convertVelocityVector = this.gameObject.AddComponent<ConvertVelocityVector>();
     }
-    
-    private void OnEnable()
-    {
-        inputFilter.FilteredInputEvent.AddListener(InstanciarBolinha);
-    }
-
-    private void OnDisable()
-    {
-        inputFilter.FilteredInputEvent.RemoveListener(InstanciarBolinha);
-    }
-    
-    
 }

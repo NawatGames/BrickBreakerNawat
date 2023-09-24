@@ -9,6 +9,7 @@ public class ShooterLIneRenderer : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private InputFilter inputFilter;
     [SerializeField] private GameObject ballShooter;
+    [SerializeField] private ShooterRaycast shooterRaycast;
     void OnEnable(){
         rawInput.worldspacePointerDownEvent.AddListener(OnWorldspacePointerDown);
         rawInput.worldspacePointerDragEvent.AddListener(OnWorldspacePointerDrag);
@@ -25,7 +26,7 @@ public class ShooterLIneRenderer : MonoBehaviour
     }
     void OnWorldspacePointerDrag(Vector2 position){
         lineRenderer.enabled = true;
-        UpdateLineRenderer(_initialPosition, inputFilter.AngleClamp(position) + _initialPosition);
+        UpdateLineRenderer(_initialPosition, shooterRaycast.GetRaycastHitPosition(inputFilter.AngleClamp(position), _initialPosition));
     }
     void OnWorldspacePointerUp(Vector2 position){
         lineRenderer.enabled = false;

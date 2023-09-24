@@ -6,7 +6,7 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     public GameObject playerBall;
-    [SerializeField] private InputFilter inputFilter;
+    [SerializeField] private BallShooterHandler ballShooterHandler;
     [SerializeField] private float absoluteVelocity = 10f;
     private ConvertVelocityVector _convertVelocityVector;
 
@@ -27,12 +27,12 @@ public class Shooter : MonoBehaviour
     
     private void OnEnable()
     {
-        inputFilter.FilteredInputEvent.AddListener(InstanciarBolinha);
+        ballShooterHandler.ShootBallEvent.AddListener(InstanciarBolinha);
     }
 
     private void OnDisable()
     {
-        inputFilter.FilteredInputEvent.RemoveListener(InstanciarBolinha);
+        ballShooterHandler.ShootBallEvent.RemoveListener(InstanciarBolinha);
     }
     
     
