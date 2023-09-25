@@ -8,8 +8,7 @@ public class IntEvent : UnityEvent<int> { }
 
 public class BallDamage : MonoBehaviour
 {
-    public int damage = 10;
-    public IntEvent TileCollisionDamageEvent; 
+    public int damage = 1;
     private BallCollisionHandler ballCollisionHandler;
     public UnityEvent OnDamageValueChanged;
 
@@ -18,20 +17,19 @@ public class BallDamage : MonoBehaviour
         ballCollisionHandler = this.gameObject.GetComponent<BallCollisionHandler>();
     }
 
-    private void OnEnable ()
+    private void TileCollisionDamageEventCaller(Collision2D collision)
+    {
+        collision.gameObject.GetComponent<TileHealth>().TileHitEvent.Invoke(damage);
+    }
+
+    private void OnEnable()
     {
         ballCollisionHandler.TileCollisionEvent.AddListener(TileCollisionDamageEventCaller);
     }
 
-    private void OnDisable ()
+    private void OnDisable()
     {
         ballCollisionHandler.TileCollisionEvent.RemoveListener(TileCollisionDamageEventCaller);
-    }
-
-    private void TileCollisionDamageEventCaller()
-    {
-        Debug.Log("TileCollisionDamageEventCaller");
-        TileCollisionDamageEvent.Invoke(damage);
     }
 
     public void SetDamage(int newDamage)

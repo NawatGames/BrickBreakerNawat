@@ -23,7 +23,7 @@ public class LayerController : MonoBehaviour
         ballCollisionHandler.WallCollisionEvent.RemoveListener(ChangeBallLayerOnCollision);
     }
 
-    private void ChangeBallLayerOnCollision()
+    private void ChangeBallLayerOnCollision(Collision2D collision2D)
     {
         Debug.Log("ChangeBallLayerOnCollision");
         root.layer = LayerMask.NameToLayer("BallLayer2");

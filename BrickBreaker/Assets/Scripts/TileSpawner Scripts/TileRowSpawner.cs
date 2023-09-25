@@ -26,7 +26,7 @@ public class TileRowSpawner : MonoBehaviour
 
     public void SpawnRow()
     {
-        Vector3 spawnPosition = transform.position; // Posição inicial de spawn.
+        Vector2 spawnPosition = transform.position; // Posição inicial de spawn.
 
         foreach (GameObject prefab in tilePrefabs)
         {

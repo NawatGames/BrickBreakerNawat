@@ -11,6 +11,7 @@ public class InputFilter : MonoBehaviour
     public Vector2 initialPosition;
     [SerializeField] private float angleClamp = 20f;
     public UnityEvent<Vector2> FilteredInputEvent;
+    private bool isDragging = false;
     
     public Vector2 AngleClamp(Vector2 position){
         {
@@ -55,20 +56,31 @@ public class InputFilter : MonoBehaviour
     void OnEnable()
     {
         rawInput.worldspacePointerUpEvent.AddListener(OnWorldspacePointerUp);
+        rawInput.worldspacePointerDragEvent.AddListener(OnWorldSpaceDrag);
     } 
 
     void OnDisable()
     {
         rawInput.worldspacePointerUpEvent.RemoveListener(OnWorldspacePointerUp);
+        rawInput.worldspacePointerDragEvent.RemoveListener(OnWorldSpaceDrag);
     }
     
     private void OnWorldspacePointerUp(Vector2 direction)
     {
-        FilteredInputEvent.Invoke(AngleClamp(direction));
+        if (isDragging)
+        {
+            FilteredInputEvent.Invoke(AngleClamp(direction));
+            isDragging = false;
+        }
     }
 
     public void SetInitialPosition(Vector2 position){
         initialPosition = position;
+    }
+
+    private void OnWorldSpaceDrag(Vector2 empty)
+    {
+        isDragging = true;
     }
     
 }

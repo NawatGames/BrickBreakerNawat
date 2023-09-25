@@ -172,10 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c029973b2be573e46967cb17c5261f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  TileCollisionDamageEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  damage: 1
   OnDamageValueChanged:
     m_PersistentCalls:
       m_Calls: []

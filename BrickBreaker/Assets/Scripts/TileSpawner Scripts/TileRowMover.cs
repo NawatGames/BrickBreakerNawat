@@ -12,7 +12,7 @@ public class TileRowMover : MonoBehaviour
 
     void MoveTileRows()
     {
-        GameObject[] tileRows = GameObject.FindGameObjectsWithTag("Tijolo");//Coloca a tag do objeto
+        GameObject[] tileRows = GameObject.FindGameObjectsWithTag("Tile");//Coloca a tag do objeto
 
         foreach (GameObject row in tileRows)
         {
