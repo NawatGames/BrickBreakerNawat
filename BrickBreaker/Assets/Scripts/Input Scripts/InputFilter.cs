@@ -69,7 +69,15 @@ public class InputFilter : MonoBehaviour
     {
         if (isDragging)
         {
-            FilteredInputEvent.Invoke(AngleClamp(direction));
+            if (direction.y < 0)
+            {
+                FilteredInputEvent.Invoke(AngleClamp(new Vector2(1f, 0.1f)));
+            }
+            else
+            {
+                FilteredInputEvent.Invoke(AngleClamp(direction));
+            }
+
             isDragging = false;
         }
     }
