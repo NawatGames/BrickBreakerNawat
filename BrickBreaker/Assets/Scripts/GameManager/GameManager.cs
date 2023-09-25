@@ -8,22 +8,17 @@ public class GameManager : MonoBehaviour
 {
     public UnityEvent TurnEndEvent;
     public int MaxTurns = 2; // Defina o número máximo de turnos aqui
-    private int MaxBallCount = 3;
+    private int MaxBallCount = 30;
 
     private int currentTurn = 0;
     
-    //TESTE, TIRAR DEPOIS
-    [SerializeField] private FakeBallSpawner fakeBallSpawner;
-    
     private void OnEnable()
     {
-        fakeBallSpawner.SpawnLastFakeBallEvent.AddListener(EndTurn);
         TurnEndEvent.AddListener(StartTurn);
     }
 
     private void OnDisable()
     {
-        fakeBallSpawner.SpawnLastFakeBallEvent.RemoveListener(EndTurn);
         TurnEndEvent.RemoveListener(StartTurn);
     }
     //

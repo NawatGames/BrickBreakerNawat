@@ -6,25 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/BallDestroyer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/BallDestroyer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/FakeBallSpawner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/FakeBallSpawner.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/FirstBallHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/FirstBallHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/LastBallHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/LastBallHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/ReceiverCollision.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/ReceiverCollision.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/TurnManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ball Receiver Scripts/TurnManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab2 Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab2 Variant 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab2 Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab2 Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterSpriteEnabler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterSpriteEnabler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterTeleporter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/InputDisabler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/InputDisabler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/Shooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/Shooter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/InputScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InputScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/FakeBallSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/FakeBallSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/LayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/LayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputFilter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/LinePreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/LinePreview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/LineRaycast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/LineRaycast.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/ShooterRaycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/ShooterRaycast.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FakeBall/FakeBall.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0

@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5013662169313120000}
   - component: {fileID: 5660581199144578295}
+  - component: {fileID: -491244043508534082}
   m_Layer: 0
   m_Name: fakeBallPrefab
-  m_TagString: FakeBall
+  m_TagString: FirstFakeBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3432311767312126010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.16413501, y: -0.45663553, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-491244043508534082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3432311767312126010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f24d821b3eb204181c67388d7bf871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

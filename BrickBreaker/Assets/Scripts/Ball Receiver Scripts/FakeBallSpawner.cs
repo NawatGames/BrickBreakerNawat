@@ -30,17 +30,17 @@ public class FakeBallSpawner : MonoBehaviour
         // Verificar se isFirstFakeBall é verdadeiro
         if (lastBallHandler.IsLastBall())
         {
-            SpawnLastFakeBallEvent.Invoke(ballCollision.transform.position);
+            SpawnLastFakeBallEvent.Invoke(new Vector2(ballCollision.transform.position.x, -4));
         }
         else
         {
             if (firstBallHandler.IsFirstFakeBall())
             {
-                SpawnFirstFakeBallEvent.Invoke(ballCollision.transform.position);
+                SpawnFirstFakeBallEvent.Invoke(new Vector2(ballCollision.transform.position.x, -4));
                 firstBallHandler.FlipIsFirstFakeBall();
             }
             else
-                NormalFakeBall(ballCollision.transform.position);
+                NormalFakeBall(new Vector2(ballCollision.transform.position.x, -4));
         }
     }
 

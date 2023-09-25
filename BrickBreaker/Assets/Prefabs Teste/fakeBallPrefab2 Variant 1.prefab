@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3432311767312126010, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
       propertyPath: m_Name
-      value: fakeBallPrefab2
+      value: fakeBallPrefab2 Variant 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432311767312126010, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
+      propertyPath: m_TagString
+      value: FakeBall
       objectReference: {fileID: 0}
     - target: {fileID: 5013662169313120000, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
       propertyPath: m_RootOrder
@@ -67,5 +71,24 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.317647
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -491244043508534082, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
+--- !u!1 &1222011208576840653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3432311767312126010, guid: a66958c05ffe48c4594000f3d3192796, type: 3}
+  m_PrefabInstance: {fileID: 4564241981090096119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5514147560117368276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222011208576840653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7eeeec4d8495044e914e4648ff54e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1

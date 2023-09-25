@@ -13,41 +13,43 @@ public class InputFilter : MonoBehaviour
     public UnityEvent<Vector2> FilteredInputEvent;
     
     public Vector2 AngleClamp(Vector2 position){
-        float deltaX = position.x - initialPosition.x;
-        float deltaY = position.y - initialPosition.y;
-        float angle = Mathf.Atan2(deltaY, deltaX);
-        float clampedAngle;
-        float x;
-        float y;
-        if(angle < angleClamp * Mathf.Deg2Rad){
-            if (angle > -Mathf.PI / 2)
-            {
-                clampedAngle = angleClamp * Mathf.Deg2Rad;
-                x = deltaX * Mathf.Cos(clampedAngle);
-                y = x * Mathf.Tan(clampedAngle);
-            }
-            else
-            {
-                clampedAngle = (180-angleClamp) * Mathf.Deg2Rad;
-                x = -deltaX * Mathf.Cos(clampedAngle);
-                y = x * Mathf.Tan(clampedAngle);
-            }
-        }
-        else
         {
-            if (angle > (180 - angleClamp) * Mathf.Deg2Rad)
-            {
-                clampedAngle = (180-angleClamp) * Mathf.Deg2Rad;
-                x = -deltaX * Mathf.Cos(clampedAngle);
-                y = x * Mathf.Tan(clampedAngle);
+            float deltaX = position.x - initialPosition.x;
+            float deltaY = position.y - initialPosition.y;
+            float angle = Mathf.Atan2(deltaY, deltaX);
+            float clampedAngle;
+            float x;
+            float y;
+            if(angle < angleClamp * Mathf.Deg2Rad){
+                if (angle > -Mathf.PI / 2)
+                {
+                    clampedAngle = angleClamp * Mathf.Deg2Rad;
+                    x = deltaX * Mathf.Cos(clampedAngle);
+                    y = x * Mathf.Tan(clampedAngle);
+                }
+                else
+                {
+                    clampedAngle = (180-angleClamp) * Mathf.Deg2Rad;
+                    x = -deltaX * Mathf.Cos(clampedAngle);
+                    y = x * Mathf.Tan(clampedAngle);
+                }
             }
             else
             {
-                return position - initialPosition;
+                if (angle > (180 - angleClamp) * Mathf.Deg2Rad)
+                {
+                    clampedAngle = (180-angleClamp) * Mathf.Deg2Rad;
+                    x = -deltaX * Mathf.Cos(clampedAngle);
+                    y = x * Mathf.Tan(clampedAngle);
+                }
+                else
+                {
+                    return position - initialPosition;
+                }
             }
+            Debug.Log(new Vector2(x, y));
+            return new Vector2(x, y);
         }
-        Debug.Log(new Vector2(x, y));
-        return new Vector2(x, y);
     }
 
     void OnEnable()

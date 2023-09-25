@@ -9,7 +9,6 @@ public class LinePreview : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private InputFilter inputFilter;
     [SerializeField] private GameObject ballShooter;
-    [SerializeField] private LineRaycast lineRaycast;
     void OnEnable()
     {
         rawInput.worldspacePointerDownEvent.AddListener(OnWorldspacePointerDown);

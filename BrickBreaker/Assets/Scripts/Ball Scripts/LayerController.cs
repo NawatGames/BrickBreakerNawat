@@ -26,6 +26,6 @@ public class LayerController : MonoBehaviour
     private void ChangeBallLayerOnCollision()
     {
         Debug.Log("ChangeBallLayerOnCollision");
-        root.layer = LayerMask.NameToLayer("Layer2");
+        root.layer = LayerMask.NameToLayer("BallLayer2");
     }
 }

@@ -8,7 +8,7 @@ public class ShooterRaycast : MonoBehaviour
 
     public Vector2 GetRaycastHitPosition(Vector2 direction, Vector2 position)
     {
-        RaycastHit2D hit = Physics2D.Raycast(position, direction, Mathf.Infinity, LayerMask.GetMask("Layer2"));
+        RaycastHit2D hit = Physics2D.Raycast(position, direction, Mathf.Infinity, LayerMask.GetMask("Default"));
 
         // Check if the ray hits something
         if (hit.collider != null)
