@@ -21,6 +21,12 @@ public class TileHealth : MonoBehaviour
         }
     }
 
+    public void SetHealth(int health)
+    {
+        this.health = health;
+        TileHealthChangedEvent.Invoke(health);
+    }
+
     public int GetHealth()
     {
         return health;

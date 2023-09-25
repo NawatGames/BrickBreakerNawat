@@ -1,14 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class TileRowMover : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
     public delegate void RowMover();
     public UnityEvent RowMovedEvent;
     public float tileSize = 1.0f; // Tamanho de um tijolo.
 
+    
 
     void MoveTileRows()
     {
@@ -16,13 +20,28 @@ public class TileRowMover : MonoBehaviour
 
         foreach (GameObject row in tileRows)
         {
-            row.transform.Translate(Vector3.down * tileSize, Space.World);
+            if (row != null)
+            {
+                row.transform.DOMoveY(row.transform.position.y - tileSize, 0.5f);
+            }
         }
 
-        // Dispara o evento RowMovedEvent.
-        if (RowMovedEvent != null)
-        {
-            RowMovedEvent.Invoke();
-        }
+        StartCoroutine(WaitForAnimation());
+
+    }
+
+    private void OnEnable()
+    {
+        gameManager.TurnEndEvent.AddListener(MoveTileRows);
+    }
+
+    private void OnDisable()
+    {
+        gameManager.TurnEndEvent.RemoveListener(MoveTileRows);
+    }
+    private IEnumerator WaitForAnimation()
+    {
+        yield return new WaitForSeconds(0.5f);
+        RowMovedEvent.Invoke();
     }
 }

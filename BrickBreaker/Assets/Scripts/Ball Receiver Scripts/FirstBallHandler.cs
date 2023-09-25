@@ -23,14 +23,19 @@ public class FirstBallHandler : MonoBehaviour
         isFirstFakeBall = !isFirstFakeBall;
     }
 
+    public void ResetIsFirstFakeBall()
+    {
+        isFirstFakeBall = true;
+    }
+
     private void OnEnable()
     {
-        gameManager.TurnEndEvent.AddListener(FlipIsFirstFakeBall);
+        gameManager.TurnEndEvent.AddListener(ResetIsFirstFakeBall);
     }
     
     private void OnDisable()
     {
-        gameManager.TurnEndEvent.RemoveListener(FlipIsFirstFakeBall);
+        gameManager.TurnEndEvent.RemoveListener(ResetIsFirstFakeBall);
     }
 
     public bool IsFirstFakeBall()

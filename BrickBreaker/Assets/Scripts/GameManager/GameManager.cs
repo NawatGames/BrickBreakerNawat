@@ -7,10 +7,16 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public UnityEvent TurnEndEvent;
+    public UnityEvent GameOverEvent;
     public int MaxTurns = 2; // Defina o número máximo de turnos aqui
     [SerializeField] int MaxBallCount = 3000;
 
-    private int currentTurn = 0;
+    private int currentTurn;
+
+    private void Awake()
+    {
+        currentTurn = 1;
+    }
     
     private void OnEnable()
     {
@@ -22,11 +28,7 @@ public class GameManager : MonoBehaviour
         TurnEndEvent.RemoveListener(StartTurn);
     }
     //
-
-    void Start()
-    {
-        StartTurn();
-    }
+    
 
     public void StartTurn()
     {

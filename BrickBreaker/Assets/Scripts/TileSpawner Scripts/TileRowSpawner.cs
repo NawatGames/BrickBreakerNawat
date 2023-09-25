@@ -1,38 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TileRowSpawner : MonoBehaviour
 
 {
-    private TileRowMover _tileRowMover;
-    public GameObject[] tilePrefabs; // Lista de prefabs.
+    [SerializeField] private TileRowMover tileRowMover;
+    [SerializeField] private GameManager gameManager;
     public float spacing = 1.5f; //Espaços entre os tijolos
     public Transform spawnPoint;
-
-    void Awake()
+    [SerializeField] private LevelScriptableObject _level;
+    public UnityEvent RowSpawnedEvent;
+    public UnityEvent EndOfLevelEvent;
+    
+    void Start()
     {
-        _tileRowMover = this.gameObject.GetComponent<TileRowMover>();
+        SpawnRow();
     }
+    
     void OnEnable()
     {
-        _tileRowMover.RowMovedEvent.AddListener(SpawnRow);
+        tileRowMover.RowMovedEvent.AddListener(SpawnRow);
     }
 
     void OnDisable()
     {
-        _tileRowMover.RowMovedEvent.RemoveListener(SpawnRow);
+        tileRowMover.RowMovedEvent.RemoveListener(SpawnRow);
     }
 
     public void SpawnRow()
     {
-        Vector2 spawnPosition = transform.position; // Posição inicial de spawn.
-
-        foreach (GameObject prefab in tilePrefabs)
+        Vector2 spawnPosition = spawnPoint.position; // Posição inicial de spawn.
+        
+        if(gameManager.GetCurrentTurn() <= _level.levelRows.Length)
         {
-            Instantiate(prefab, spawnPosition, Quaternion.identity);
+            foreach (GameObject prefab in _level.levelRows[gameManager.GetCurrentTurn() - 1].rowObjects)
+            {
+                Instantiate(prefab, spawnPosition, Quaternion.identity);
             
-            spawnPosition.x += spacing;
+                spawnPosition.x += spacing;
+            }
         }
+        
+        else
+        {
+            EndOfLevelEvent.Invoke();
+        }
+        RowSpawnedEvent.Invoke();
     }
 }

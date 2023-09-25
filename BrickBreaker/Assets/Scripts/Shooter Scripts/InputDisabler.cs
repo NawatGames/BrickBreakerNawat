@@ -9,7 +9,7 @@ public class InputDisabler : MonoBehaviour
 {
     [SerializeField] private GameObject inputManager;
     [SerializeField] private BallShooterHandler ballShooterHandler;
-    [FormerlySerializedAs("turnManager")] [SerializeField] private GameManager gameManager;
+    [SerializeField] private TileRowSpawner tileRowSpawner;
 
     private void DisableInputManager()
     {
@@ -23,12 +23,12 @@ public class InputDisabler : MonoBehaviour
     private void OnEnable()
     {
         ballShooterHandler.StartShootBallEvent.AddListener(DisableInputManager);
-        gameManager.TurnEndEvent.AddListener(EnableInputManager);
+        tileRowSpawner.RowSpawnedEvent.AddListener(EnableInputManager);
     }
 
     private void OnDisable()
     {
         ballShooterHandler.StartShootBallEvent.RemoveListener(DisableInputManager);
-        gameManager.TurnEndEvent.RemoveListener(EnableInputManager);
+        tileRowSpawner.RowSpawnedEvent.RemoveListener(EnableInputManager);
     }
 }
