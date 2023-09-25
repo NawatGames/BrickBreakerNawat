@@ -382,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.292
+      value: 7.33
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1187,7 +1187,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   MaxTurns: 1000
-  MaxBallCount: 20
+  MaxBallCount: 3
 --- !u!114 &1386089907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1314,7 +1314,7 @@ Transform:
   m_GameObject: {fileID: 1526902367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.241, y: -4, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.28, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

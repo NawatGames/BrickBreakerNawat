@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent GameOverEvent;
     public int MaxTurns = 2; // Defina o número máximo de turnos aqui
     [SerializeField] int MaxBallCount = 3000;
+    private int _adderCount = 0;
 
     private int currentTurn;
 
@@ -17,18 +19,20 @@ public class GameManager : MonoBehaviour
     {
         currentTurn = 1;
     }
-    
+
     private void OnEnable()
     {
         TurnEndEvent.AddListener(StartTurn);
+        TurnEndEvent.AddListener(OnTurnEndSetMaxBallCount);
     }
 
     private void OnDisable()
     {
         TurnEndEvent.RemoveListener(StartTurn);
+        TurnEndEvent.RemoveListener(OnTurnEndSetMaxBallCount);
     }
     //
-    
+
 
     public void StartTurn()
     {
@@ -53,13 +57,19 @@ public class GameManager : MonoBehaviour
     {
         return currentTurn;
     }
-    
+
     public int GetMaxBallCount()
     {
         return MaxBallCount;
     }
-    public void SetMaxBallCount(int newMaxBallCount)
+
+    public void OnAdderTrigger()
     {
-        MaxBallCount = newMaxBallCount;
+        _adderCount++;
+    }
+    private void OnTurnEndSetMaxBallCount()
+    {
+        MaxBallCount = GetMaxBallCount() + _adderCount;
+        _adderCount = 0;
     }
 }

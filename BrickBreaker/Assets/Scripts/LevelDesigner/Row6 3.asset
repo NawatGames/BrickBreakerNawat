@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 781955fd036ab314c95191004ef232c5, type: 3}
-  m_Name: Row1
+  m_Name: Row6 3
   m_EditorClassIdentifier: 
-  turnCount: 1
+  turnCount: 6
   rowObjects:
   - {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
-  - {fileID: 8695064938521036159, guid: b81165ebdead7144bb06b9399dfb2a91, type: 3}
-  - {fileID: 3786338268243483808, guid: 24d02fa2d651193449b00ae66b904839, type: 3}
   - {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
   - {fileID: 8695064938521036159, guid: b81165ebdead7144bb06b9399dfb2a91, type: 3}
+  - {fileID: 8695064938521036159, guid: b81165ebdead7144bb06b9399dfb2a91, type: 3}
+  - {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
