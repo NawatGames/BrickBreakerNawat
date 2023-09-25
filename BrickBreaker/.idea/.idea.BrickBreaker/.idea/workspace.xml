@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab2 Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab2 Variant 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputFilter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Tile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Tile.prefab" afterDir="false" />
     </list>
@@ -110,7 +108,7 @@
       <workItem from="1694822194481" duration="5513000" />
       <workItem from="1694899477615" duration="8000" />
       <workItem from="1694899494871" duration="729000" />
-      <workItem from="1695652414888" duration="10192000" />
+      <workItem from="1695652414888" duration="10963000" />
     </task>
     <servers />
   </component>

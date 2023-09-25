@@ -15,41 +15,48 @@ public class InputFilter : MonoBehaviour
     
     public Vector2 AngleClamp(Vector2 position){
         {
-            float deltaX = position.x - initialPosition.x;
-            float deltaY = position.y - initialPosition.y;
-            float angle = Mathf.Atan2(deltaY, deltaX);
-            float clampedAngle;
-            float x;
-            float y;
-            if(angle < angleClamp * Mathf.Deg2Rad){
-                if (angle > -Mathf.PI / 2)
-                {
-                    clampedAngle = angleClamp * Mathf.Deg2Rad;
-                    x = deltaX * Mathf.Cos(clampedAngle);
-                    y = x * Mathf.Tan(clampedAngle);
-                }
-                else
-                {
-                    clampedAngle = (180-angleClamp) * Mathf.Deg2Rad;
-                    x = -deltaX * Mathf.Cos(clampedAngle);
-                    y = x * Mathf.Tan(clampedAngle);
-                }
+            if (Math.Abs(position.x - initialPosition.x) < 0.001 && position.y - initialPosition.y < 0)
+            {
+                return new Vector2(Mathf.Cos(angleClamp * Mathf.Deg2Rad), Mathf.Sin(angleClamp * Mathf.Deg2Rad));
             }
             else
             {
-                if (angle > (180 - angleClamp) * Mathf.Deg2Rad)
-                {
-                    clampedAngle = (180-angleClamp) * Mathf.Deg2Rad;
-                    x = -deltaX * Mathf.Cos(clampedAngle);
-                    y = x * Mathf.Tan(clampedAngle);
+                float deltaX = position.x - initialPosition.x;
+                float deltaY = position.y - initialPosition.y;
+                float angle = Mathf.Atan2(deltaY, deltaX);
+                float clampedAngle;
+                float x;
+                float y;
+                if(angle < angleClamp * Mathf.Deg2Rad){
+                    if (angle > -Mathf.PI / 2)
+                    {
+                        clampedAngle = angleClamp * Mathf.Deg2Rad;
+                        x = deltaX * Mathf.Cos(clampedAngle);
+                        y = x * Mathf.Tan(clampedAngle);
+                    }
+                    else
+                    {
+                        clampedAngle = (180-angleClamp) * Mathf.Deg2Rad;
+                        x = -deltaX * Mathf.Cos(clampedAngle);
+                        y = x * Mathf.Tan(clampedAngle);
+                    }
                 }
                 else
                 {
-                    return position - initialPosition;
+                    if (angle > (180 - angleClamp) * Mathf.Deg2Rad)
+                    {
+                        clampedAngle = (180-angleClamp) * Mathf.Deg2Rad;
+                        x = -deltaX * Mathf.Cos(clampedAngle);
+                        y = x * Mathf.Tan(clampedAngle);
+                    }
+                    else
+                    {
+                        return position - initialPosition;
+                    }
                 }
+                Debug.Log(new Vector2(x, y));
+                return new Vector2(x, y);
             }
-            Debug.Log(new Vector2(x, y));
-            return new Vector2(x, y);
         }
     }
 
@@ -69,16 +76,8 @@ public class InputFilter : MonoBehaviour
     {
         if (isDragging)
         {
-            if (direction.y < 0)
-            {
-                FilteredInputEvent.Invoke(AngleClamp(new Vector2(1f, 0.1f)));
-            }
-            else
-            {
-                FilteredInputEvent.Invoke(AngleClamp(direction));
-            }
-
             isDragging = false;
+            FilteredInputEvent.Invoke(AngleClamp(direction));
         }
     }
 
