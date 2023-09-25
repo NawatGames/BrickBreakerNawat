@@ -23,7 +23,10 @@ public class LayerController : MonoBehaviour
 
     private void ChangeBallLayerOnCollision(Collision2D collision2D)
     {
-        Debug.Log("ChangeBallLayerOnCollision");
-        root.layer = LayerMask.NameToLayer("BallLayer2");
+        if (collision2D.gameObject.CompareTag("Wall") || collision2D.gameObject.CompareTag("Tile"))
+        {
+            Debug.Log("ChangeBallLayerOnCollision");
+            root.layer = LayerMask.NameToLayer("BallLayer2");
+        }
     }
 }

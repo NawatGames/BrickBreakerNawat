@@ -13,7 +13,10 @@ public class LastFakeBall : MonoBehaviour
     {
         _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         FirstFakeBall = GameObject.FindGameObjectWithTag("FirstFakeBall");
-        destination = FirstFakeBall.transform.position;
+        if (FirstFakeBall != null)
+        {
+            destination = FirstFakeBall.transform.position;
+        }
     }
 
     private void Start()
