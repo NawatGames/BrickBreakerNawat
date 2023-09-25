@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2229195086042604966}
   - component: {fileID: 2828552982087534622}
   - component: {fileID: 2529657767130351597}
-  - component: {fileID: 2105655921441654957}
+  - component: {fileID: 8956454702884167996}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Tile
@@ -186,9 +186,9 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &2105655921441654957
+--- !u!60 &8956454702884167996
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

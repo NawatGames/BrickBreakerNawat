@@ -20,11 +20,11 @@ public class TileHealthSpawnSetter : MonoBehaviour
         int i = UnityEngine.Random.Range(1, 100);
         if (i < 20)
         {
-            tileHealth.SetHealth(_gameManager.GetMaxBallCount() * 2);
+            tileHealth.SetHealth(_gameManager.GetMaxBallCount() * 3 + _gameManager.GetCurrentTurn());
         }
         else
         {
-            tileHealth.SetHealth(_gameManager.GetMaxBallCount());
+            tileHealth.SetHealth(_gameManager.GetMaxBallCount() + _gameManager.GetCurrentTurn() * 5);
         }
     }
 }

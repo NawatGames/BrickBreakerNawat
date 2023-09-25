@@ -29,6 +29,10 @@ public class LastFakeBall : MonoBehaviour
     private void OnTweenComplete()
     {
         _gameManager.TurnEndEvent.Invoke();
-        Destroy(this.gameObject);
+        GameObject[] fakeBallList = GameObject.FindGameObjectsWithTag("FakeBall");
+        foreach (GameObject fakeBall in fakeBallList)
+        {
+            Destroy(fakeBall);
+        }
     }
 }

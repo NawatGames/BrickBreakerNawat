@@ -11,6 +11,7 @@ TagManager:
   - FakeBall
   - FirstFakeBall
   - GameManager
+  - Shooter
   layers:
   - Default
   - TransparentFX

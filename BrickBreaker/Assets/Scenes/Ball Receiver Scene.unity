@@ -128,7 +128,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 49148677028324315, guid: 02fc24eb8966eed4c80abc733e6b0251, type: 3}
   m_PrefabInstance: {fileID: 2060491790}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &457818915
+--- !u!1001 &448576707
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -137,15 +137,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4487430210875326785, guid: 3c8e9383b56f30a45afafedef3decfd2, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4487430210875326785, guid: 3c8e9383b56f30a45afafedef3decfd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.05
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 4487430210875326785, guid: 3c8e9383b56f30a45afafedef3decfd2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7
+      value: 5.69
       objectReference: {fileID: 0}
     - target: {fileID: 4487430210875326785, guid: 3c8e9383b56f30a45afafedef3decfd2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4487430210875326796, guid: 3c8e9383b56f30a45afafedef3decfd2, type: 3}
       propertyPath: m_Name
-      value: Bolinha (2)
+      value: Bolinha (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4487430210875326796, guid: 3c8e9383b56f30a45afafedef3decfd2, type: 3}
       propertyPath: m_TagString
@@ -202,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4487430210875326785, guid: 3c8e9383b56f30a45afafedef3decfd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.57
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: 4487430210875326785, guid: 3c8e9383b56f30a45afafedef3decfd2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333ea922f99660140b3e029e1b8368f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnManager: {fileID: 778360871}
+  gameManager: {fileID: 778360871}
   ballList: []
 --- !u!1001 &1298195747
 PrefabInstance:
@@ -306,7 +306,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4487430210875326785, guid: 3c8e9383b56f30a45afafedef3decfd2, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4487430210875326785, guid: 3c8e9383b56f30a45afafedef3decfd2, type: 3}
       propertyPath: m_LocalPosition.x

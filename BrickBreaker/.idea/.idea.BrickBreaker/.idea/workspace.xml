@@ -6,8 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputFilter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab2 Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab2 Variant 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ball Receiver Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ball Receiver Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/LastBallHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/LastBallHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FakeBall/FakeBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FakeBall/FakeBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FakeBall/LastFakeBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FakeBall/LastFakeBall.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Tile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Tile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealthSpawnSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealthSpawnSetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +27,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FakeBall/FakeBall.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/CheckWinCondition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FakeBall/FakeBallCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameOverButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameOverMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelDesigner/LevelRowScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -108,7 +116,7 @@
       <workItem from="1694822194481" duration="5513000" />
       <workItem from="1694899477615" duration="8000" />
       <workItem from="1694899494871" duration="729000" />
-      <workItem from="1695652414888" duration="10963000" />
+      <workItem from="1695652414888" duration="16678000" />
     </task>
     <servers />
   </component>

@@ -10,6 +10,7 @@ public class FakeBall : MonoBehaviour
     private GameObject FirstFakeBall;
     private void Awake()
     {
+        
         FirstFakeBall = GameObject.FindGameObjectWithTag("FirstFakeBall");
         destination = FirstFakeBall.transform.position;
     }
@@ -23,6 +24,5 @@ public class FakeBall : MonoBehaviour
 
     private void OnTweenComplete()
     {
-        Destroy(this.gameObject);
     }
 }

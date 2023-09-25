@@ -8,14 +8,15 @@ public class LastBallHandler : MonoBehaviour
 {
     [FormerlySerializedAs("turnManager")] [SerializeField] private GameManager gameManager;
     public GameObject[] ballList;
-
-    private void Update()
-    {
-        ballList = GameObject.FindGameObjectsWithTag("Ball");
-    }
+    
     
     public bool IsLastBall()
     {
-        return ballList.Length == 1;
+        GameObject[] fakeBallList = GameObject.FindGameObjectsWithTag("FakeBall");
+        return fakeBallList.Length == gameManager.GetMaxBallCount() - 2;
+    }
+    public int GetBallCount()
+    {
+        return ballList.Length;
     }
 }

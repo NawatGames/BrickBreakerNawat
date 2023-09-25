@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileRowMover: {fileID: 151877813}
   gameManager: {fileID: 1386089906}
-  spacing: 1
+  spacing: 0.9
   spawnPoint: {fileID: 6492468}
   _level: {fileID: 11400000, guid: 2051f008f669304428ff3606541a1a54, type: 2}
   RowSpawnedEvent:
@@ -228,7 +228,7 @@ MonoBehaviour:
   RowMovedEvent:
     m_PersistentCalls:
       m_Calls: []
-  tileSize: 1
+  tileSize: 0.9
 --- !u!4 &151877814
 Transform:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466481104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.18, y: 0.95, z: -10}
+  m_LocalPosition: {x: 2, y: 0.95, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -535,7 +535,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.080357194
+        value: 0.035717607
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -669,8 +669,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0037878603
-        value: 0.11607203
+        time: 0
+        value: 0.035711616
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -777,7 +777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.105
+      value: 4.705
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1248,7 +1248,7 @@ GameObject:
   - component: {fileID: 1526902374}
   m_Layer: 0
   m_Name: Shooter
-  m_TagString: Untagged
+  m_TagString: Shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1534,9 +1534,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2105655921441654957, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105655921441654957, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105655921441654957, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105655921441654957, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105655921441654957, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105655921441654957, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.16
+      objectReference: {fileID: 0}
     - target: {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
       propertyPath: m_Name
-      value: Tile
+      value: SpawnPoint
       objectReference: {fileID: 0}
     - target: {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
       propertyPath: m_IsActive
@@ -1633,6 +1657,38 @@ PrefabInstance:
     - target: {fileID: 2229195086042604986, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229195086042604987, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2529657767130351597, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956454702884167996, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956454702884167996, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956454702884167996, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956454702884167996, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956454702884167996, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956454702884167996, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
