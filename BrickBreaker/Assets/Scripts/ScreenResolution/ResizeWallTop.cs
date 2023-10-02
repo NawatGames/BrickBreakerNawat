@@ -7,20 +7,17 @@ public class ResizeWallTop : MonoBehaviour
 
     void Start()
     {
-        // Salva a escala inicial do objeto
+        //escala inicial
         initialScale = transform.localScale;
-
-        // Salva a resolução inicial da tela
         initialResolutionHeight = Screen.height;
 
-        // Chama o método de redimensionamento na inicialização e sempre que a resolução da tela mudar
         Resize();
         Screen.orientation = ScreenOrientation.Portrait;
     }
 
     void Update()
     {
-        // Verifica se a resolução da tela mudou
+        //checa a resolucao
         if (Screen.height != initialResolutionHeight)
         {
             Resize();
@@ -29,13 +26,13 @@ public class ResizeWallTop : MonoBehaviour
 
     private void Resize()
     {
-        // Obtém a resolução da tela atual
+        //tela atual
         float currentResolutionHeight = Screen.height;
 
-        // Calcula o fator de escala apenas para a altura
+        // calcula a escala, so precisa da altura
         float scaleHeight = currentResolutionHeight / initialResolutionHeight;
 
-        // Aplica o fator de escala à escala inicial do objeto (apenas na direção vertical)
+        // aplica os fatores
         Vector3 newScale = new Vector3(initialScale.x, initialScale.y * scaleHeight, initialScale.z);
         transform.localScale = newScale;
     }

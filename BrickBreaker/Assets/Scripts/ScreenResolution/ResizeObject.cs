@@ -8,21 +8,21 @@ public class ResizeObject : MonoBehaviour
 
     void Start()
     {
-        // Salva a escala inicial do objeto
+        //escala inicial
         initialScale = transform.localScale;
 
-        // Salva a resolução inicial da tela
+        //resolucao da tela
         initialResolutionWidth = Screen.width;
         initialResolutionHeight = Screen.height;
 
-        // Chama o método de redimensionamento na inicialização e sempre que a resolução da tela mudar
+
         Resize();
         Screen.orientation = ScreenOrientation.Portrait;
     }
 
     void Update()
     {
-        // Verifica se a resolução da tela mudou
+        //checa a resolucao
         if (Screen.width != initialResolutionWidth || Screen.height != initialResolutionHeight)
         {
             Resize();
@@ -31,15 +31,15 @@ public class ResizeObject : MonoBehaviour
 
     private void Resize()
     {
-        // Obtém a resolução da tela atual
+        //tela atual
         float currentResolutionWidth = Screen.width;
         float currentResolutionHeight = Screen.height;
 
-        // Calcula os fatores de escala para largura e altura
+        // calcula escala para largura e altura
         float scaleWidth = currentResolutionWidth / initialResolutionWidth;
         float scaleHeight = currentResolutionHeight / initialResolutionHeight;
 
-        // Aplica os fatores de escala à escala inicial do objeto
+        // aplica os fatores
         Vector3 newScale = new Vector3(initialScale.x * scaleWidth, initialScale.y * scaleHeight, initialScale.z);
         transform.localScale = newScale;
     }
