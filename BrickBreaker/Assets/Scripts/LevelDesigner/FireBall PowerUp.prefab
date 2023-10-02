@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3786338268243483818}
   - component: {fileID: 3786338268243483813}
-  - component: {fileID: 3786338268243483812}
-  - component: {fileID: 3786338268243483815}
-  - component: {fileID: 3786338268243483814}
   - component: {fileID: 3786338268243483809}
+  - component: {fileID: 2305376723395154471}
+  - component: {fileID: 5862915870245460202}
+  - component: {fileID: 6457203865001134548}
   m_Layer: 0
-  m_Name: Adder PowerUp
+  m_Name: FireBall PowerUp
   m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -88,47 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3786338268243483812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3786338268243483808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09ba532d9b8c2c643ad4a18181c12235, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpRepeatableTrigger: {fileID: 3786338268243483814}
---- !u!114 &3786338268243483815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3786338268243483808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b763cb54e777a74a98923bf5cb84cd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpRepeatableTrigger: {fileID: 3786338268243483814}
---- !u!114 &3786338268243483814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3786338268243483808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 906f058682438b64fbe161bc71939357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PowerUpSuccessEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!60 &3786338268243483809
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -160,3 +119,49 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.43359375}
       - {x: 0.5, y: 0}
       - {x: 0.25, y: 0.43359375}
+--- !u!114 &2305376723395154471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3786338268243483808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4083e35152c4fe74ba23880333935189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireBallPrefab: {fileID: 4355788159433470632, guid: 3fc3238ede567494093bef5ecf27fa0f, type: 3}
+  powerUpUniqueTrigger: {fileID: 6457203865001134548}
+--- !u!114 &5862915870245460202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3786338268243483808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851ce81a18ee26544bce13fe7385331a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpRepeatableTrigger: {fileID: 0}
+  powerUpUniqueTrigger: {fileID: 6457203865001134548}
+--- !u!114 &6457203865001134548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3786338268243483808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c6d3fd035764445869d32b83928b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PowerUpSuccessEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PowerUpFailEvent:
+    m_PersistentCalls:
+      m_Calls: []

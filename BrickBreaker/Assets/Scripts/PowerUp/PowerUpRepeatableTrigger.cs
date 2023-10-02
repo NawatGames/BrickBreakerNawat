@@ -9,7 +9,7 @@ public class PowerUpRepeatableTrigger : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Ball"))
+        if (other.GetComponent<BallHandler>() != null)
         {
             PowerUpSuccessEvent.Invoke(other.gameObject.GetComponent<BallHandler>());
         }

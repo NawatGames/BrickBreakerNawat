@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 public class LastBallHandler : MonoBehaviour
 {
-    [FormerlySerializedAs("turnManager")] [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameManager gameManager;
     public GameObject[] ballList;
     
     

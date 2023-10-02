@@ -1,17 +1,30 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUpContactDestroyer : MonoBehaviour
+public class PowerUpEndTurnDestroyer : MonoBehaviour
 {
     [SerializeField] private PowerUpRepeatableTrigger powerUpRepeatableTrigger;
     [SerializeField] private PowerUpUniqueTrigger powerUpUniqueTrigger;
+    private GameManager _gameManager;
+    private bool _isTriggered = false;
 
+    private void Awake()
+    {
+        _gameManager = FindObjectOfType<GameManager>();
+    }
 
+    private void OnTurnEnd()
+    {
+        if (_isTriggered)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    
     private void OnPowerUpSuccess(BallHandler ballHandler)
     {
-        Destroy(this.gameObject);
+        _isTriggered = true;
     }
 
     private void OnEnable()
@@ -25,6 +38,7 @@ public class PowerUpContactDestroyer : MonoBehaviour
         {
             powerUpUniqueTrigger.PowerUpSuccessEvent.AddListener(OnPowerUpSuccess);
         }
+        _gameManager.TurnEndEvent.AddListener(OnTurnEnd);
     }
 
     private void OnDisable()
@@ -38,5 +52,6 @@ public class PowerUpContactDestroyer : MonoBehaviour
         {
             powerUpUniqueTrigger.PowerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
         }
+        _gameManager.TurnEndEvent.RemoveListener(OnTurnEnd);
     }
 }

@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
     public UnityEvent GameOverEvent;
     public int MaxTurns = 2; // Defina o número máximo de turnos aqui
     [SerializeField] int MaxBallCount = 3000;
+    private int _destroyedBallCount = 0;
     private int _adderCount = 0;
+    public UnityEvent BallDestroyedEvent;
 
     private int currentTurn;
 
@@ -24,12 +26,16 @@ public class GameManager : MonoBehaviour
     {
         TurnEndEvent.AddListener(StartTurn);
         TurnEndEvent.AddListener(OnTurnEndSetMaxBallCount);
+        TurnEndEvent.AddListener(OnTurnEndResetDestroyedBallCount);
+        BallDestroyedEvent.AddListener(OnBallDestroyed);
     }
 
     private void OnDisable()
     {
         TurnEndEvent.RemoveListener(StartTurn);
         TurnEndEvent.RemoveListener(OnTurnEndSetMaxBallCount);
+        TurnEndEvent.RemoveListener(OnTurnEndResetDestroyedBallCount);
+        BallDestroyedEvent.RemoveListener(OnBallDestroyed);
     }
     //
 
@@ -71,5 +77,20 @@ public class GameManager : MonoBehaviour
     {
         MaxBallCount = GetMaxBallCount() + _adderCount;
         _adderCount = 0;
+    }
+
+    private void OnTurnEndResetDestroyedBallCount()
+    {
+        _destroyedBallCount = 0;
+    }
+
+    private void OnBallDestroyed()
+    {
+        _destroyedBallCount++;
+        Debug.Log("BallDestroyed");
+        if (_destroyedBallCount >= MaxBallCount)
+        {
+            GameOverEvent.Invoke();
+        }
     }
 }

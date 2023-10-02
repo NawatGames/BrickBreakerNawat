@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class BallDestroyer : MonoBehaviour
 {
     [SerializeField] private ReceiverCollision receiverCollision;
-    private void OnBallCollisionEnter(Collision2D ballCollision)
+    private void OnReceiverCollision(Collision2D ballCollision)
     {
         if (ballCollision.gameObject.CompareTag("Ball"))
         {
@@ -16,11 +16,11 @@ public class BallDestroyer : MonoBehaviour
 
     private void OnEnable()
     {
-        receiverCollision.ReceiverCollisionEvent.AddListener(OnBallCollisionEnter);
+        receiverCollision.ReceiverCollisionEvent.AddListener(OnReceiverCollision);
     }
 
     private void OnDisable()
     {
-        receiverCollision.ReceiverCollisionEvent.RemoveListener(OnBallCollisionEnter);
+        receiverCollision.ReceiverCollisionEvent.RemoveListener(OnReceiverCollision);
     }
 }

@@ -6,14 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/BallDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/BallDestroyer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/LastBallHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/LastBallHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Level 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Adder PowerUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Adder PowerUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row6 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row6 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row6.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealthSpawnSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealthSpawnSetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpContactDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpContactDestroyer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpRepeatableTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpRepeatableTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +33,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelDesigner/LevelRowScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelDesigner/LevelScriptableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpContactDestroyer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpEndTurnDestroyer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tile/EmptyTile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tile/TileHealth.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -116,6 +120,16 @@
       <workItem from="1694899477615" duration="8000" />
       <workItem from="1694899494871" duration="729000" />
       <workItem from="1695652414888" duration="20685000" />
+      <workItem from="1695681407211" duration="38000" />
+      <workItem from="1695681459626" duration="9000" />
+      <workItem from="1695686815753" duration="1859000" />
+      <workItem from="1695753235651" duration="320000" />
+      <workItem from="1695758007832" duration="499000" />
+      <workItem from="1695758539336" duration="9000" />
+      <workItem from="1695764958364" duration="3092000" />
+      <workItem from="1695945292556" duration="735000" />
+      <workItem from="1696009009934" duration="26000" />
+      <workItem from="1696281643444" duration="6008000" />
     </task>
     <servers />
   </component>

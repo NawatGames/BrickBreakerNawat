@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-    [SerializeField]
-    private new Rigidbody2D rigidbody2D;
-    [SerializeField]
-    private float speed;
+    private Rigidbody2D _rigidbody2D;
 
-    public void SetDirection(Vector2 direction)
+    private void Awake()
     {
-        rigidbody2D.velocity = direction.normalized * speed;
-
+        _rigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        if (Mathf.Abs(_rigidbody2D.velocity.y) < 0.05f)
+        {
+            _rigidbody2D.AddForce(new Vector2(0, -0.2f), ForceMode2D.Impulse);
+        }
+    }
 }
