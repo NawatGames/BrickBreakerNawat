@@ -6,16 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/BallDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/BallDestroyer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/FirstBallHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/FirstBallHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/LastBallHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/LastBallHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FakeBall/FirstFakeBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FakeBall/FirstFakeBall.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Adder PowerUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Adder PowerUp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row6 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row6 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Row6.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpContactDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpContactDestroyer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpRepeatableTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpRepeatableTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/BallDestroyerTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/BallDestroyerTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +126,9 @@
       <workItem from="1695764958364" duration="3092000" />
       <workItem from="1695945292556" duration="735000" />
       <workItem from="1696009009934" duration="26000" />
-      <workItem from="1696281643444" duration="6008000" />
+      <workItem from="1696281643444" duration="6406000" />
+      <workItem from="1696288796911" duration="2046000" />
+      <workItem from="1696294833397" duration="40000" />
     </task>
     <servers />
   </component>

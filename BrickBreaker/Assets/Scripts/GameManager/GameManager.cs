@@ -69,6 +69,11 @@ public class GameManager : MonoBehaviour
         return MaxBallCount;
     }
 
+    public int GetDestroyedBallCount()
+    {
+        return _destroyedBallCount;
+    }
+
     public void OnAdderTrigger()
     {
         _adderCount++;
@@ -87,10 +92,5 @@ public class GameManager : MonoBehaviour
     private void OnBallDestroyed()
     {
         _destroyedBallCount++;
-        Debug.Log("BallDestroyed");
-        if (_destroyedBallCount >= MaxBallCount)
-        {
-            GameOverEvent.Invoke();
-        }
     }
 }

@@ -20,7 +20,7 @@ public class FirstBallHandler : MonoBehaviour
 
     public void FlipIsFirstFakeBall()
     {
-        isFirstFakeBall = !isFirstFakeBall;
+        isFirstFakeBall = false;
     }
 
     public void ResetIsFirstFakeBall()
