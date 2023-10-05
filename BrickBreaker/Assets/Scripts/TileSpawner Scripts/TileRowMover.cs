@@ -4,25 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class TileRowMover : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
     public delegate void RowMover();
     public UnityEvent RowMovedEvent;
-    public float tileSize = 1.0f; // Tamanho de um tijolo.
-
+    public float tileSize = 1.0f; // Tamanho de um tijolo
+    
     
 
     void MoveTileRows()
     {
-        GameObject[] tileRows = GameObject.FindGameObjectsWithTag("Tile");//Coloca a tag do objeto
+        TileHealth[] tileRows = GameObject.FindObjectsOfType<TileHealth>();
 
-        foreach (GameObject row in tileRows)
+        foreach (TileHealth row in tileRows)
         {
             if (row != null)
             {
-                row.transform.DOMoveY(row.transform.position.y - tileSize, 0.5f);
+                row.gameObject.transform.DOMoveY(row.gameObject.transform.position.y - tileSize, 0.5f);
             }
         }
 
