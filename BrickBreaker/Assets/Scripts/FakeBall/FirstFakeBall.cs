@@ -16,16 +16,16 @@ public class FirstFakeBall : MonoBehaviour
 
     private void OnEnable()
     {
-        _gameManager.TurnEndEvent.AddListener(OnTurnEnd);
+        _gameManager.turnEndEvent.AddListener(OnTurnEnd);
         if(_lastBallHandler.GetFakeBallCount() == 0 && _lastBallHandler.GetBallCount() == 1)
         {
-            _gameManager.TurnEndEvent.Invoke();
+            _gameManager.turnEndEvent.Invoke();
         }
     }
 
     private void OnDisable()
     {
-        _gameManager.TurnEndEvent.RemoveListener(OnTurnEnd);
+        _gameManager.turnEndEvent.RemoveListener(OnTurnEnd);
     }
 
     private void OnTurnEnd()

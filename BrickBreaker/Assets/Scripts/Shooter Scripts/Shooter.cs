@@ -11,7 +11,7 @@ public class Shooter : MonoBehaviour
     private ConvertVelocityVector _convertVelocityVector;
     private Vector2 _shooterPosition;
 
-    public void InstanciarBolinha(Vector2 direcao)
+    public void InstantiateBall(Vector2 direcao)
     {
         GameObject playerBallclone = Instantiate(playerBall, _shooterPosition, Quaternion.identity);
         Rigidbody2D rb = playerBallclone.GetComponent<Rigidbody2D>();
@@ -28,13 +28,13 @@ public class Shooter : MonoBehaviour
     
     private void OnEnable()
     {
-        ballShooterHandler.ShootBallEvent.AddListener(InstanciarBolinha);
+        ballShooterHandler.ShootBallEvent.AddListener(InstantiateBall);
         ballShooterHandler.StartShootBallEvent.AddListener(SetShooterPosition);
     }
 
     private void OnDisable()
     {
-        ballShooterHandler.ShootBallEvent.RemoveListener(InstanciarBolinha);
+        ballShooterHandler.ShootBallEvent.RemoveListener(InstantiateBall);
         ballShooterHandler.StartShootBallEvent.RemoveListener(SetShooterPosition);
     }
 

@@ -7,46 +7,46 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    public UnityEvent TurnEndEvent;
-    public UnityEvent GameOverEvent;
-    public int MaxTurns = 2; // Defina o número máximo de turnos aqui
-    [SerializeField] int MaxBallCount = 3000;
+    public UnityEvent turnEndEvent;
+    public UnityEvent gameOverEvent;
+    public int maxTurns = 2; // Defina o número máximo de turnos aqui
+    [SerializeField] int maxBallCount = 3000;
     private int _destroyedBallCount = 0;
     private int _adderCount = 0;
-    public UnityEvent BallDestroyedEvent;
+    public UnityEvent ballDestroyedEvent;
 
-    private int currentTurn;
+    private int _currentTurn;
 
     private void Awake()
     {
-        currentTurn = 1;
+        _currentTurn = 1;
     }
 
     private void OnEnable()
     {
-        TurnEndEvent.AddListener(StartTurn);
-        TurnEndEvent.AddListener(OnTurnEndSetMaxBallCount);
-        TurnEndEvent.AddListener(OnTurnEndResetDestroyedBallCount);
-        BallDestroyedEvent.AddListener(OnBallDestroyed);
+        turnEndEvent.AddListener(StartTurn);
+        turnEndEvent.AddListener(OnTurnEndSetMaxBallCount);
+        turnEndEvent.AddListener(OnTurnEndResetDestroyedBallCount);
+        ballDestroyedEvent.AddListener(OnBallDestroyed);
     }
 
     private void OnDisable()
     {
-        TurnEndEvent.RemoveListener(StartTurn);
-        TurnEndEvent.RemoveListener(OnTurnEndSetMaxBallCount);
-        TurnEndEvent.RemoveListener(OnTurnEndResetDestroyedBallCount);
-        BallDestroyedEvent.RemoveListener(OnBallDestroyed);
+        turnEndEvent.RemoveListener(StartTurn);
+        turnEndEvent.RemoveListener(OnTurnEndSetMaxBallCount);
+        turnEndEvent.RemoveListener(OnTurnEndResetDestroyedBallCount);
+        ballDestroyedEvent.RemoveListener(OnBallDestroyed);
     }
     //
 
 
     public void StartTurn()
     {
-        currentTurn++;
+        _currentTurn++;
 
-        if (currentTurn <= MaxTurns)
+        if (_currentTurn <= maxTurns)
         {
-            Debug.Log("Turno " + currentTurn);
+            Debug.Log("Turno " + _currentTurn);
         }
         else
         {
@@ -56,17 +56,17 @@ public class GameManager : MonoBehaviour
 
     public void EndTurn(Vector2 position)
     {
-        TurnEndEvent.Invoke();
+        turnEndEvent.Invoke();
     }
 
     public int GetCurrentTurn()
     {
-        return currentTurn;
+        return _currentTurn;
     }
 
     public int GetMaxBallCount()
     {
-        return MaxBallCount;
+        return maxBallCount;
     }
 
     public int GetDestroyedBallCount()
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
     }
     private void OnTurnEndSetMaxBallCount()
     {
-        MaxBallCount = GetMaxBallCount() + _adderCount;
+        maxBallCount = GetMaxBallCount() + _adderCount;
         _adderCount = 0;
     }
 

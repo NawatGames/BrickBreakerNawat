@@ -12,6 +12,6 @@ public class ReceiverCollision : MonoBehaviour
             if(collision.gameObject.CompareTag("Ball"))
                 ReceiverCollisionEvent.Invoke(collision);
             if(collision.gameObject.CompareTag("Tile"))
-                gameManager.GameOverEvent.Invoke();
+                gameManager.gameOverEvent.Invoke();
     }
 }

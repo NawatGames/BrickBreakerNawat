@@ -33,12 +33,12 @@ public class TileRowMover : MonoBehaviour
 
     private void OnEnable()
     {
-        gameManager.TurnEndEvent.AddListener(MoveTileRows);
+        gameManager.turnEndEvent.AddListener(MoveTileRows);
     }
 
     private void OnDisable()
     {
-        gameManager.TurnEndEvent.RemoveListener(MoveTileRows);
+        gameManager.turnEndEvent.RemoveListener(MoveTileRows);
     }
     private IEnumerator WaitForAnimation()
     {

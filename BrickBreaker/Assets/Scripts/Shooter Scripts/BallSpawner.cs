@@ -8,7 +8,7 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] private float absoluteVelocity = 10f;
     private ConvertVelocityVector _convertVelocityVector;
 
-    public void InstanciarBolinha(Vector2 direcao)
+    public void InstantiateBall(Vector2 direcao)
     {
         GameObject playerBallclone = Instantiate(playerBall, this.gameObject.transform.position, Quaternion.identity);
         Rigidbody2D rb = playerBallclone.GetComponent<Rigidbody2D>();

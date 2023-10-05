@@ -30,12 +30,12 @@ public class FirstBallHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        gameManager.TurnEndEvent.AddListener(ResetIsFirstFakeBall);
+        gameManager.turnEndEvent.AddListener(ResetIsFirstFakeBall);
     }
     
     private void OnDisable()
     {
-        gameManager.TurnEndEvent.RemoveListener(ResetIsFirstFakeBall);
+        gameManager.turnEndEvent.RemoveListener(ResetIsFirstFakeBall);
     }
 
     public bool IsFirstFakeBall()
