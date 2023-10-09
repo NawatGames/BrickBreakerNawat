@@ -11,17 +11,17 @@ public class LastBallHandler : MonoBehaviour
     
     public bool IsLastBall()
     {
-        GameObject[] fakeBallList = GameObject.FindGameObjectsWithTag("FakeBall");
+        FakeBallHandler[] fakeBallList = GameObject.FindObjectsOfType<FakeBallHandler>();
         return fakeBallList.Length == gameManager.GetMaxBallCount() - 2 - gameManager.GetDestroyedBallCount();
     }
     public int GetFakeBallCount()
     {
-        GameObject[] fakeBallList = GameObject.FindGameObjectsWithTag("FakeBall");
+        FakeBallHandler[] fakeBallList = GameObject.FindObjectsOfType<FakeBallHandler>();
         return fakeBallList.Length;
     }
     public int GetBallCount()
     {
-        GameObject[] ballList = GameObject.FindGameObjectsWithTag("Ball");
+        BallHandler[] ballList = GameObject.FindObjectsOfType<BallHandler>();
         return ballList.Length;
     }
 }

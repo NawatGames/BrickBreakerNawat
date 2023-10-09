@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2828552982087534622}
   - component: {fileID: 2529657767130351597}
   - component: {fileID: 8956454702884167996}
+  - component: {fileID: -5662917725845856678}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Tile
@@ -167,6 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileHealth: {fileID: 2229195086042604967}
+  steepness: 0.1
+  midpoint: 40
+  multiplier: 50
 --- !u!50 &2529657767130351597
 Rigidbody2D:
   serializedVersion: 4
@@ -233,6 +237,30 @@ PolygonCollider2D:
       - {x: 0.421875, y: -0.421875}
       - {x: 0.46875, y: -0.359375}
       - {x: 0.4921875, y: -0.28515625}
+--- !u!114 &-5662917725845856678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2229195086042604985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4daab9995142544b820100d6b256a69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballDestroyerTile: {fileID: 0}
+  bombTilePower: {fileID: 0}
+  chestTileLoot: {fileID: 0}
+  emptyTile: {fileID: 0}
+  fireTilePower: {fileID: 0}
+  glassTileHealth: {fileID: 0}
+  rainbowTilePower: {fileID: 0}
+  tankTileHealth: {fileID: 0}
+  tileDestroyer: {fileID: 0}
+  tileHealth: {fileID: 2229195086042604967}
+  tileHealthDisplay: {fileID: 2229195086042604966}
+  tileHealthSpawnSetter: {fileID: 2828552982087534622}
 --- !u!1 &2229195087188707433
 GameObject:
   m_ObjectHideFlags: 0

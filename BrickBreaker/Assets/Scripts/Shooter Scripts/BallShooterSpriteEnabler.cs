@@ -8,7 +8,7 @@ public class BallShooterSpriteEnabler : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
     
-    [SerializeField] private BallShooterHandler ballShooterHandler;
+    [SerializeField] private Shooter ballShooterHandler;
     [SerializeField] private GameManager gameManager;
     
 

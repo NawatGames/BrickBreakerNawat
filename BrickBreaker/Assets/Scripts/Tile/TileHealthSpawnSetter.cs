@@ -15,7 +15,7 @@ public class TileHealthSpawnSetter : MonoBehaviour
 
     private void Start()
     {
-        _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
         RandomizeHealth();
     }
     

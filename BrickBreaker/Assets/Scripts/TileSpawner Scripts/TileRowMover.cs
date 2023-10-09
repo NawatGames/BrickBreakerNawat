@@ -17,9 +17,9 @@ public class TileRowMover : MonoBehaviour
 
     void MoveTileRows()
     {
-        TileHealth[] tileRows = GameObject.FindObjectsOfType<TileHealth>();
+        TileCollisionHandler[] tileRows = GameObject.FindObjectsOfType<TileCollisionHandler>();
 
-        foreach (TileHealth row in tileRows)
+        foreach (TileCollisionHandler row in tileRows)
         {
             if (row != null)
             {

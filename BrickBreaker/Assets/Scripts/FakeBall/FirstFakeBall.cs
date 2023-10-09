@@ -10,7 +10,7 @@ public class FirstFakeBall : MonoBehaviour
 
     private void Awake()
     {
-        _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
         _lastBallHandler = GameObject.FindObjectOfType<LastBallHandler>();
     }
 

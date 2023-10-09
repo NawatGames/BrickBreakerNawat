@@ -6,9 +6,9 @@ public class BombTilePower : MonoBehaviour
 {
     private void OnDestroy()
     {
-        GameObject[] tiles = GameObject.FindGameObjectsWithTag("Tile");
+        TileCollisionHandler[] tiles = TileCollisionHandler.FindObjectsOfType<TileCollisionHandler>();
 
-        foreach (GameObject tile in tiles)
+        foreach (TileCollisionHandler tile in tiles)
         {
             Destroy(tile);
         }
