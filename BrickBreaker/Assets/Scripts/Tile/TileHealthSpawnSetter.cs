@@ -7,7 +7,7 @@ using UnityEngine;
 public class TileHealthSpawnSetter : MonoBehaviour
 {
     private GameManager _gameManager;
-    [SerializeField] private TileHealth tileHealth;
+    [SerializeField] protected TileHealth tileHealth;
 
     private void Start()
     {
