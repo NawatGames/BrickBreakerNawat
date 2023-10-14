@@ -13,8 +13,8 @@ public class Shooter : MonoBehaviour
 
     public void InstanciarBolinha(Vector2 direcao)
     {
-        GameObject playerBallClone = Instantiate(playerBall, _shooterPosition, Quaternion.identity);
-        Rigidbody2D rb = playerBallClone.GetComponent<Rigidbody2D>();
+        GameObject playerBallclone = Instantiate(playerBall, _shooterPosition, Quaternion.identity);
+        Rigidbody2D rb = playerBallclone.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.velocity = _convertVelocityVector.ConvertDirection(direcao, absoluteVelocity);

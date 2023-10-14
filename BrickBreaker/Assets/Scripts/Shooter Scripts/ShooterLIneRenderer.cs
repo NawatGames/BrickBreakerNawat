@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShooterLineRenderer : MonoBehaviour
+public class ShooterLIneRenderer : MonoBehaviour
 {
     [SerializeField] private RawInput rawInput;
     private Vector2 _initialPosition;
