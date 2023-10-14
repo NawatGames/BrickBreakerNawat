@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
+
     private Rigidbody2D _rigidbody2D;
+
 
     private void Awake()
     {
