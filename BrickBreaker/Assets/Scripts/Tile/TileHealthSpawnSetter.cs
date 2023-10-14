@@ -7,7 +7,7 @@ using UnityEngine;
 public class TileHealthSpawnSetter : MonoBehaviour
 {
     private GameManager _gameManager;
-    [SerializeField] protected TileHealth tileHealth;
+    [SerializeField] private TileHealth tileHealth;
 
     [SerializeField] private float steepness = 0.1f; // Ajuste a inclinação da função logística
     [SerializeField] private float midpoint = 40f; // Ajuste a posição do ponto médio para a transição

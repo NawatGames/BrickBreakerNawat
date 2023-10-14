@@ -6,11 +6,11 @@ using UnityEngine.Events;
 public class BallDestroyer : MonoBehaviour
 {
     [SerializeField] private ReceiverCollision receiverCollision;
-    private void OnReceiverCollision(Transform transform)
+    private void OnReceiverCollision(Collision2D ballCollision)
     {
-        if (transform.gameObject.CompareTag("Ball"))
+        if (ballCollision.gameObject.CompareTag("Ball"))
         {
-            Destroy(transform.gameObject);
+            Destroy(ballCollision.gameObject);
         }
     }
 

@@ -14,62 +14,40 @@ public class FakeBallSpawner : MonoBehaviour
     private ReceiverCollision receiverCollision;
     public UnityEvent<Vector2> SpawnFirstFakeBallEvent;
     public UnityEvent<Vector2> SpawnLastFakeBallEvent;
-    private GameManager _gameManager;
 
     void Start()
     {
-        _gameManager = GameObject.FindObjectOfType<GameManager>();
         receiverCollision = FindObjectOfType<ReceiverCollision>();
+
         if (receiverCollision != null)
         {
             receiverCollision.ReceiverCollisionEvent.AddListener(Check);
         }
-        if (_gameManager != null)
-        {
-            _gameManager.BallDestroyedEvent.AddListener(OnBallDestroyed);
-        }
     }
 
-    void Check(Transform transform)
+    void Check(Collision2D ballCollision)
     {
         // Verificar se isFirstFakeBall é verdadeiro
         if (lastBallHandler.IsLastBall())
         {
-            SpawnLastFakeBallEvent.Invoke(new Vector2(transform.position.x, -4));
+            SpawnLastFakeBallEvent.Invoke(new Vector2(ballCollision.transform.position.x, -4));
         }
         else
         {
             if (firstBallHandler.IsFirstFakeBall())
             {
-                SpawnFirstFakeBallEvent.Invoke(new Vector2(transform.position.x, -4));
+                SpawnFirstFakeBallEvent.Invoke(new Vector2(ballCollision.transform.position.x, -4));
                 firstBallHandler.FlipIsFirstFakeBall();
             }
             else
-                NormalFakeBall(new Vector2(transform.position.x, -4));
+                NormalFakeBall(new Vector2(ballCollision.transform.position.x, -4));
         }
     }
 
     private void OnEnable()
     {
-
         SpawnFirstFakeBallEvent.AddListener(SpawnFirstFakeBall);
         SpawnLastFakeBallEvent.AddListener(SpawnLastFakeBall);
-    }
-
-    private void OnBallDestroyed()
-    {
-        StartCoroutine(WaitUntilFirstFakeBall());
-    }
-
-    private IEnumerator WaitUntilFirstFakeBall()
-    {
-        while (firstBallHandler.IsFirstFakeBall())
-        {
-            yield return null;
-        }
-        GameObject firstFakeBall = GameObject.FindGameObjectWithTag("FirstFakeBall");
-        Transform firstFakeBallTransform = firstFakeBall.transform;
-        Check(firstFakeBallTransform);
     }
 
     private void OnDisable()
