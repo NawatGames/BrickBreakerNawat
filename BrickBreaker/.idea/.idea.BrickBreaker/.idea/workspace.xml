@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/FireBall.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/FireBall.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/FireBallShader.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/FireBallShader.shader.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Adder PowerUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Adder PowerUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/BallDestroyerTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/BallDestroyerTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/FireBall PowerUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/FireBall PowerUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/RainbowTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/RainbowTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/ShooterLIneRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/ShooterLIneRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/BallDestroyerTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/BallDestroyerTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +44,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpContactDestroyer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpEndTurnDestroyer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScreenResolution/ResizeWallTop.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tile/CustomExplosion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tile/EmptyTile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tile/TileHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.21/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -37,26 +58,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\kaive\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\kaive\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\kaive\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\kaive\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\kaive\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\kaive\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Unity.exe" />
@@ -122,6 +143,10 @@
       <workItem from="1696009009934" duration="26000" />
       <workItem from="1696281643444" duration="6008000" />
       <workItem from="1697297991262" duration="2023000" />
+      <workItem from="1697306883667" duration="8000" />
+      <workItem from="1697306900220" duration="123000" />
+      <workItem from="1697309002562" duration="1692000" />
+      <workItem from="1697478712996" duration="11943000" />
     </task>
     <servers />
   </component>
