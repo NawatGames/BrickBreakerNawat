@@ -41,11 +41,11 @@ public class ShooterLIneRenderer : MonoBehaviour
         Vector2 angle = angleClamp;
 
         for(int n = 1; n < lines; n++){
-            RaycastHit2D hit = Physics2D.Raycast(temp + angle * .01f, angle, Mathf.Infinity, LayerMask.GetMask("Default") | LayerMask.GetMask("Tile"));
+            RaycastHit2D hit = Physics2D.Raycast(temp + angle * .01f, angle, Mathf.Infinity);
 
             points[n] = hit.point;
             angle = Vector2.Reflect(angle.normalized, hit.normal);
-            temp = points[n]; // Error ## point in (0,0) for some reason
+            temp = points[n];
         }
 
         // foreach(var item in points){
