@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/BallDestroyerTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/BallDestroyerTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +63,14 @@
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Builds/Windows/1.2.0\Quebrador de Tijolos.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\kaive\Documents\IMT\NAWAT\BrickBreakerNawat\Builds\Windows\1.2.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\kaive\Documents\IMT\NAWAT\BrickBreakerNawat\BrickBreaker -debugCodeOptimization" />
@@ -128,7 +138,7 @@
       <workItem from="1697306883667" duration="8000" />
       <workItem from="1697306900220" duration="123000" />
       <workItem from="1697309002562" duration="1692000" />
-      <workItem from="1697478712996" duration="15254000" />
+      <workItem from="1697478712996" duration="15889000" />
     </task>
     <servers />
   </component>
