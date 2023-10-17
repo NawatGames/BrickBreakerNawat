@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: c9352c2e30f4aed428a4cd11547f1b1c, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -217,7 +217,7 @@ MonoBehaviour:
   gameManager: {fileID: 1386089906}
   spacing: 1.1536
   spawnPoint: {fileID: 6492468}
-  _level: {fileID: 11400000, guid: 2051f008f669304428ff3606541a1a54, type: 2}
+  _level: {fileID: 11400000, guid: fe9462db5f9ad9d448f79073175e9656, type: 2}
   RowSpawnedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1729,6 +1729,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2229195086042604987, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ec248b51c4cf10b4ba56296487b21d26, type: 2}
     - target: {fileID: 2529657767130351597, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
       propertyPath: m_GravityScale
       value: 0
