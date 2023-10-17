@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/FireBall.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/FireBall.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/FireBallShader.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/FireBallShader.shader.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs Teste/fakeBallPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/playerBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test10802400.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Adder PowerUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/Adder PowerUp.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/BallDestroyerTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/BallDestroyerTile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/FireBall PowerUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/FireBall PowerUp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/RainbowTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelDesigner/RainbowTile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/ShooterLIneRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/ShooterLIneRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/BallDestroyerTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/BallDestroyerTile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +128,7 @@
       <workItem from="1697306883667" duration="8000" />
       <workItem from="1697306900220" duration="123000" />
       <workItem from="1697309002562" duration="1692000" />
-      <workItem from="1697478712996" duration="11943000" />
+      <workItem from="1697478712996" duration="14641000" />
     </task>
     <servers />
   </component>
