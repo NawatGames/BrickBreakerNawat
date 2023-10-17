@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,7 +32,17 @@ public class ShooterLIneRenderer : MonoBehaviour
     void OnWorldspacePointerUp(Vector2 position){
         lineRenderer.enabled = false;
     }
-    
+
+    // void Start()
+    // {
+    //     _initialPosition = ballShooter.transform.position;
+    // }
+    //
+    // private void Update()
+    // {
+    //     UpdateLineRenderer(_initialPosition, new Vector2(_initialPosition.x, _initialPosition.y + 10));
+    // }
+
     void UpdateLineRenderer(Vector2 initialPosition, Vector2 finalPosition){
         Vector3 []points = new Vector3[2];
         points[0] = initialPosition;

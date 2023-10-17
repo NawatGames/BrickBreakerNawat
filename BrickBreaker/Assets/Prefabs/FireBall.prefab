@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireBallDamage: 2
+  fireBallMaterial: {fileID: 2100000, guid: 9b4dcf745db52ff4fa3fdc2ad0537fbe, type: 2}

@@ -8,13 +8,16 @@ public class TileHealth : MonoBehaviour
 {
     [SerializeField] private int health = 10;
     public UnityEvent NoHealthEvent;
-    public UnityEvent<int> TileHitEvent;
+    public UnityEvent<GameObject> TileHitEvent;
     public UnityEvent<int> TileHealthChangedEvent;
-    
-    private void OnTileHit(int damage)
+
+    public void SubtractHealth(int damage, GameObject ball)
     {
+        
         health -= damage;
+        TileHitEvent.Invoke(ball);
         TileHealthChangedEvent.Invoke(health);
+        Debug.Log("Hit");
         if (health <= 0)
         {
             NoHealthEvent.Invoke();
@@ -31,14 +34,5 @@ public class TileHealth : MonoBehaviour
     {
         return health;
     }
-
-    private void OnEnable()
-    {
-        TileHitEvent.AddListener(OnTileHit);
-    }
-
-    private void OnDisable()
-    {
-        TileHitEvent.RemoveListener(OnTileHit);
-    }
+    
 }
