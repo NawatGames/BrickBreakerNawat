@@ -8,6 +8,8 @@ public class FireBall : MonoBehaviour
 {
     private BallHandler _ballHandler;
     [SerializeField] private int fireBallDamage = 2;
+    [SerializeField] private Material fireBallMaterial;
+    private Material _defaultMaterial;
 
     private void OnDisable()
     {
@@ -17,7 +19,7 @@ public class FireBall : MonoBehaviour
 
     private void OnCollision(Collision2D collision2D)
     {
-        _ballHandler.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        _ballHandler.gameObject.GetComponent<SpriteRenderer>().material = _defaultMaterial;
         _ballHandler.ballDamage.SetDamage(1);
         Destroy(this.gameObject);
     }
@@ -33,7 +35,8 @@ public class FireBall : MonoBehaviour
     {
         _ballHandler = ballHandler;
         _ballHandler.ballDamage.SetDamage(fireBallDamage);
-        _ballHandler.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        _defaultMaterial = _ballHandler.GetComponent<SpriteRenderer>().material;
+        _ballHandler.gameObject.GetComponent<SpriteRenderer>().material = fireBallMaterial;
         _ballHandler.GetComponent<BallCollisionHandler>().TileCollisionEvent.AddListener(OnCollision);
         _ballHandler.GetComponent<BallCollisionHandler>().WallCollisionEvent.AddListener(OnCollision);
     }

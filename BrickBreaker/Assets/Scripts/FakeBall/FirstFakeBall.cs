@@ -17,10 +17,6 @@ public class FirstFakeBall : MonoBehaviour
     private void OnEnable()
     {
         _gameManager.TurnEndEvent.AddListener(OnTurnEnd);
-        if(_lastBallHandler.GetFakeBallCount() == 0 && _lastBallHandler.GetBallCount() == 1)
-        {
-            _gameManager.TurnEndEvent.Invoke();
-        }
     }
 
     private void OnDisable()

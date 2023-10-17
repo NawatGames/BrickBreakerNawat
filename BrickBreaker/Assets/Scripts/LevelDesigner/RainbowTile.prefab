@@ -107,6 +107,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.6738929
       objectReference: {fileID: 0}
+    - target: {fileID: 2229195086042604987, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229195086042604987, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f951f94e97975145836872da0e9eb9d, type: 2}
+    - target: {fileID: 2229195087188707434, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229195087188707434, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
 --- !u!1 &6944918552930218709 stripped
@@ -127,3 +143,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glassTilePrefab: {fileID: 7753842968071526094, guid: 82e0ce43b3ed56d468393a30e374b86a, type: 3}
+--- !u!114 &3757115575061421711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6944918552930218709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bf040c052cf4a49bba0db60bd14b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialTime: 0.5
+  finalTime: 200000
+  speed: 2
