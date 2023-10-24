@@ -9,6 +9,8 @@ public class ElectroBall : MonoBehaviour
     private BallHandler _ballHandler;
     [SerializeField] private float electroAray = 1f;
     [SerializeField] private ElectroAnimation electroAnimation;
+    [SerializeField] private Material electroBallMaterial;
+    private Material _defaultMaterial;
 
     private void OnDisable()
     {
@@ -28,12 +30,12 @@ public class ElectroBall : MonoBehaviour
                 TileHealth health = objetoNoRaio.GetComponent<TileHealth>();
                 if (health != null)
                 {
-                    health.TileHitEvent.Invoke(_ballHandler.ballDamage.GetDamage());
+                    health.SubtractHealth(_ballHandler.ballDamage.GetDamage(), null);
                 }
             }
         }
-        _ballHandler.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         _ballHandler.ballDamage.SetDamage(1);
+        _ballHandler.gameObject.GetComponent<SpriteRenderer>().material = _defaultMaterial;
         Destroy(this.gameObject);
     }
 
@@ -47,7 +49,8 @@ public class ElectroBall : MonoBehaviour
     public void SetBallHandler(BallHandler ballHandler)
     {
         _ballHandler = ballHandler;
-        _ballHandler.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
+        _defaultMaterial = _ballHandler.GetComponent<SpriteRenderer>().material;
+        _ballHandler.gameObject.GetComponent<SpriteRenderer>().material = electroBallMaterial;
         _ballHandler.GetComponent<BallCollisionHandler>().TileCollisionEvent.AddListener(OnCollision);
         _ballHandler.GetComponent<BallCollisionHandler>().WallCollisionEvent.AddListener(OnCollision);
     }

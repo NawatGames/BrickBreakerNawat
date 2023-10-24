@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   electroAray: 1
   electroAnimation: {fileID: 432765932318553083}
+  electroBallMaterial: {fileID: 2100000, guid: 1724006aae1cc5e47bbbc3f6ae9f9b5c, type: 2}
 --- !u!114 &432765932318553083
 MonoBehaviour:
   m_ObjectHideFlags: 0
