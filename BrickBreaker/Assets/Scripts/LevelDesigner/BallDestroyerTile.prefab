@@ -107,8 +107,32 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2229195086042604987, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ec248b51c4cf10b4ba56296487b21d26, type: 2}
+    - target: {fileID: 2229195087188707434, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229195087188707434, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2828552982087534622, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+--- !u!114 &5499023536309759756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2229195086042604967, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+  m_PrefabInstance: {fileID: 5962701979739015851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5499023536309759762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9852da34319049409eecd3a1e3daff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5499023536309759762 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
@@ -126,3 +150,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb625aebf4670f4b9aeae86be87e66b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &941300890522276165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5499023536309759762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4fc4c8428e0e64ea7f6572edf18975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileHealth: {fileID: 5499023536309759756}
