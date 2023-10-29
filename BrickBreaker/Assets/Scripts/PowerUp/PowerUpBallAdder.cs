@@ -6,15 +6,15 @@ using UnityEngine;
 public class PowerUpBallAdder : MonoBehaviour
 {
     [SerializeField] private PowerUpRepeatableTrigger powerUpRepeatableTrigger;
-    private GameManager _gameManager;
+    [SerializeField] private GameManager gameManager;
 
     private void Awake()
     {
-        _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.FindObjectOfType<GameManager>().GetComponent<GameManager>();
     }
     
     private void OnPowerUpSuccess(BallHandler ballHandler){
-        _gameManager.OnAdderTrigger();
+        gameManager.OnAdderTrigger();
     }
     
     private void OnEnable()

@@ -8,7 +8,7 @@ public class BallShooterSpriteEnabler : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
     
-    [SerializeField] private BallShooterHandler ballShooterHandler;
+    [SerializeField] private Shooter ballShooterHandler;
     [SerializeField] private GameManager gameManager;
     
 
@@ -30,13 +30,13 @@ public class BallShooterSpriteEnabler : MonoBehaviour
     public void OnEnable()
     {
         ballShooterHandler.StartShootBallEvent.AddListener(DisableSprite);
-        gameManager.TurnEndEvent.AddListener(EnableSprite);
+        gameManager.turnEndEvent.AddListener(EnableSprite);
     }
 
     public void OnDisable()
     {
         ballShooterHandler.StartShootBallEvent.RemoveListener(DisableSprite);
-        gameManager.TurnEndEvent.RemoveListener(EnableSprite);
+        gameManager.turnEndEvent.RemoveListener(EnableSprite);
     }
     
 }

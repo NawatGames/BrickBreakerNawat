@@ -23,7 +23,7 @@ public class WinCondition : MonoBehaviour
     {
         if (_isLevelOver)
         {
-            GameObject[] tileRows = GameObject.FindGameObjectsWithTag("Tile");
+            TileHealth[] tileRows = GameObject.FindObjectsOfType<TileHealth>(); //Trocar futuramente para o TileHolder
             if (tileRows.Length == 0)
             {
                 WinEvent.Invoke();
@@ -38,7 +38,7 @@ public class WinCondition : MonoBehaviour
 
     private void OnEnable()
     {
-        gameManager.TurnEndEvent.AddListener(OnTurnEnd);
+        gameManager.turnEndEvent.AddListener(OnTurnEnd);
         tileRowSpawner.EndOfLevelEvent.AddListener(OnEndOfLevel);
     }
 }

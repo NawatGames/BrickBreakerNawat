@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 public class InputDisabler : MonoBehaviour
 {
     [SerializeField] private GameObject inputManager;
-    [SerializeField] private BallShooterHandler ballShooterHandler;
+    [SerializeField] private Shooter ballShooterHandler;
     [SerializeField] private TileRowSpawner tileRowSpawner;
 
     private void DisableInputManager()

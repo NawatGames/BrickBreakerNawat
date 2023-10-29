@@ -1,45 +1,46 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Shooter : MonoBehaviour
 {
-    public GameObject playerBall;
-    [SerializeField] private BallShooterHandler ballShooterHandler;
-    [SerializeField] private float absoluteVelocity = 10f;
-    private ConvertVelocityVector _convertVelocityVector;
-    private Vector2 _shooterPosition;
-
-    public void InstanciarBolinha(Vector2 direcao)
+    private int _maxBallCount;
+    [SerializeField] private float shootingDelay = 0.1f;
+    // Start is called before the first frame update
+    [SerializeField] private InputFilter inputFilter;
+    [SerializeField] private GameManager gameManager;
+    public UnityEvent StartShootBallEvent;
+    public UnityEvent<Vector2> ShootBallEvent;
+    public UnityEvent EndShootBallEvent;
+    
+    private void OnFilteredInput(Vector2 direction)
     {
-        GameObject playerBallclone = Instantiate(playerBall, _shooterPosition, Quaternion.identity);
-        Rigidbody2D rb = playerBallclone.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.velocity = _convertVelocityVector.ConvertDirection(direcao, absoluteVelocity);
-        }
+        
+        _maxBallCount = gameManager.GetMaxBallCount();
+        StartCoroutine(BallSpawnerIterator(direction));
     }
 
-    private void Awake()
+    private IEnumerator BallSpawnerIterator(Vector2 direction)
     {
-        _convertVelocityVector = this.gameObject.AddComponent<ConvertVelocityVector>();
+        StartShootBallEvent.Invoke();
+        for(int i = 0; i < _maxBallCount; i++)
+        {
+            ShootBallEvent.Invoke(direction);
+            yield return new WaitForSeconds(shootingDelay);
+        }
+        EndShootBallEvent.Invoke();
     }
     
     private void OnEnable()
     {
-        ballShooterHandler.ShootBallEvent.AddListener(InstanciarBolinha);
-        ballShooterHandler.StartShootBallEvent.AddListener(SetShooterPosition);
+        inputFilter.FilteredInputEvent.AddListener(OnFilteredInput);
     }
 
     private void OnDisable()
     {
-        ballShooterHandler.ShootBallEvent.RemoveListener(InstanciarBolinha);
-        ballShooterHandler.StartShootBallEvent.RemoveListener(SetShooterPosition);
-    }
-
-    public void SetShooterPosition()
-    {
-        _shooterPosition = this.gameObject.transform.position;
+        inputFilter.FilteredInputEvent.RemoveListener(OnFilteredInput);
     }
 }

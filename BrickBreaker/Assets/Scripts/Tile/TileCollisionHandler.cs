@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class TileCollisionHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public BallDestroyerTile ballDestroyerTile;
+    public BombTilePower bombTilePower;
+    public ChestTileLoot chestTileLoot;
+    public EmptyTile emptyTile;
+    public FireTilePower fireTilePower;
+    public GlassTileHealth glassTileHealth;
+    public RainbowTilePower rainbowTilePower;
+    public TankTileHealth tankTileHealth;
+    public TileDestroyer tileDestroyer;
+    public TileHealth tileHealth;
+    public TileHealthDisplay tileHealthDisplay;
+    public TileHealthSpawnSetter tileHealthSpawnSetter;
+    
 }

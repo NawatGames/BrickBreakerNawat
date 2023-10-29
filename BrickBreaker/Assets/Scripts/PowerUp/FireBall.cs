@@ -17,14 +17,14 @@ public class FireBall : MonoBehaviour
         _ballHandler.GetComponent<BallCollisionHandler>().WallCollisionEvent.RemoveListener(OnCollision);
     }
 
-    private void OnCollision(Collision2D collision2D)
+    private void OnCollision(TileCollisionHandler tileCollisionHandler)
     {
         _ballHandler.gameObject.GetComponent<SpriteRenderer>().material = _defaultMaterial;
         _ballHandler.ballDamage.SetDamage(1);
         Destroy(this.gameObject);
     }
 
-    private void OnCollision()
+    private void OnCollision(Collision2D collision2D)
     {
         _ballHandler.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         _ballHandler.ballDamage.SetDamage(1);

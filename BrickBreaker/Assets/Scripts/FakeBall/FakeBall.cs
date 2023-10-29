@@ -7,12 +7,12 @@ public class FakeBall : MonoBehaviour
 {
     private Vector2 destination;
     [SerializeField] private float tweenSpeed = 3f;
-    private GameObject FirstFakeBall;
+    private GameObject firstFakeBall;
     private void Awake()
     {
         
-        FirstFakeBall = GameObject.FindGameObjectWithTag("FirstFakeBall");
-        destination = FirstFakeBall.transform.position;
+        firstFakeBall = GameObject.FindObjectOfType<FirstFakeBall>().gameObject;
+        destination = firstFakeBall.transform.position;
     }
 
     private void Start()

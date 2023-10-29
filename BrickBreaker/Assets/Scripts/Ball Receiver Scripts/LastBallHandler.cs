@@ -7,16 +7,21 @@ using UnityEngine.Serialization;
 public class LastBallHandler : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
-    public GameObject[] ballList;
     
     
     public bool IsLastBall()
     {
-        GameObject[] fakeBallList = GameObject.FindGameObjectsWithTag("FakeBall");
-        return fakeBallList.Length == gameManager.GetMaxBallCount() - 2;
+        FakeBallHandler[] fakeBallList = GameObject.FindObjectsOfType<FakeBallHandler>();
+        return fakeBallList.Length == gameManager.GetMaxBallCount() - 2 - gameManager.GetDestroyedBallCount();
+    }
+    public int GetFakeBallCount()
+    {
+        FakeBallHandler[] fakeBallList = GameObject.FindObjectsOfType<FakeBallHandler>();
+        return fakeBallList.Length;
     }
     public int GetBallCount()
     {
+        BallHandler[] ballList = GameObject.FindObjectsOfType<BallHandler>();
         return ballList.Length;
     }
 }

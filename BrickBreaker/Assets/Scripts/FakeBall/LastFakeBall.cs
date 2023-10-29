@@ -28,7 +28,7 @@ public class LastFakeBall : MonoBehaviour
 
     private void OnTweenComplete()
     {
-        _gameManager.TurnEndEvent.Invoke();
+        _gameManager.turnEndEvent.Invoke();
         GameObject[] fakeBallList = GameObject.FindGameObjectsWithTag("FakeBall");
         foreach (GameObject fakeBall in fakeBallList)
         {

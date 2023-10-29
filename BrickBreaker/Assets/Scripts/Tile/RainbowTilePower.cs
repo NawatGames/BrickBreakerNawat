@@ -7,12 +7,13 @@ public class RainbowTilePower : MonoBehaviour
     public GameObject glassTilePrefab; 
     private void OnDestroy()
     {
-        GameObject[] tiles = GameObject.FindGameObjectsWithTag("Tile");
+        TileCollisionHandler[] tiles = GameObject.FindObjectsOfType<TileCollisionHandler>();
 
 
-        foreach (GameObject tile in tiles)
+        foreach (TileCollisionHandler tile in tiles)
         {
-            Instantiate(glassTilePrefab, tile.transform.position, tile.transform.rotation);
+            var transform1 = tile.transform;
+            Instantiate(glassTilePrefab, transform1.position, transform1.rotation);
             Destroy(tile);
         }
     }

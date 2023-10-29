@@ -17,12 +17,10 @@ public class BallDamage : MonoBehaviour
         ballCollisionHandler = this.gameObject.GetComponent<BallCollisionHandler>();
     }
 
-    private void TileCollisionDamageEventCaller(Collision2D collision)
+    private void TileCollisionDamageEventCaller(TileCollisionHandler tileCollisionHandler)
     {
-        Debug.Log("Tile Hit");
-        collision.gameObject.GetComponent<TileHealth>().SubtractHealth(damage, this.gameObject);
+        tileCollisionHandler.tileHealth.TileHitEvent.Invoke(damage);
     }
-    
 
     private void OnEnable()
     {

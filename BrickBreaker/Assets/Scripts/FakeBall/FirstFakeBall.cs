@@ -10,18 +10,22 @@ public class FirstFakeBall : MonoBehaviour
 
     private void Awake()
     {
-        _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
         _lastBallHandler = GameObject.FindObjectOfType<LastBallHandler>();
     }
 
     private void OnEnable()
     {
-        _gameManager.TurnEndEvent.AddListener(OnTurnEnd);
+        _gameManager.turnEndEvent.AddListener(OnTurnEnd);
+        if(_lastBallHandler.GetFakeBallCount() == 0 && _lastBallHandler.GetBallCount() == 1)
+        {
+            _gameManager.turnEndEvent.Invoke();
+        }
     }
 
     private void OnDisable()
     {
-        _gameManager.TurnEndEvent.RemoveListener(OnTurnEnd);
+        _gameManager.turnEndEvent.RemoveListener(OnTurnEnd);
     }
 
     private void OnTurnEnd()
