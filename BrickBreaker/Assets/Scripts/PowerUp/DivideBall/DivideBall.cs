@@ -1,15 +1,15 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class ElectroBall : MonoBehaviour
+public class DivideBall : MonoBehaviour
 {
     private BallHandler _ballHandler;
-    [SerializeField] private float electroAray = 1f;
-    [SerializeField] private Material electroBallMaterial;
+    [SerializeField] private Material divideBallMaterial;
     private Material _defaultMaterial;
+    [SerializeField] private float divisionForce = 5f;
+    [SerializeField] private Vector2 divisionDirection = Vector2.one;
+    [SerializeField] private GameObject dividedBall;
 
     private void OnDisable()
     {
@@ -21,17 +21,19 @@ public class ElectroBall : MonoBehaviour
     {
         if (collision2D.gameObject.CompareTag("Tile"))
         {
-            Vector2 collisionPoint = collision2D.contacts[0].point;
-            /*electroAnimation.DrawCircle(collisionPoint, electroAray);*/
-            Collider2D[] objetosNoRaio = Physics2D.OverlapCircleAll(collisionPoint, electroAray);
-            foreach (Collider2D objetoNoRaio in objetosNoRaio)
-            {  
-                TileHealth health = objetoNoRaio.GetComponent<TileHealth>();
-                if (health != null)
-                {
-                    health.SubtractHealth(_ballHandler.ballDamage.GetDamage(), null);
-                }
-            }
+            // Crie duas novas bolas a partir do prefab
+            GameObject novaBola1 = Instantiate(dividedBall, transform.position, Quaternion.identity);
+            GameObject novaBola2 = Instantiate(dividedBall, transform.position, Quaternion.identity);
+
+            // Aplique forças para separar as bolas
+            Rigidbody2D rb1 = novaBola1.GetComponent<Rigidbody2D>();
+            Rigidbody2D rb2 = novaBola2.GetComponent<Rigidbody2D>();
+
+            rb1.velocity = divisionForce * divisionDirection;
+            rb2.velocity = -divisionForce * divisionDirection;
+
+            // Destrua a bola original
+            Destroy(gameObject);
         }
         _ballHandler.ballDamage.SetDamage(1);
         _ballHandler.gameObject.GetComponent<SpriteRenderer>().material = _defaultMaterial;
@@ -49,7 +51,7 @@ public class ElectroBall : MonoBehaviour
     {
         _ballHandler = ballHandler;
         _defaultMaterial = _ballHandler.GetComponent<SpriteRenderer>().material;
-        _ballHandler.gameObject.GetComponent<SpriteRenderer>().material = electroBallMaterial;
+        _ballHandler.gameObject.GetComponent<SpriteRenderer>().material = divideBallMaterial;
         _ballHandler.GetComponent<BallCollisionHandler>().TileCollisionEvent.AddListener(OnCollision);
         _ballHandler.GetComponent<BallCollisionHandler>().WallCollisionEvent.AddListener(OnCollision);
     }
