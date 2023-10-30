@@ -386,11 +386,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 9.805629
+      value: 12.3075285
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.355
+      value: 2.1048
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -642,11 +642,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1c15cc55b91d64584ec0063ab31b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lines: 1
   rawInput: {fileID: 1138297514}
   lineRenderer: {fileID: 889622125}
   inputFilter: {fileID: 1138297517}
   ballShooter: {fileID: 1526902367}
-  shooterRaycast: {fileID: 889622127}
 --- !u!120 &889622125
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -805,7 +805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.861
+      value: 5.87
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -874,7 +874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545ca9b492b633544a9229a136add0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
 --- !u!1001 &1083431723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -900,7 +899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.79043204
+      value: 0.8404664
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalScale.y
@@ -908,7 +907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.851
+      value: -1.91
       objectReference: {fileID: 0}
     - target: {fileID: 3469437724477283109, guid: d57d9b4b9ebdbaf4ea5b9d68816dfba9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -977,7 +976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da74a8f8bb7a5274985df9ee5afe0824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
 --- !u!1001 &1124086099
 PrefabInstance:
   m_ObjectHideFlags: 0

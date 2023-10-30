@@ -2,43 +2,26 @@ using UnityEngine;
 
 public class ResizeWallLeft : MonoBehaviour
 {
-    [SerializeField]
     private Camera mainCamera;
 
-    private Vector3 initialPosition;
-
-    void Start()
+    private void Start()
     {
-        if (mainCamera == null)
-        {
-            mainCamera = Camera.main;
-        }
-
-        //posicao
-        InitializePosition();
+        mainCamera = Camera.main;
+        UpdatePosition();
     }
 
-    void Update()
+    private void Update()
     {
-        //checa a resolucao
-        Reposition();
+        UpdatePosition();
     }
 
-    private void InitializePosition()
+    private void UpdatePosition()
     {
-        //posicao inicial
-        initialPosition = mainCamera.WorldToScreenPoint(transform.position);
-    }
+        float cameraHalfWidth = mainCamera.orthographicSize * mainCamera.aspect;
+        float cameraX = mainCamera.transform.position.x;
 
-    private void Reposition()
-    {
-        //posicao atual
-        Vector3 currentPosition = mainCamera.WorldToScreenPoint(transform.position);
-
-        //diferenca de posicao no X
-        float deltaX = initialPosition.x - currentPosition.x;
-
-        // Aplica a posicao da parede
-        transform.position = mainCamera.ScreenToWorldPoint(new Vector3(currentPosition.x + deltaX, currentPosition.y, currentPosition.z));
+        // Ajusta a posição da parede da esquerda para estar na borda da câmera no lado de fora
+        float newPositionX = cameraX - cameraHalfWidth - (transform.localScale.x / 2f);
+        transform.position = new Vector3(newPositionX, transform.position.y, transform.position.z);
     }
 }
