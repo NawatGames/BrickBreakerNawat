@@ -167,6 +167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileHealth: {fileID: 2229195086042604967}
+  steepness: 0.1
+  midpoint: 40
+  multiplier: 50
 --- !u!50 &2529657767130351597
 Rigidbody2D:
   serializedVersion: 4

@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
       propertyPath: m_Name
-      value: EmptyTile 1
+      value: EmptyTile
       objectReference: {fileID: 0}
     - target: {fileID: 2229195086042604986, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
       propertyPath: m_Pivot.x
