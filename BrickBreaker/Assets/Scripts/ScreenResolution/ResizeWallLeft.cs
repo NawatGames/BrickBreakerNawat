@@ -20,7 +20,7 @@ public class ResizeWallLeft : MonoBehaviour
         float cameraHalfWidth = mainCamera.orthographicSize * mainCamera.aspect;
         float cameraX = mainCamera.transform.position.x;
 
-        // Ajusta a posição da parede da esquerda para estar na borda da câmera no lado de fora
+        // ajuste da posição
         float newPositionX = cameraX - cameraHalfWidth - (transform.localScale.x / 2f);
         transform.position = new Vector3(newPositionX, transform.position.y, transform.position.z);
     }
