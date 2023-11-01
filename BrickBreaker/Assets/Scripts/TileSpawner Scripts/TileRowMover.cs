@@ -10,7 +10,7 @@ public class TileRowMover : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
     public delegate void RowMover();
-    public UnityEvent RowMovedEvent;
+    public UnityEvent rowMovedEvent;
     public float tileSize = 1.0f; // Tamanho de um tijolo
     
     
@@ -43,6 +43,6 @@ public class TileRowMover : MonoBehaviour
     private IEnumerator WaitForAnimation()
     {
         yield return new WaitForSeconds(0.5f);
-        RowMovedEvent.Invoke();
+        rowMovedEvent.Invoke();
     }
 }

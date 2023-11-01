@@ -12,9 +12,9 @@ public class Shooter : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private InputFilter inputFilter;
     [SerializeField] private GameManager gameManager;
-    public UnityEvent StartShootBallEvent;
-    public UnityEvent<Vector2> ShootBallEvent;
-    public UnityEvent EndShootBallEvent;
+    public UnityEvent startShootBallEvent;
+    public UnityEvent<Vector2> shootBallEvent;
+    public UnityEvent endShootBallEvent;
     
     private void OnFilteredInput(Vector2 direction)
     {
@@ -25,22 +25,22 @@ public class Shooter : MonoBehaviour
 
     private IEnumerator BallSpawnerIterator(Vector2 direction)
     {
-        StartShootBallEvent.Invoke();
+        startShootBallEvent.Invoke();
         for(int i = 0; i < _maxBallCount; i++)
         {
-            ShootBallEvent.Invoke(direction);
+            shootBallEvent.Invoke(direction);
             yield return new WaitForSeconds(shootingDelay);
         }
-        EndShootBallEvent.Invoke();
+        endShootBallEvent.Invoke();
     }
     
     private void OnEnable()
     {
-        inputFilter.FilteredInputEvent.AddListener(OnFilteredInput);
+        inputFilter.filteredInputEvent.AddListener(OnFilteredInput);
     }
 
     private void OnDisable()
     {
-        inputFilter.FilteredInputEvent.RemoveListener(OnFilteredInput);
+        inputFilter.filteredInputEvent.RemoveListener(OnFilteredInput);
     }
 }

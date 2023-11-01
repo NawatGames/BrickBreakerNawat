@@ -6,8 +6,8 @@ using UnityEngine.Events;
 public class TankTileHealth : MonoBehaviour
 {
     [SerializeField] private int numberOfHits = 5;
-    public UnityEvent<int> TileHitEvent;
-    public GameObject TilePrefab;
+    public UnityEvent<int> tileHitEvent;
+    public GameObject tilePrefab;
 
     private void OnTileHit(int damage)
     {
@@ -20,6 +20,6 @@ public class TankTileHealth : MonoBehaviour
     void ReplaceTile()
     {
         Destroy(this.gameObject);
-        GameObject newTile = Instantiate(TilePrefab, transform.position, transform.rotation);
+        GameObject newTile = Instantiate(tilePrefab, transform.position, transform.rotation);
     }
 }

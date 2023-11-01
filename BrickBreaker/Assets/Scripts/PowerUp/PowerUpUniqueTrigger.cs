@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class PowerUpUniqueTrigger : MonoBehaviour
 {
-    public UnityEvent<BallHandler> PowerUpSuccessEvent;
-    public UnityEvent PowerUpFailEvent;
+    public UnityEvent<BallHandler> powerUpSuccessEvent;
+    public UnityEvent powerUpFailEvent;
     private BallHandler[] _ballList;
     private bool _isTriggered = false;
 
@@ -16,13 +16,13 @@ public class PowerUpUniqueTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        BallHandler _ballHandler = other.GetComponent<BallHandler>();
-        if (_ballHandler != null)
+        BallHandler ballHandler = other.GetComponent<BallHandler>();
+        if (ballHandler != null)
         {
             _isTriggered = false;
             foreach (var ball in _ballList)
             {
-                if (ball == _ballHandler)
+                if (ball == ballHandler)
                 {
                     _isTriggered = true;
                 }
@@ -30,25 +30,25 @@ public class PowerUpUniqueTrigger : MonoBehaviour
 
             if (!_isTriggered)
             {
-                AddBallToList(_ballHandler);
-                PowerUpSuccessEvent.Invoke(_ballHandler);
+                AddBallToList(ballHandler);
+                powerUpSuccessEvent.Invoke(ballHandler);
             }
             else
             {
-                PowerUpFailEvent.Invoke();
+                powerUpFailEvent.Invoke();
             }
         }
     }
 
     private void AddBallToList(BallHandler ball)
     {
-        BallHandler[] _tempBallList = new BallHandler[_ballList.Length + 1];
+        BallHandler[] tempBallList = new BallHandler[_ballList.Length + 1];
         for (int i = 0; i < _ballList.Length; i++)
         {
-            _tempBallList[i] = _ballList[i];
+            tempBallList[i] = _ballList[i];
         }
 
-        _tempBallList[_tempBallList.Length - 1] = ball;
-        _ballList = _tempBallList;
+        tempBallList[tempBallList.Length - 1] = ball;
+        _ballList = tempBallList;
     }
 }

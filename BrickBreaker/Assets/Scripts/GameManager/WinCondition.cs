@@ -9,7 +9,7 @@ public class WinCondition : MonoBehaviour
     [SerializeField] private TileRowSpawner tileRowSpawner;
 
     [SerializeField] private GameManager gameManager;
-    public UnityEvent WinEvent;
+    public UnityEvent winEvent;
 
     private bool _isLevelOver;
 
@@ -26,7 +26,7 @@ public class WinCondition : MonoBehaviour
             TileHealth[] tileRows = GameObject.FindObjectsOfType<TileHealth>(); //Trocar futuramente para o TileHolder
             if (tileRows.Length == 0)
             {
-                WinEvent.Invoke();
+                winEvent.Invoke();
             }
         }
     }
@@ -39,6 +39,6 @@ public class WinCondition : MonoBehaviour
     private void OnEnable()
     {
         gameManager.turnEndEvent.AddListener(OnTurnEnd);
-        tileRowSpawner.EndOfLevelEvent.AddListener(OnEndOfLevel);
+        tileRowSpawner.endOfLevelEvent.AddListener(OnEndOfLevel);
     }
 }

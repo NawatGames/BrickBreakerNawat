@@ -5,13 +5,13 @@ using UnityEngine.Events;
 
 public class PowerUpRepeatableTrigger : MonoBehaviour
 {
-    public UnityEvent<BallHandler> PowerUpSuccessEvent;
+    public UnityEvent<BallHandler> powerUpSuccessEvent;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<BallHandler>() != null)
         {
-            PowerUpSuccessEvent.Invoke(other.gameObject.GetComponent<BallHandler>());
+            powerUpSuccessEvent.Invoke(other.gameObject.GetComponent<BallHandler>());
         }
     }
 }

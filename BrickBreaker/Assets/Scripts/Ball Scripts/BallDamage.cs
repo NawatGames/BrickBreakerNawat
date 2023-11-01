@@ -9,32 +9,32 @@ public class IntEvent : UnityEvent<int> { }
 public class BallDamage : MonoBehaviour
 {
     public int damage = 1;
-    private BallCollisionHandler ballCollisionHandler;
-    public UnityEvent OnDamageValueChanged;
+    private BallCollisionHandler _ballCollisionHandler;
+    public UnityEvent onDamageValueChanged;
 
     private void Awake ()
     {
-        ballCollisionHandler = this.gameObject.GetComponent<BallCollisionHandler>();
+        _ballCollisionHandler = this.gameObject.GetComponent<BallCollisionHandler>();
     }
 
     private void TileCollisionDamageEventCaller(TileCollisionHandler tileCollisionHandler)
     {
-        tileCollisionHandler.tileHealth.TileHitEvent.Invoke(damage);
+        tileCollisionHandler.tileHealth.tileHitEvent.Invoke(damage);
     }
 
     private void OnEnable()
     {
-        ballCollisionHandler.TileCollisionEvent.AddListener(TileCollisionDamageEventCaller);
+        _ballCollisionHandler.tileCollisionEvent.AddListener(TileCollisionDamageEventCaller);
     }
 
     private void OnDisable()
     {
-        ballCollisionHandler.TileCollisionEvent.RemoveListener(TileCollisionDamageEventCaller);
+        _ballCollisionHandler.tileCollisionEvent.RemoveListener(TileCollisionDamageEventCaller);
     }
 
     public void SetDamage(int newDamage)
     {
         damage = newDamage;
-        OnDamageValueChanged.Invoke();
+        onDamageValueChanged.Invoke();
     }
 }

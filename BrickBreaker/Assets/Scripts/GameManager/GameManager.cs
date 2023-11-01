@@ -93,9 +93,9 @@ public class GameManager : MonoBehaviour
     {
         _destroyedBallCount++;
         Debug.Log("BallDestroyed");
-        if (_destroyedBallCount >= MaxBallCount)
+        if (_destroyedBallCount >= maxBallCount)
         {
-            GameOverEvent.Invoke();
+            gameOverEvent.Invoke();
         }
     }
 }

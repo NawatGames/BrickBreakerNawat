@@ -19,12 +19,12 @@ public class PowerUpBallAdder : MonoBehaviour
     
     private void OnEnable()
     {
-        powerUpRepeatableTrigger.PowerUpSuccessEvent.AddListener(OnPowerUpSuccess);
+        powerUpRepeatableTrigger.powerUpSuccessEvent.AddListener(OnPowerUpSuccess);
     }
 
     private void OnDisable()
     {
-        powerUpRepeatableTrigger.PowerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
+        powerUpRepeatableTrigger.powerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
     }
     
 }

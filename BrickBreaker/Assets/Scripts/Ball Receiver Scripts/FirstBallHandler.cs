@@ -11,7 +11,7 @@ public class FirstBallHandler : MonoBehaviour
 {
     [FormerlySerializedAs("turnManager")] [SerializeField] private GameManager gameManager;
     public bool isFirstFakeBall;
-    public GameObject FirstFakeBall;
+    public GameObject firstFakeBall;
 
     private void Start()
     {

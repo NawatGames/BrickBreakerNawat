@@ -22,13 +22,13 @@ public class InputDisabler : MonoBehaviour
     }
     private void OnEnable()
     {
-        ballShooterHandler.StartShootBallEvent.AddListener(DisableInputManager);
-        tileRowSpawner.RowSpawnedEvent.AddListener(EnableInputManager);
+        ballShooterHandler.startShootBallEvent.AddListener(DisableInputManager);
+        tileRowSpawner.rowSpawnedEvent.AddListener(EnableInputManager);
     }
 
     private void OnDisable()
     {
-        ballShooterHandler.StartShootBallEvent.RemoveListener(DisableInputManager);
-        tileRowSpawner.RowSpawnedEvent.RemoveListener(EnableInputManager);
+        ballShooterHandler.startShootBallEvent.RemoveListener(DisableInputManager);
+        tileRowSpawner.rowSpawnedEvent.RemoveListener(EnableInputManager);
     }
 }

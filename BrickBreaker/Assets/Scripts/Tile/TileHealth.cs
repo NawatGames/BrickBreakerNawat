@@ -7,27 +7,27 @@ using UnityEngine.Events;
 public class TileHealth : MonoBehaviour
 {
     [SerializeField] private int health = 10;
-    public UnityEvent NoHealthEvent;
-    public UnityEvent<GameObject> TileHitEvent;
-    public UnityEvent<int> TileHealthChangedEvent;
+    public UnityEvent noHealthEvent;
+    public UnityEvent<GameObject> tileHitEvent;
+    public UnityEvent<int> tileHealthChangedEvent;
 
     public void SubtractHealth(int damage, GameObject ball)
     {
         
         health -= damage;
-        TileHitEvent.Invoke(ball);
-        TileHealthChangedEvent.Invoke(health);
+        tileHitEvent.Invoke(ball);
+        tileHealthChangedEvent.Invoke(health);
         Debug.Log("Hit");
         if (health <= 0)
         {
-            NoHealthEvent.Invoke();
+            noHealthEvent.Invoke();
         }
     }
 
     public void SetHealth(int health)
     {
         this.health = health;
-        TileHealthChangedEvent.Invoke(health);
+        tileHealthChangedEvent.Invoke(health);
     }
 
     public int GetHealth()

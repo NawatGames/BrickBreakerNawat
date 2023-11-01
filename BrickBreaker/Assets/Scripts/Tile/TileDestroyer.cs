@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TileDestroyer : MonoBehaviour
 {
-    [SerializeField] private TileHealth _tileHealth;
+    [SerializeField] private TileHealth tileHealth;
 
     private void Awake()
     {
@@ -13,12 +13,12 @@ public class TileDestroyer : MonoBehaviour
 
     private void OnEnable()
     {
-        _tileHealth.NoHealthEvent.AddListener(OnNoHealth);
+        tileHealth.noHealthEvent.AddListener(OnNoHealth);
     }
 
     private void OnDisable()
     {
-        _tileHealth.NoHealthEvent.RemoveListener(OnNoHealth);
+        tileHealth.noHealthEvent.RemoveListener(OnNoHealth);
     }
 
     private void OnNoHealth()

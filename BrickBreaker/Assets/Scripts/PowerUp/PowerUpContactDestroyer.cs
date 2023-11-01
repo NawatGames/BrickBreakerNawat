@@ -18,12 +18,12 @@ public class PowerUpContactDestroyer : MonoBehaviour
     {
         if (powerUpRepeatableTrigger != null)
         {
-            powerUpRepeatableTrigger.PowerUpSuccessEvent.AddListener(OnPowerUpSuccess);
+            powerUpRepeatableTrigger.powerUpSuccessEvent.AddListener(OnPowerUpSuccess);
         }
 
         if (powerUpUniqueTrigger != null)
         {
-            powerUpUniqueTrigger.PowerUpSuccessEvent.AddListener(OnPowerUpSuccess);
+            powerUpUniqueTrigger.powerUpSuccessEvent.AddListener(OnPowerUpSuccess);
         }
     }
 
@@ -31,12 +31,12 @@ public class PowerUpContactDestroyer : MonoBehaviour
     {
         if (powerUpRepeatableTrigger != null)
         {
-            powerUpRepeatableTrigger.PowerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
+            powerUpRepeatableTrigger.powerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
         }
 
         if (powerUpUniqueTrigger != null)
         {
-            powerUpUniqueTrigger.PowerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
+            powerUpUniqueTrigger.powerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
         }
     }
 }
