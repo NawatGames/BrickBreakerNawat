@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class WinCondition : MonoBehaviour
 {   
     [SerializeField] private TileRowSpawner tileRowSpawner;
 
     [SerializeField] private GameManager gameManager;
-    public UnityEvent WinEvent;
+    [FormerlySerializedAs("WinEvent")] public UnityEvent winEvent;
 
     private bool _isLevelOver;
 
@@ -26,7 +27,7 @@ public class WinCondition : MonoBehaviour
             GameObject[] tileRows = GameObject.FindGameObjectsWithTag("Tile");
             if (tileRows.Length == 0)
             {
-                WinEvent.Invoke();
+                winEvent.Invoke();
             }
         }
     }
@@ -38,7 +39,7 @@ public class WinCondition : MonoBehaviour
 
     private void OnEnable()
     {
-        gameManager.TurnEndEvent.AddListener(OnTurnEnd);
-        tileRowSpawner.EndOfLevelEvent.AddListener(OnEndOfLevel);
+        gameManager.turnEndEvent.AddListener(OnTurnEnd);
+        tileRowSpawner.endOfLevelEvent.AddListener(OnEndOfLevel);
     }
 }

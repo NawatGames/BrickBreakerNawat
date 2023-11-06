@@ -10,15 +10,15 @@ public class LayerController : MonoBehaviour
     private void OnEnable()
     {
         BallCollisionHandler ballCollisionHandler = root.GetComponent<BallCollisionHandler>();
-        ballCollisionHandler.TileCollisionEvent.AddListener(ChangeBallLayerOnCollision);
-        ballCollisionHandler.WallCollisionEvent.AddListener(ChangeBallLayerOnCollision);
+        ballCollisionHandler.tileCollisionEvent.AddListener(ChangeBallLayerOnCollision);
+        ballCollisionHandler.wallCollisionEvent.AddListener(ChangeBallLayerOnCollision);
     }
 
     private void OnDisable()
     {
         BallCollisionHandler ballCollisionHandler = root.GetComponent<BallCollisionHandler>();
-        ballCollisionHandler.TileCollisionEvent.RemoveListener(ChangeBallLayerOnCollision);
-        ballCollisionHandler.WallCollisionEvent.RemoveListener(ChangeBallLayerOnCollision);
+        ballCollisionHandler.tileCollisionEvent.RemoveListener(ChangeBallLayerOnCollision);
+        ballCollisionHandler.wallCollisionEvent.RemoveListener(ChangeBallLayerOnCollision);
     }
 
     private void ChangeBallLayerOnCollision(Collision2D collision2D)

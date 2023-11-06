@@ -6,18 +6,18 @@ public class BallShooterTeleporter : MonoBehaviour
 {
     [SerializeField] private FakeBallSpawner fakeBallSpawner;
 
-    private void teleportShooter(Vector2 position)
+    private void TeleportShooter(Vector2 position)
     {
         this.gameObject.transform.position = position;
     }
 
     private void OnEnable()
     {
-        fakeBallSpawner.SpawnFirstFakeBallEvent.AddListener(teleportShooter);
+        fakeBallSpawner.spawnFirstFakeBallEvent.AddListener(TeleportShooter);
     }
 
     private void OnDisable()
     {
-        fakeBallSpawner.SpawnFirstFakeBallEvent.RemoveListener(teleportShooter);
+        fakeBallSpawner.spawnFirstFakeBallEvent.RemoveListener(TeleportShooter);
     }
 }

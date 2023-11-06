@@ -5,7 +5,7 @@ public class ResizeWallLeft : MonoBehaviour
     [SerializeField]
     private Camera mainCamera;
 
-    private Vector3 initialPosition;
+    private Vector3 _initialPosition;
 
     void Start()
     {
@@ -27,7 +27,7 @@ public class ResizeWallLeft : MonoBehaviour
     private void InitializePosition()
     {
         //posicao inicial
-        initialPosition = mainCamera.WorldToScreenPoint(transform.position);
+        _initialPosition = mainCamera.WorldToScreenPoint(transform.position);
     }
 
     private void Reposition()
@@ -36,7 +36,7 @@ public class ResizeWallLeft : MonoBehaviour
         Vector3 currentPosition = mainCamera.WorldToScreenPoint(transform.position);
 
         //diferenca de posicao no X
-        float deltaX = initialPosition.x - currentPosition.x;
+        float deltaX = _initialPosition.x - currentPosition.x;
 
         // Aplica a posicao da parede
         transform.position = mainCamera.ScreenToWorldPoint(new Vector3(currentPosition.x + deltaX, currentPosition.y, currentPosition.z));

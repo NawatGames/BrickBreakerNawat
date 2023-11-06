@@ -21,21 +21,21 @@ public class BallDestroyerTile : MonoBehaviour
         {
             if(_gameManager.GetDestroyedBallCount() == _gameManager.GetMaxBallCount() - 1)
             {
-                _gameManager.GameOverEvent.Invoke();
+                _gameManager.gameOverEvent.Invoke();
             }
-            _gameManager.TurnEndEvent.Invoke();
+            _gameManager.turnEndEvent.Invoke();
         }
         Destroy(ball);
-        _gameManager.BallDestroyedEvent.Invoke();
+        _gameManager.ballDestroyedEvent.Invoke();
     }
     
     private void OnEnable()
     {
-        _tileHealth.TileHitEvent.AddListener(OnTileHit);
+        _tileHealth.tileHitEvent.AddListener(OnTileHit);
     }
     
     private void OnDisable()
     {
-        _tileHealth.TileHitEvent.RemoveListener(OnTileHit);
+        _tileHealth.tileHitEvent.RemoveListener(OnTileHit);
     }
 }

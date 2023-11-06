@@ -2,29 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class TileHealthDisplay : MonoBehaviour
 {
-    [SerializeField] private TextMeshPro _textMeshPro;
-    [SerializeField] private TileHealth _tileHealth;
+    [FormerlySerializedAs("_textMeshPro")] [SerializeField] private TextMeshPro textMeshPro;
+    [FormerlySerializedAs("_tileHealth")] [SerializeField] private TileHealth tileHealth;
 
     private void Awake()
     {
-        _textMeshPro.text = _tileHealth.GetHealth().ToString();
+        textMeshPro.text = tileHealth.GetHealth().ToString();
     }
 
     private void OnTileHealthChanged(int health)
     {
-        _textMeshPro.text = health.ToString();
+        textMeshPro.text = health.ToString();
     }
 
     private void OnEnable()
     {
-        _tileHealth.TileHealthChangedEvent.AddListener(OnTileHealthChanged);
+        tileHealth.tileHealthChangedEvent.AddListener(OnTileHealthChanged);
     }
 
     private void OnDisable()
     {
-        _tileHealth.TileHealthChangedEvent.RemoveListener(OnTileHealthChanged);
+        tileHealth.tileHealthChangedEvent.RemoveListener(OnTileHealthChanged);
     }
 }

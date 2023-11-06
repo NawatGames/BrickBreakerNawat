@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class TileRowSpawner : MonoBehaviour
 
@@ -10,9 +11,9 @@ public class TileRowSpawner : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     public float spacing = 1.5f; //Espaços entre os tijolos
     public Transform spawnPoint;
-    [SerializeField] private LevelScriptableObject _level;
-    public UnityEvent RowSpawnedEvent;
-    public UnityEvent EndOfLevelEvent;
+    [FormerlySerializedAs("_level")] [SerializeField] private LevelScriptableObject level;
+    [FormerlySerializedAs("RowSpawnedEvent")] public UnityEvent rowSpawnedEvent;
+    [FormerlySerializedAs("EndOfLevelEvent")] public UnityEvent endOfLevelEvent;
     
     void Start()
     {
@@ -21,21 +22,21 @@ public class TileRowSpawner : MonoBehaviour
     
     void OnEnable()
     {
-        tileRowMover.RowMovedEvent.AddListener(SpawnRow);
+        tileRowMover.rowMovedEvent.AddListener(SpawnRow);
     }
 
     void OnDisable()
     {
-        tileRowMover.RowMovedEvent.RemoveListener(SpawnRow);
+        tileRowMover.rowMovedEvent.RemoveListener(SpawnRow);
     }
 
     public void SpawnRow()
     {
         Vector2 spawnPosition = spawnPoint.position; // Posição inicial de spawn.
         
-        if(gameManager.GetCurrentTurn() <= _level.levelRows.Length)
+        if(gameManager.GetCurrentTurn() <= level.levelRows.Length)
         {
-            foreach (GameObject prefab in _level.levelRows[gameManager.GetCurrentTurn() - 1].rowObjects)
+            foreach (GameObject prefab in level.levelRows[gameManager.GetCurrentTurn() - 1].rowObjects)
             {
                 Instantiate(prefab, spawnPosition, Quaternion.identity);
             
@@ -45,8 +46,8 @@ public class TileRowSpawner : MonoBehaviour
         
         else
         {
-            EndOfLevelEvent.Invoke();
+            endOfLevelEvent.Invoke();
         }
-        RowSpawnedEvent.Invoke();
+        rowSpawnedEvent.Invoke();
     }
 }

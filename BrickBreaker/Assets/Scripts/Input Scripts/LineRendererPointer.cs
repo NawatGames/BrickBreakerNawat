@@ -5,7 +5,7 @@ using UnityEngine;
 public class LineRendererPointer : MonoBehaviour
 {
     [SerializeField] private RawInput rawInput;
-    private Vector2 initialPosition;
+    private Vector2 _initialPosition;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private InputFilter inputFilter;
 
@@ -20,12 +20,12 @@ public class LineRendererPointer : MonoBehaviour
         rawInput.worldspacePointerUpEvent.RemoveListener(OnWorldspacePointerUp);
     }
     void OnWorldspacePointerDown(Vector2 position){
-        initialPosition = position;
+        _initialPosition = position;
         inputFilter.SetInitialPosition(position);
     }
     void OnWorldspacePointerDrag(Vector2 position){
         lineRenderer.enabled = true;
-        UpdateLineRenderer(initialPosition, position);
+        UpdateLineRenderer(_initialPosition, position);
     }
     void OnWorldspacePointerUp(Vector2 position){
         lineRenderer.enabled = false;
