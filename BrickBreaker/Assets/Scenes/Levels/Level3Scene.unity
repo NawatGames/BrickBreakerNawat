@@ -205,7 +205,7 @@ MonoBehaviour:
   gameManager: {fileID: 1386089906}
   spacing: 1.1536
   spawnPoint: {fileID: 6492468}
-  _level: {fileID: 11400000, guid: 9a2d7261149265443834c185668acc8b, type: 2}
+  _level: {fileID: 0}
   RowSpawnedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1186,8 +1186,8 @@ MonoBehaviour:
   GameOverEvent:
     m_PersistentCalls:
       m_Calls: []
-  MaxTurns: 1000
-  MaxBallCount: 3
+  MaxTurns: 2
+  MaxBallCount: 3000
   BallDestroyedEvent:
     m_PersistentCalls:
       m_Calls: []
