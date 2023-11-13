@@ -1,47 +1,55 @@
 using UnityEngine;
 
-public class Level1Manager : MonoBehaviour
+public class Level2Manager : MonoBehaviour
 {
-    public GameObject level3; // Referência ao objeto "Level 1"
+    public GameObject level2; // Referência ao objeto "Level 1"
 
-    private bool level3Complete = false;
+    private bool level2Complete = false;
+
+    public void LoadData(GameData data){
+        this.level2Complete = data.Level2Complete;
+    }
+
+    public void SaveData(ref GameData data){
+        data.Level2Complete = this.level2Complete;
+    } 
 
     void Start()
     {
         // Inicialize a referência ao objeto "Level 1"
-        level3 = GameObject.Find("Level 3");
+        level2 = GameObject.Find("Level 2");
 
         // Verifique se o objeto "Level 1" foi encontrado
-        if (level3 != null)
+        if (level2 != null)
         {
             // Verifique se o nível foi completado
-            level3Complete = CheckLevel3Complete();
+            level2Complete = CheckLevel2Complete();
         }
         else
         {
-            Debug.LogError("Objeto 'Level 3' não encontrado. Verifique se o nome está correto.");
+            Debug.LogError("Objeto 'Level 2' não encontrado. Verifique se o nome está correto.");
         }
     }
 
     void Update()
     {
         // Se o nível foi completado, faça o que for necessário aqui
-        if (level3Complete)
+        if (level2Complete)
         {
             Debug.Log("Nível completo!");
         }
     }
 
-    bool CheckLevel3Complete()
+    bool CheckLevel2Complete()
     {
         // Itera sobre cada fileira
-        for (int i = 1; i <= 100; i++)
+        for (int i = 51; i <= 125; i++)
         {
             // Construa o nome da fileira
-            string rowName = "Lv3Row " + i.ToString();
+            string rowName = "Row " + i.ToString();
 
             // Obtém a fileira pelo nome
-            Transform rowTransform = level3.transform.Find(rowName);
+            Transform rowTransform = level2.transform.Find(rowName);
 
             // Verifique se a fileira foi encontrada
             if (rowTransform != null)

@@ -1,47 +1,55 @@
 using UnityEngine;
 
-public class Level2Manager : MonoBehaviour
+public class Level1Manager : MonoBehaviour, IDataPersistance
 {
-    public GameObject level2; // Referência ao objeto "Level 1"
+    public GameObject level1; // Referência ao objeto "Level 1"
 
-    private bool level2Complete = false;
+    private bool level1Complete = false;
+
+    public void LoadData(GameData data){
+        this.level1Complete = data.Level1Complete;
+    }
+
+    public void SaveData(ref GameData data){
+        data.Level1Complete = this.level1Complete;
+    }    
 
     void Start()
     {
         // Inicialize a referência ao objeto "Level 1"
-        level2 = GameObject.Find("Level 2");
+        level1 = GameObject.Find("Level 1");
 
         // Verifique se o objeto "Level 1" foi encontrado
-        if (level2 != null)
+        if (level1 != null)
         {
             // Verifique se o nível foi completado
-            level2Complete = CheckLevel2Complete();
+            level1Complete = CheckLevel1Complete();
         }
         else
         {
-            Debug.LogError("Objeto 'Level 2' não encontrado. Verifique se o nome está correto.");
+            Debug.LogError("Objeto 'Level 1' não encontrado. Verifique se o nome está correto.");
         }
     }
 
     void Update()
     {
         // Se o nível foi completado, faça o que for necessário aqui
-        if (level2Complete)
+        if (level1Complete)
         {
             Debug.Log("Nível completo!");
         }
     }
 
-    bool CheckLevel2Complete()
+    bool CheckLevel1Complete()
     {
         // Itera sobre cada fileira
-        for (int i = 51; i <= 125; i++)
+        for (int i = 1; i <= 50; i++)
         {
             // Construa o nome da fileira
             string rowName = "Row " + i.ToString();
 
             // Obtém a fileira pelo nome
-            Transform rowTransform = level2.transform.Find(rowName);
+            Transform rowTransform = level1.transform.Find(rowName);
 
             // Verifique se a fileira foi encontrada
             if (rowTransform != null)
