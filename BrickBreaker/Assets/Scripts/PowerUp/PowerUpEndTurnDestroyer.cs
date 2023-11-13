@@ -36,7 +36,7 @@ public class PowerUpEndTurnDestroyer : MonoBehaviour
 
         if (powerUpUniqueTrigger != null)
         {
-            powerUpUniqueTrigger.powerUpSuccessEvent.AddListener(OnPowerUpSuccess);
+            powerUpUniqueTrigger.PowerUpSuccessEvent.AddListener(OnPowerUpSuccess);
         }
         _gameManager.turnEndEvent.AddListener(OnTurnEnd);
     }
@@ -50,7 +50,7 @@ public class PowerUpEndTurnDestroyer : MonoBehaviour
 
         if (powerUpUniqueTrigger != null)
         {
-            powerUpUniqueTrigger.powerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
+            powerUpUniqueTrigger.PowerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
         }
         _gameManager.turnEndEvent.RemoveListener(OnTurnEnd);
     }

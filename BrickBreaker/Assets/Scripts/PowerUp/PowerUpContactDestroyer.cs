@@ -23,7 +23,7 @@ public class PowerUpContactDestroyer : MonoBehaviour
 
         if (powerUpUniqueTrigger != null)
         {
-            powerUpUniqueTrigger.powerUpSuccessEvent.AddListener(OnPowerUpSuccess);
+            powerUpUniqueTrigger.PowerUpSuccessEvent.AddListener(OnPowerUpSuccess);
         }
     }
 
@@ -36,7 +36,7 @@ public class PowerUpContactDestroyer : MonoBehaviour
 
         if (powerUpUniqueTrigger != null)
         {
-            powerUpUniqueTrigger.powerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
+            powerUpUniqueTrigger.PowerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
         }
     }
 }

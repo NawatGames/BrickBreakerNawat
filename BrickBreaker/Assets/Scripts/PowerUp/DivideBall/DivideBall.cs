@@ -25,7 +25,7 @@ public class DivideBall : MonoBehaviour
             GameObject novaBola1 = Instantiate(dividedBall, transform.position, Quaternion.identity);
             GameObject novaBola2 = Instantiate(dividedBall, transform.position, Quaternion.identity);
 
-            // Aplique forças para separar as bolas
+            // Aplique forÃ§as para separar as bolas
             Rigidbody2D rb1 = novaBola1.GetComponent<Rigidbody2D>();
             Rigidbody2D rb2 = novaBola2.GetComponent<Rigidbody2D>();
 

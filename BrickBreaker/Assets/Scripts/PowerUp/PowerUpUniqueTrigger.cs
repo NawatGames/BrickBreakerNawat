@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 public class PowerUpUniqueTrigger : MonoBehaviour
 {
-    [FormerlySerializedAs("PowerUpSuccessEvent")] public UnityEvent<BallHandler> powerUpSuccessEvent;
+    [FormerlySerializedAs("powerUpSuccessEvent")] public UnityEvent<BallHandler> PowerUpSuccessEvent;
     [FormerlySerializedAs("PowerUpFailEvent")] public UnityEvent powerUpFailEvent;
     private BallHandler[] _ballList;
     private bool _isTriggered = false;
@@ -32,7 +32,7 @@ public class PowerUpUniqueTrigger : MonoBehaviour
             if (!_isTriggered)
             {
                 AddBallToList(ballHandler);
-                powerUpSuccessEvent.Invoke(ballHandler);
+                PowerUpSuccessEvent.Invoke(ballHandler);
             }
             else
             {

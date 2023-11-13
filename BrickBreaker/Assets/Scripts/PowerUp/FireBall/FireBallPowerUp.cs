@@ -17,11 +17,11 @@ public class FireBallPowerUp : MonoBehaviour
     
     private void OnEnable()
     {
-        powerUpUniqueTrigger.powerUpSuccessEvent.AddListener(OnPowerUpSuccess);
+        powerUpUniqueTrigger.PowerUpSuccessEvent.AddListener(OnPowerUpSuccess);
     }
     
     private void OnDisable()
     {
-        powerUpUniqueTrigger.powerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
+        powerUpUniqueTrigger.PowerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
     }
 }
