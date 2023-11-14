@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnCount: 100
   rowObjects:
-  - {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
-  - {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
-  - {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
-  - {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
-  - {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
-  - {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
