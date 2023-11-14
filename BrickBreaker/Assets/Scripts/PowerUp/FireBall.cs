@@ -9,6 +9,7 @@ public class FireBall : MonoBehaviour
     private BallHandler _ballHandler;
     [SerializeField] private int fireBallDamage = 2;
     [SerializeField] private Material fireBallMaterial;
+    public UnityEvent<GameObject> FireBallCollisionEvent;
     private Material _defaultMaterial;
 
     private void OnDisable()
@@ -19,6 +20,7 @@ public class FireBall : MonoBehaviour
 
     private void OnCollision(Collision2D collision2D)
     {
+        FireBallCollisionEvent.Invoke(collision2D.gameObject);
         _ballHandler.gameObject.GetComponent<SpriteRenderer>().material = _defaultMaterial;
         _ballHandler.ballDamage.SetDamage(1);
         Destroy(this.gameObject);

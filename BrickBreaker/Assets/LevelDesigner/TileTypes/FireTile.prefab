@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3062262891680014801, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 6182537176833275038, guid: 140d4f36d0eeac6428d206c6da8a2fac, type: 3}
+    - target: {fileID: 1136654945923405321, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 6182537176833275038, guid: 140d4f36d0eeac6428d206c6da8a2fac, type: 3}
     - target: {fileID: 2229195086042604985, guid: 064b07109889b164e86649e7c03fd8d0, type: 3}
       propertyPath: m_Name
       value: FireTile

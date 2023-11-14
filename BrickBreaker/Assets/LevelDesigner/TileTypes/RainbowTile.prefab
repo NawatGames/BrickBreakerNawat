@@ -158,3 +158,16 @@ MonoBehaviour:
   initialTime: 0.5
   finalTime: 200000
   speed: 2
+--- !u!114 &3799857429539442864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6944918552930218709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cb74edaf6ebcb48af0d152c9bc8c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabRainbowAnim: {fileID: 6182537176833275038, guid: 596c2c4f2ab469144b8ca5a1565373aa, type: 3}

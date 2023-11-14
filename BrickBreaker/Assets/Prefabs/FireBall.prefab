@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7846951791243740632}
   - component: {fileID: 7825166600184253337}
+  - component: {fileID: 7933045471623906798}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -46,3 +47,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireBallDamage: 2
   fireBallMaterial: {fileID: 2100000, guid: 9b4dcf745db52ff4fa3fdc2ad0537fbe, type: 2}
+  FireBallCollisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7933045471623906798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4355788159433470632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6df42b5052e3755418e072f0bdb4fe79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireBall: {fileID: 7825166600184253337}
+  prefabFireAnim: {fileID: 6182537176833275038, guid: 140d4f36d0eeac6428d206c6da8a2fac, type: 3}

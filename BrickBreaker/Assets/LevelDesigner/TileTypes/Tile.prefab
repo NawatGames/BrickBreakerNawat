@@ -17,6 +17,9 @@ GameObject:
   - component: {fileID: 2828552982087534622}
   - component: {fileID: 2529657767130351597}
   - component: {fileID: 8956454702884167996}
+  - component: {fileID: -7077514762690014662}
+  - component: {fileID: 8758069932419004961}
+  - component: {fileID: -3062262891680014801}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Tile
@@ -167,6 +170,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileHealth: {fileID: 2229195086042604967}
+  steepness: 0.1
+  midpoint: 40
+  multiplier: 50
 --- !u!50 &2529657767130351597
 Rigidbody2D:
   serializedVersion: 4
@@ -233,6 +239,54 @@ PolygonCollider2D:
       - {x: 0.421875, y: -0.421875}
       - {x: 0.46875, y: -0.359375}
       - {x: 0.4921875, y: -0.28515625}
+--- !u!95 &-7077514762690014662
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2229195086042604985}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: baa76f7f5d80ced4facacd62457e39f5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8758069932419004961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2229195086042604985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ba72ebca7488844a4b002b528de250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+--- !u!114 &-3062262891680014801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2229195086042604985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4231d1851d532ae41a4b63ea3d645176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tileHealth: {fileID: 2229195086042604967}
+  prefab: {fileID: 6182537176833275038, guid: 37f7f802e45526e459900a9a9f732b7b, type: 3}
 --- !u!1 &2229195087188707433
 GameObject:
   m_ObjectHideFlags: 0
