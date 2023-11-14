@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class ResizeWallTop : MonoBehaviour
 {
-    private Vector3 _initialScale;
-    private float _initialResolutionHeight;
+    private Vector3 initialScale;
+    private float initialResolutionHeight;
 
     void Start()
     {
         //escala inicial
-        _initialScale = transform.localScale;
-        _initialResolutionHeight = Screen.height;
+        initialScale = transform.localScale;
+        initialResolutionHeight = Screen.height;
 
         Resize();
         Screen.orientation = ScreenOrientation.Portrait;
@@ -18,7 +18,7 @@ public class ResizeWallTop : MonoBehaviour
     void Update()
     {
         //checa a resolucao
-        if (Screen.height != _initialResolutionHeight)
+        if (Screen.height != initialResolutionHeight)
         {
             Resize();
         }
@@ -30,10 +30,10 @@ public class ResizeWallTop : MonoBehaviour
         float currentResolutionHeight = Screen.height;
 
         // calcula a escala, so precisa da altura
-        float scaleHeight = currentResolutionHeight / _initialResolutionHeight;
+        float scaleHeight = currentResolutionHeight / initialResolutionHeight;
 
         // aplica os fatores
-        Vector3 newScale = new Vector3(_initialScale.x, _initialScale.y * scaleHeight, _initialScale.z);
+        Vector3 newScale = new Vector3(initialScale.x, initialScale.y * scaleHeight, initialScale.z);
         transform.localScale = newScale;
     }
 }

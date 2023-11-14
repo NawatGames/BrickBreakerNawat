@@ -4,7 +4,6 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 public class BallShooterHandler : MonoBehaviour
 {
@@ -13,9 +12,9 @@ public class BallShooterHandler : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private InputFilter inputFilter;
     [SerializeField] private GameManager gameManager;
-    [FormerlySerializedAs("StartShootBallEvent")] public UnityEvent startShootBallEvent;
-    [FormerlySerializedAs("ShootBallEvent")] public UnityEvent<Vector2> shootBallEvent;
-    [FormerlySerializedAs("EndShootBallEvent")] public UnityEvent endShootBallEvent;
+    public UnityEvent StartShootBallEvent;
+    public UnityEvent<Vector2> ShootBallEvent;
+    public UnityEvent EndShootBallEvent;
     
     private void OnFilteredInput(Vector2 direction)
     {
@@ -26,22 +25,22 @@ public class BallShooterHandler : MonoBehaviour
 
     private IEnumerator BallSpawnerIterator(Vector2 direction)
     {
-        startShootBallEvent.Invoke();
+        StartShootBallEvent.Invoke();
         for(int i = 0; i < _maxBallCount; i++)
         {
-            shootBallEvent.Invoke(direction);
+            ShootBallEvent.Invoke(direction);
             yield return new WaitForSeconds(shootingDelay);
         }
-        endShootBallEvent.Invoke();
+        EndShootBallEvent.Invoke();
     }
     
     private void OnEnable()
     {
-        inputFilter.filteredInputEvent.AddListener(OnFilteredInput);
+        inputFilter.FilteredInputEvent.AddListener(OnFilteredInput);
     }
 
     private void OnDisable()
     {
-        inputFilter.filteredInputEvent.RemoveListener(OnFilteredInput);
+        inputFilter.FilteredInputEvent.RemoveListener(OnFilteredInput);
     }
 }

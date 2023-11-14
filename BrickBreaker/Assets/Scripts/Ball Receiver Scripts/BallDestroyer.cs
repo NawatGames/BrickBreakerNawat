@@ -16,11 +16,11 @@ public class BallDestroyer : MonoBehaviour
 
     private void OnEnable()
     {
-        receiverCollision.receiverCollisionEvent.AddListener(OnReceiverCollision);
+        receiverCollision.ReceiverCollisionEvent.AddListener(OnReceiverCollision);
     }
 
     private void OnDisable()
     {
-        receiverCollision.receiverCollisionEvent.RemoveListener(OnReceiverCollision);
+        receiverCollision.ReceiverCollisionEvent.RemoveListener(OnReceiverCollision);
     }
 }

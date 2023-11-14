@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 
 public class InputFilter : MonoBehaviour
@@ -11,8 +10,8 @@ public class InputFilter : MonoBehaviour
     [SerializeField] private RawInput rawInput;
     public Vector2 initialPosition;
     [SerializeField] private float angleClamp = 20f;
-    [FormerlySerializedAs("FilteredInputEvent")] public UnityEvent<Vector2> filteredInputEvent;
-    private bool _isDragging = false;
+    public UnityEvent<Vector2> FilteredInputEvent;
+    private bool isDragging = false;
     
     public Vector2 AngleClamp(Vector2 position){
         {
@@ -75,10 +74,10 @@ public class InputFilter : MonoBehaviour
     
     private void OnWorldspacePointerUp(Vector2 direction)
     {
-        if (_isDragging)
+        if (isDragging)
         {
-            _isDragging = false;
-            filteredInputEvent.Invoke(AngleClamp(direction));
+            isDragging = false;
+            FilteredInputEvent.Invoke(AngleClamp(direction));
         }
     }
 
@@ -88,7 +87,7 @@ public class InputFilter : MonoBehaviour
 
     private void OnWorldSpaceDrag(Vector2 empty)
     {
-        _isDragging = true;
+        isDragging = true;
     }
     
 }

@@ -29,14 +29,14 @@ public class BallShooterSpriteEnabler : MonoBehaviour
 
     public void OnEnable()
     {
-        ballShooterHandler.startShootBallEvent.AddListener(DisableSprite);
-        gameManager.turnEndEvent.AddListener(EnableSprite);
+        ballShooterHandler.StartShootBallEvent.AddListener(DisableSprite);
+        gameManager.TurnEndEvent.AddListener(EnableSprite);
     }
 
     public void OnDisable()
     {
-        ballShooterHandler.startShootBallEvent.RemoveListener(DisableSprite);
-        gameManager.turnEndEvent.RemoveListener(EnableSprite);
+        ballShooterHandler.StartShootBallEvent.RemoveListener(DisableSprite);
+        gameManager.TurnEndEvent.RemoveListener(EnableSprite);
     }
     
 }

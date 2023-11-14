@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
-using UnityEngine.Serialization;
 
 public class TileRowMover : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
     public delegate void RowMover();
-    [FormerlySerializedAs("RowMovedEvent")] public UnityEvent rowMovedEvent;
+    public UnityEvent RowMovedEvent;
     public float tileSize = 1.0f; // Tamanho de um tijolo.
 
     
@@ -33,16 +32,16 @@ public class TileRowMover : MonoBehaviour
 
     private void OnEnable()
     {
-        gameManager.turnEndEvent.AddListener(MoveTileRows);
+        gameManager.TurnEndEvent.AddListener(MoveTileRows);
     }
 
     private void OnDisable()
     {
-        gameManager.turnEndEvent.RemoveListener(MoveTileRows);
+        gameManager.TurnEndEvent.RemoveListener(MoveTileRows);
     }
     private IEnumerator WaitForAnimation()
     {
         yield return new WaitForSeconds(0.5f);
-        rowMovedEvent.Invoke();
+        RowMovedEvent.Invoke();
     }
 }

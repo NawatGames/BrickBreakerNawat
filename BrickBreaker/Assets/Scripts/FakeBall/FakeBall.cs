@@ -5,19 +5,19 @@ using DG.Tweening;
 
 public class FakeBall : MonoBehaviour
 {
-    private Vector2 _destination;
+    private Vector2 destination;
     [SerializeField] private float tweenSpeed = 3f;
-    private GameObject _firstFakeBall;
+    private GameObject FirstFakeBall;
     private void Awake()
     {
         
-        _firstFakeBall = GameObject.FindGameObjectWithTag("FirstFakeBall");
-        _destination = _firstFakeBall.transform.position;
+        FirstFakeBall = GameObject.FindGameObjectWithTag("FirstFakeBall");
+        destination = FirstFakeBall.transform.position;
     }
 
     private void Start()
     {
-        transform.DOMove(_destination, Mathf.Abs(_destination.x - this.transform.position.x)/ tweenSpeed)
+        transform.DOMove(destination, Mathf.Abs(destination.x - this.transform.position.x)/ tweenSpeed)
             .SetEase(Ease.OutQuad) // You can change the ease type as needed.
             .OnComplete(OnTweenComplete); // Optionally, call a method when the tween is complete.
     }

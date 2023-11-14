@@ -11,22 +11,22 @@ public class FakeBallSpawner : MonoBehaviour
     public GameObject fakeBallPrefab; 
     public GameObject firstFakeBallPrefab;
     public GameObject lastFakeBallPrefab;
-    private ReceiverCollision _receiverCollision;
-    [FormerlySerializedAs("SpawnFirstFakeBallEvent")] public UnityEvent<Vector2> spawnFirstFakeBallEvent;
-    [FormerlySerializedAs("SpawnLastFakeBallEvent")] public UnityEvent<Vector2> spawnLastFakeBallEvent;
+    private ReceiverCollision receiverCollision;
+    public UnityEvent<Vector2> SpawnFirstFakeBallEvent;
+    public UnityEvent<Vector2> SpawnLastFakeBallEvent;
     private GameManager _gameManager;
 
     void Start()
     {
         _gameManager = GameObject.FindObjectOfType<GameManager>();
-        _receiverCollision = FindObjectOfType<ReceiverCollision>();
-        if (_receiverCollision != null)
+        receiverCollision = FindObjectOfType<ReceiverCollision>();
+        if (receiverCollision != null)
         {
-            _receiverCollision.receiverCollisionEvent.AddListener(Check);
+            receiverCollision.ReceiverCollisionEvent.AddListener(Check);
         }
         if (_gameManager != null)
         {
-            _gameManager.ballDestroyedEvent.AddListener(OnBallDestroyed);
+            _gameManager.BallDestroyedEvent.AddListener(OnBallDestroyed);
         }
     }
 
@@ -35,13 +35,13 @@ public class FakeBallSpawner : MonoBehaviour
         // Verificar se isFirstFakeBall é verdadeiro
         if (lastBallHandler.IsLastBall())
         {
-            spawnLastFakeBallEvent.Invoke(new Vector2(transform.position.x, -4));
+            SpawnLastFakeBallEvent.Invoke(new Vector2(transform.position.x, -4));
         }
         else
         {
             if (firstBallHandler.IsFirstFakeBall())
             {
-                spawnFirstFakeBallEvent.Invoke(new Vector2(transform.position.x, -4));
+                SpawnFirstFakeBallEvent.Invoke(new Vector2(transform.position.x, -4));
                 firstBallHandler.FlipIsFirstFakeBall();
             }
             else
@@ -52,8 +52,8 @@ public class FakeBallSpawner : MonoBehaviour
     private void OnEnable()
     {
 
-        spawnFirstFakeBallEvent.AddListener(SpawnFirstFakeBall);
-        spawnLastFakeBallEvent.AddListener(SpawnLastFakeBall);
+        SpawnFirstFakeBallEvent.AddListener(SpawnFirstFakeBall);
+        SpawnLastFakeBallEvent.AddListener(SpawnLastFakeBall);
     }
 
     private void OnBallDestroyed()
@@ -74,8 +74,8 @@ public class FakeBallSpawner : MonoBehaviour
 
     private void OnDisable()
     {
-        spawnFirstFakeBallEvent.RemoveListener(SpawnFirstFakeBall);
-        spawnLastFakeBallEvent.RemoveListener(SpawnLastFakeBall);
+        SpawnFirstFakeBallEvent.RemoveListener(SpawnFirstFakeBall);
+        SpawnLastFakeBallEvent.RemoveListener(SpawnLastFakeBall);
     }
     
     void SpawnFirstFakeBall(Vector2 position)

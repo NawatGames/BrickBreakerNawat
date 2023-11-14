@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 public class PowerUpUniqueTrigger : MonoBehaviour
 {
-    [FormerlySerializedAs("powerUpSuccessEvent")] public UnityEvent<BallHandler> PowerUpSuccessEvent;
-    [FormerlySerializedAs("PowerUpFailEvent")] public UnityEvent powerUpFailEvent;
+
+    public UnityEvent<BallHandler> PowerUpSuccessEvent;
+    public UnityEvent PowerUpFailEvent;
     private BallHandler[] _ballList;
     private bool _isTriggered = false;
 
@@ -17,13 +17,13 @@ public class PowerUpUniqueTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        BallHandler ballHandler = other.GetComponent<BallHandler>();
-        if (ballHandler != null)
+        BallHandler _ballHandler = other.GetComponent<BallHandler>();
+        if (_ballHandler != null)
         {
             _isTriggered = false;
             foreach (var ball in _ballList)
             {
-                if (ball == ballHandler)
+                if (ball == _ballHandler)
                 {
                     _isTriggered = true;
                 }
@@ -31,25 +31,27 @@ public class PowerUpUniqueTrigger : MonoBehaviour
 
             if (!_isTriggered)
             {
-                AddBallToList(ballHandler);
-                PowerUpSuccessEvent.Invoke(ballHandler);
+
+                AddBallToList(_ballHandler);
+                PowerUpSuccessEvent.Invoke(_ballHandler);
+
             }
             else
             {
-                powerUpFailEvent.Invoke();
+                PowerUpFailEvent.Invoke();
             }
         }
     }
 
     private void AddBallToList(BallHandler ball)
     {
-        BallHandler[] tempBallList = new BallHandler[_ballList.Length + 1];
+        BallHandler[] _tempBallList = new BallHandler[_ballList.Length + 1];
         for (int i = 0; i < _ballList.Length; i++)
         {
-            tempBallList[i] = _ballList[i];
+            _tempBallList[i] = _ballList[i];
         }
 
-        tempBallList[tempBallList.Length - 1] = ball;
-        _ballList = tempBallList;
+        _tempBallList[_tempBallList.Length - 1] = ball;
+        _ballList = _tempBallList;
     }
 }

@@ -8,7 +8,7 @@ public class IntEvent : UnityEvent<int> { }
 
 public class BallDamage : MonoBehaviour
 {
-    private int damage = 1;
+    public int damage = 1;
     private BallCollisionHandler ballCollisionHandler;
     public UnityEvent OnDamageValueChanged;
 
@@ -38,9 +38,5 @@ public class BallDamage : MonoBehaviour
     {
         damage = newDamage;
         OnDamageValueChanged.Invoke();
-    }
-    public int GetDamage()
-    {
-        return damage;
     }
 }

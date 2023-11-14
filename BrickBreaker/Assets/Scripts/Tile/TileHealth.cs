@@ -3,32 +3,31 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 public class TileHealth : MonoBehaviour
 {
     [SerializeField] private int health = 10;
-    [FormerlySerializedAs("NoHealthEvent")] public UnityEvent noHealthEvent;
-    [FormerlySerializedAs("TileHitEvent")] public UnityEvent<GameObject> tileHitEvent;
-    [FormerlySerializedAs("TileHealthChangedEvent")] public UnityEvent<int> tileHealthChangedEvent;
+    public UnityEvent NoHealthEvent;
+    public UnityEvent<GameObject> TileHitEvent;
+    public UnityEvent<int> TileHealthChangedEvent;
 
     public void SubtractHealth(int damage, GameObject ball)
     {
         
         health -= damage;
-        tileHitEvent.Invoke(ball);
-        tileHealthChangedEvent.Invoke(health);
+        TileHitEvent.Invoke(ball);
+        TileHealthChangedEvent.Invoke(health);
         Debug.Log("Hit");
         if (health <= 0)
         {
-            noHealthEvent.Invoke();
+            NoHealthEvent.Invoke();
         }
     }
 
     public void SetHealth(int health)
     {
         this.health = health;
-        tileHealthChangedEvent.Invoke(health);
+        TileHealthChangedEvent.Invoke(health);
     }
 
     public int GetHealth()
