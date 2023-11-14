@@ -15,11 +15,11 @@ public class WinMessage : MonoBehaviour
     
     private void OnEnable()
     {
-        winCondition.winEvent.AddListener(OnWin);
+        winCondition.WinEvent.AddListener(OnWin);
     }
 
     private void OnDisable()
     {
-        winCondition.winEvent.RemoveListener(OnWin);
+        winCondition.WinEvent.RemoveListener(OnWin);
     }
 }

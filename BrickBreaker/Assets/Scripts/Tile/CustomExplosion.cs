@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CustomExplosion : MonoBehaviour
 {
-    private SpriteRenderer _renderer;
+    private SpriteRenderer renderer;
     
     [SerializeField] private float initialTime = 0.5f;
     [SerializeField] private float finalTime = 1f;
@@ -13,13 +13,13 @@ public class CustomExplosion : MonoBehaviour
 
     private void Awake()
     {
-        _renderer = GetComponent<SpriteRenderer>();
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     private IEnumerator Start()
     {
 
-        var neonMaterial = _renderer.material;
+        var neonMaterial = renderer.material;
         var currentTime = initialTime;
         neonMaterial.SetFloat("_CustomTime", currentTime);
         

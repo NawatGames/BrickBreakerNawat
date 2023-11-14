@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class ResizeObject : MonoBehaviour
 {
-    private Vector3 _initialScale;
-    private float _initialResolutionWidth;
-    private float _initialResolutionHeight;
+    private Vector3 initialScale;
+    private float initialResolutionWidth;
+    private float initialResolutionHeight;
 
     void Start()
     {
         //escala inicial
-        _initialScale = transform.localScale;
+        initialScale = transform.localScale;
 
         //resolucao da tela
-        _initialResolutionWidth = Screen.width;
-        _initialResolutionHeight = Screen.height;
+        initialResolutionWidth = Screen.width;
+        initialResolutionHeight = Screen.height;
 
 
         Resize();
@@ -23,7 +23,7 @@ public class ResizeObject : MonoBehaviour
     void Update()
     {
         //checa a resolucao
-        if (Screen.width != _initialResolutionWidth || Screen.height != _initialResolutionHeight)
+        if (Screen.width != initialResolutionWidth || Screen.height != initialResolutionHeight)
         {
             Resize();
         }
@@ -36,11 +36,11 @@ public class ResizeObject : MonoBehaviour
         float currentResolutionHeight = Screen.height;
 
         // calcula escala para largura e altura
-        float scaleWidth = currentResolutionWidth / _initialResolutionWidth;
-        float scaleHeight = currentResolutionHeight / _initialResolutionHeight;
+        float scaleWidth = currentResolutionWidth / initialResolutionWidth;
+        float scaleHeight = currentResolutionHeight / initialResolutionHeight;
 
         // aplica os fatores
-        Vector3 newScale = new Vector3(_initialScale.x * scaleWidth, _initialScale.y * scaleHeight, _initialScale.z);
+        Vector3 newScale = new Vector3(initialScale.x * scaleWidth, initialScale.y * scaleHeight, initialScale.z);
         transform.localScale = newScale;
     }
 }

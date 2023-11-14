@@ -28,14 +28,14 @@ public class Shooter : MonoBehaviour
     
     private void OnEnable()
     {
-        ballShooterHandler.shootBallEvent.AddListener(InstanciarBolinha);
-        ballShooterHandler.startShootBallEvent.AddListener(SetShooterPosition);
+        ballShooterHandler.ShootBallEvent.AddListener(InstanciarBolinha);
+        ballShooterHandler.StartShootBallEvent.AddListener(SetShooterPosition);
     }
 
     private void OnDisable()
     {
-        ballShooterHandler.shootBallEvent.RemoveListener(InstanciarBolinha);
-        ballShooterHandler.startShootBallEvent.RemoveListener(SetShooterPosition);
+        ballShooterHandler.ShootBallEvent.RemoveListener(InstanciarBolinha);
+        ballShooterHandler.StartShootBallEvent.RemoveListener(SetShooterPosition);
     }
 
     public void SetShooterPosition()

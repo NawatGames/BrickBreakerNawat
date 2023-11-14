@@ -11,7 +11,7 @@ public class FirstBallHandler : MonoBehaviour
 {
     [FormerlySerializedAs("turnManager")] [SerializeField] private GameManager gameManager;
     public bool isFirstFakeBall;
-    [FormerlySerializedAs("FirstFakeBall")] public GameObject firstFakeBall;
+    public GameObject FirstFakeBall;
 
     private void Start()
     {
@@ -30,12 +30,12 @@ public class FirstBallHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        gameManager.turnEndEvent.AddListener(ResetIsFirstFakeBall);
+        gameManager.TurnEndEvent.AddListener(ResetIsFirstFakeBall);
     }
     
     private void OnDisable()
     {
-        gameManager.turnEndEvent.RemoveListener(ResetIsFirstFakeBall);
+        gameManager.TurnEndEvent.RemoveListener(ResetIsFirstFakeBall);
     }
 
     public bool IsFirstFakeBall()

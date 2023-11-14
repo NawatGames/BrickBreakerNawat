@@ -2,33 +2,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class TileDestroyer : MonoBehaviour
 {
-    [FormerlySerializedAs("_tileHealth")] [SerializeField] private TileHealth tileHealth;
-    private AddScore _addScore;
-    
+    [SerializeField] private TileHealth _tileHealth;
 
     private void Awake()
     {
-        _addScore = GameObject.FindObjectOfType<AddScore>();
     }
 
     private void OnEnable()
     {
-        tileHealth.noHealthEvent.AddListener(OnNoHealth);
+        _tileHealth.NoHealthEvent.AddListener(OnNoHealth);
     }
 
     private void OnDisable()
     {
-        tileHealth.noHealthEvent.RemoveListener(OnNoHealth);
+        _tileHealth.NoHealthEvent.RemoveListener(OnNoHealth);
     }
 
     private void OnNoHealth()
     {
-        _addScore.AddScoreEvent.Invoke(1);
         Destroy(this.gameObject);
-        
     }
 }

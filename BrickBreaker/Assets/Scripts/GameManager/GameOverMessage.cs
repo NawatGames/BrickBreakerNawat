@@ -14,11 +14,11 @@ public class GameOverMessage : MonoBehaviour
 
     private void OnEnable()
     {
-        gameManager.gameOverEvent.AddListener(OnGameOver);
+        gameManager.GameOverEvent.AddListener(OnGameOver);
     }
 
     private void OnDisable()
     {
-        gameManager.gameOverEvent.RemoveListener(OnGameOver);
+        gameManager.GameOverEvent.RemoveListener(OnGameOver);
     }
 }

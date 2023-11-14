@@ -31,27 +31,27 @@ public class PowerUpEndTurnDestroyer : MonoBehaviour
     {
         if (powerUpRepeatableTrigger != null)
         {
-            powerUpRepeatableTrigger.powerUpSuccessEvent.AddListener(OnPowerUpSuccess);
+            powerUpRepeatableTrigger.PowerUpSuccessEvent.AddListener(OnPowerUpSuccess);
         }
 
         if (powerUpUniqueTrigger != null)
         {
-            powerUpUniqueTrigger.powerUpSuccessEvent.AddListener(OnPowerUpSuccess);
+            powerUpUniqueTrigger.PowerUpSuccessEvent.AddListener(OnPowerUpSuccess);
         }
-        _gameManager.turnEndEvent.AddListener(OnTurnEnd);
+        _gameManager.TurnEndEvent.AddListener(OnTurnEnd);
     }
 
     private void OnDisable()
     {
         if (powerUpRepeatableTrigger != null)
         {
-            powerUpRepeatableTrigger.powerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
+            powerUpRepeatableTrigger.PowerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
         }
 
         if (powerUpUniqueTrigger != null)
         {
-            powerUpUniqueTrigger.powerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
+            powerUpUniqueTrigger.PowerUpSuccessEvent.RemoveListener(OnPowerUpSuccess);
         }
-        _gameManager.turnEndEvent.RemoveListener(OnTurnEnd);
+        _gameManager.TurnEndEvent.RemoveListener(OnTurnEnd);
     }
 }

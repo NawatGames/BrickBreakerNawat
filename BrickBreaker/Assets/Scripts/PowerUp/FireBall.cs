@@ -13,8 +13,8 @@ public class FireBall : MonoBehaviour
 
     private void OnDisable()
     {
-        _ballHandler.GetComponent<BallCollisionHandler>().tileCollisionEvent.RemoveListener(OnCollision);
-        _ballHandler.GetComponent<BallCollisionHandler>().wallCollisionEvent.RemoveListener(OnCollision);
+        _ballHandler.GetComponent<BallCollisionHandler>().TileCollisionEvent.RemoveListener(OnCollision);
+        _ballHandler.GetComponent<BallCollisionHandler>().WallCollisionEvent.RemoveListener(OnCollision);
     }
 
     private void OnCollision(Collision2D collision2D)
@@ -37,7 +37,7 @@ public class FireBall : MonoBehaviour
         _ballHandler.ballDamage.SetDamage(fireBallDamage);
         _defaultMaterial = _ballHandler.GetComponent<SpriteRenderer>().material;
         _ballHandler.gameObject.GetComponent<SpriteRenderer>().material = fireBallMaterial;
-        _ballHandler.GetComponent<BallCollisionHandler>().tileCollisionEvent.AddListener(OnCollision);
-        _ballHandler.GetComponent<BallCollisionHandler>().wallCollisionEvent.AddListener(OnCollision);
+        _ballHandler.GetComponent<BallCollisionHandler>().TileCollisionEvent.AddListener(OnCollision);
+        _ballHandler.GetComponent<BallCollisionHandler>().WallCollisionEvent.AddListener(OnCollision);
     }
 }

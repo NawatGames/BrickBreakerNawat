@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 [System.Serializable]
 public class IntEvent : UnityEvent<int> { }
@@ -10,12 +9,12 @@ public class IntEvent : UnityEvent<int> { }
 public class BallDamage : MonoBehaviour
 {
     public int damage = 1;
-    private BallCollisionHandler _ballCollisionHandler;
-    [FormerlySerializedAs("OnDamageValueChanged")] public UnityEvent onDamageValueChanged;
+    private BallCollisionHandler ballCollisionHandler;
+    public UnityEvent OnDamageValueChanged;
 
     private void Awake ()
     {
-        _ballCollisionHandler = this.gameObject.GetComponent<BallCollisionHandler>();
+        ballCollisionHandler = this.gameObject.GetComponent<BallCollisionHandler>();
     }
 
     private void TileCollisionDamageEventCaller(Collision2D collision)
@@ -27,17 +26,21 @@ public class BallDamage : MonoBehaviour
 
     private void OnEnable()
     {
-        _ballCollisionHandler.tileCollisionEvent.AddListener(TileCollisionDamageEventCaller);
+        ballCollisionHandler.TileCollisionEvent.AddListener(TileCollisionDamageEventCaller);
     }
 
     private void OnDisable()
     {
-        _ballCollisionHandler.tileCollisionEvent.RemoveListener(TileCollisionDamageEventCaller);
+        ballCollisionHandler.TileCollisionEvent.RemoveListener(TileCollisionDamageEventCaller);
     }
 
     public void SetDamage(int newDamage)
     {
         damage = newDamage;
-        onDamageValueChanged.Invoke();
+        OnDamageValueChanged.Invoke();
+    }
+    public int GetDamage()
+    {
+        return damage;
     }
 }
