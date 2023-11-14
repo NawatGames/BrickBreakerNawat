@@ -8,6 +8,8 @@ public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     private int score = 0;
+    private float bonusMultiplier = 1.0f; 
+    private int bonusIncrement = 50;
 
     private void Start()
     {
@@ -18,6 +20,12 @@ public class ScoreManager : MonoBehaviour
     {
         score += points;
         UpdateScoreText();
+        UpdateBonusMultiplier(); 
+    }
+
+    public float GetBonusMultiplier()
+    {
+        return bonusMultiplier;
     }
 
     private void UpdateScoreText()
@@ -25,6 +33,17 @@ public class ScoreManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score.ToString();
+        }
+    }
+
+    private void UpdateBonusMultiplier()
+    {
+        int bonusIncrements = score / bonusIncrement;
+
+        if (bonusIncrements > 0)
+        {
+            bonusMultiplier += bonusIncrements * 0.1f;
+            bonusIncrement = (bonusIncrements + 1) * 50;
         }
     }
 }

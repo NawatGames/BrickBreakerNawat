@@ -6,47 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Level1Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Level1Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/BallDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/BallDestroyer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/FakeBallSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/FakeBallSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/FirstBallHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/FirstBallHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/ReceiverCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Receiver Scripts/ReceiverCollision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallCollisionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallCollisionHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/LayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/LayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FakeBall/FakeBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FakeBall/FakeBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FakeBall/FirstFakeBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FakeBall/FirstFakeBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FakeBall/LastFakeBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FakeBall/LastFakeBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameOverMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameOverMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/WinCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/WinCondition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/WinMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/WinMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputFilter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputFilter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/LineRendererPointer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/LineRendererPointer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBallPowerUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBallPowerUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpBallAdder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpBallAdder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpContactDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpContactDestroyer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpEndTurnDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpEndTurnDestroyer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpRepeatableTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpRepeatableTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpUniqueTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpUniqueTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScreenResolution/ResizeObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScreenResolution/ResizeObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScreenResolution/ResizeWallLeft.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScreenResolution/ResizeWallLeft.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScreenResolution/ResizeWallRight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScreenResolution/ResizeWallRight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScreenResolution/ResizeWallTop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScreenResolution/ResizeWallTop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterSpriteEnabler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterSpriteEnabler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/BallShooterTeleporter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/InputDisabler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/InputDisabler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/Shooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooter Scripts/Shooter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/BallDestroyerTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/BallDestroyerTile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/CustomExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/CustomExplosion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/TankTileHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/TankTileHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/TileDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/TileDestroyer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealthDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile/TileHealthDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileSpawner Scripts/TileRowMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileSpawner Scripts/TileRowMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileSpawner Scripts/TileRowSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileSpawner Scripts/TileRowSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/AddScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score/AddScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +53,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -180,6 +142,7 @@
       <workItem from="1697309002562" duration="1692000" />
       <workItem from="1697478712996" duration="15889000" />
       <workItem from="1699305039612" duration="6153000" />
+      <workItem from="1699914859671" duration="5430000" />
     </task>
     <servers />
   </component>
