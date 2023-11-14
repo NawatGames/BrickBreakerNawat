@@ -39,4 +39,8 @@ public class BallDamage : MonoBehaviour
         damage = newDamage;
         OnDamageValueChanged.Invoke();
     }
+    public int GetDamage()
+    {
+        return damage;
+    }
 }
