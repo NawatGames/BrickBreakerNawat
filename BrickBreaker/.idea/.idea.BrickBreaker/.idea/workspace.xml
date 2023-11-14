@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrickBreaker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallCollisionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/BallCollisionHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/LayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball Scripts/LayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/DivideBall/DivideBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/DivideBall/DivideBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBall/FireBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBall/FireBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBall/FireBallPowerUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/FireBall/FireBallPowerUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpContactDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpContactDestroyer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpEndTurnDestroyer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpEndTurnDestroyer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpUniqueTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUp/PowerUpUniqueTrigger.cs" afterDir="false" />
-    </list>
+    <list default="true" id="fadcb539-1db8-4c39-8535-2704c9de057a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
