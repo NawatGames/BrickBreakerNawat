@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8956454702884167996}
   - component: {fileID: -7077514762690014662}
   - component: {fileID: 8758069932419004961}
-  - component: {fileID: 1136654945923405321}
+  - component: {fileID: -3062262891680014801}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Tile
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
---- !u!114 &1136654945923405321
+--- !u!114 &-3062262891680014801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
