@@ -10,6 +10,7 @@ public class ShooterLIneRenderer : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private InputFilter inputFilter;
     [SerializeField] private GameObject ballShooter;
+    [SerializeField] private Collider2D playerCollider;
 
     void OnEnable(){
         rawInput.worldspacePointerDownEvent.AddListener(OnWorldspacePointerDown);
@@ -26,39 +27,55 @@ public class ShooterLIneRenderer : MonoBehaviour
     }
     void OnWorldspacePointerDrag(Vector2 position){
         lineRenderer.enabled = true;
-        UpdateLineRenderer(lines, _initialPosition, inputFilter.AngleClamp(position));
+        UpdateLineRenderer(_initialPosition, inputFilter.AngleClamp(position));
     }
     void OnWorldspacePointerUp(Vector2 position){
         lineRenderer.enabled = false;
     }
     
-    void UpdateLineRenderer(int lines, Vector2 initialPosition, Vector2 angleClamp){
+    void UpdateLineRenderer(Vector2 initialPosition, Vector2 angleClamp){
         lines++;
-        List<Vector3> points = new List<Vector3>();
 
-        points.Add(initialPosition);
-        Vector2 temp = initialPosition;
-        Vector2 angle = angleClamp;
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.SetLayerMask(LayerMask.GetMask("Default", "Tile"));
 
-        for(int n = 1; n < lines; n++){
-            RaycastHit2D hit = Physics2D.Raycast(temp + angle * .01f, angle, Mathf.Infinity, LayerMask.GetMask("Default") | LayerMask.GetMask("Tile"));
+        var hits = new List<RaycastHit2D>(lines);
+        playerCollider.Cast(angleClamp, filter, hits);
 
-            if(!hit)
-            {
-                hit = Physics2D.Raycast(temp + angle * .01f, angle);
-                AddPoint();
-                break;
-            }
+        var points = new List<Vector3>();
 
-            AddPoint();
+        Debug.Log(points.Count);
 
-            void AddPoint()
-            {
-                points.Add(hit.point);
-                angle = Vector2.Reflect(angle.normalized, hit.normal);
-                temp = points[n];
-            }
+        foreach (var hit in hits)
+        {
+            points.Add(hit.point);
         }
+
+        Debug.Log(points.Count);
+
+        // points.Add(initialPosition);
+        // Vector2 temp = initialPosition;
+        // Vector2 angle = angleClamp;
+
+        // for(int n = 1; n < lines; n++){
+        //     RaycastHit2D hit = Physics2D.Raycast(temp + angle * .01f, angle, Mathf.Infinity, LayerMask.GetMask("Default") | LayerMask.GetMask("Tile"));
+
+        //     if(!hit)
+        //     {
+        //         hit = Physics2D.Raycast(temp + angle * .01f, angle);
+        //         AddPoint();
+        //         break;
+        //     }
+
+        //     AddPoint();
+
+        //     void AddPoint()
+        //     {
+        //         points.Add(hit.point);
+        //         angle = Vector2.Reflect(angle.normalized, hit.normal);
+        //         temp = points[n];
+        //     }
+        // }
 
         // foreach(var item in points){
         //     Debug.LogError(item);

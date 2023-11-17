@@ -618,6 +618,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 889622125}
   inputFilter: {fileID: 1138297517}
   ballShooter: {fileID: 1526902367}
+  playerCollider: {fileID: 1090923845770911361, guid: ebf6df1a19c02dd468270c64043f1a7b, type: 3}
 --- !u!120 &889622125
 LineRenderer:
   m_ObjectHideFlags: 0
