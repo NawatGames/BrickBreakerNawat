@@ -9,7 +9,7 @@ public class GameOverMessage : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     private void OnGameOver()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(4);
     }
 
     private void OnEnable()

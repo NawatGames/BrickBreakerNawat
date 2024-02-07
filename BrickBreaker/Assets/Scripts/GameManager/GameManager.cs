@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private int _destroyedBallCount = 0;
     private int _adderCount = 0;
     public UnityEvent BallDestroyedEvent;
-
+    public UnityEvent<int> TurnStartEvent;
     private int currentTurn;
 
     private void Awake()
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     public void StartTurn()
     {
         currentTurn++;
-
+        TurnStartEvent.Invoke(currentTurn);
         if (currentTurn <= MaxTurns)
         {
             Debug.Log("Turno " + currentTurn);

@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameOverButtonScript : MonoBehaviour
+public class LevelButtonScript : MonoBehaviour
 {
     private Button _button;
-    public int sceneIndex = 0;
+    public int sceneIndex;
 
     private void Awake()
     {
@@ -26,6 +26,6 @@ public class GameOverButtonScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(sceneIndex);
     }
 }

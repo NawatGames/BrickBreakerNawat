@@ -8,7 +8,7 @@ public class TileRowSpawner : MonoBehaviour
 {
     [SerializeField] private TileRowMover tileRowMover;
     [SerializeField] private GameManager gameManager;
-    public float spacing = 1.5f; //Espaços entre os tijolos
+    public float spacing = 1.5f * 0.8f; //Espaços entre os tijolos
     public Transform spawnPoint;
     [SerializeField] private LevelScriptableObject _level;
     public UnityEvent RowSpawnedEvent;

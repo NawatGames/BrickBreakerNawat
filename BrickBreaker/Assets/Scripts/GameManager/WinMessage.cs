@@ -10,7 +10,7 @@ public class WinMessage : MonoBehaviour
     
     private void OnWin()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     
     private void OnEnable()
